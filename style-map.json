@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1779493514500,
+  "generatedAt": 1779564533415,
   "entries": {
     "Index@app/index.tsx:61": {
       "element": {
@@ -746,6 +746,870 @@
         }
       ]
     },
+    "ProgressScreen@app/(tabs)/progress.tsx:158": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 158
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 419,
+          "properties": {
+            "flex": {
+              "line": 420,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:169": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 169
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.title",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 422,
+          "properties": {
+            "fontSize": {
+              "line": 423,
+              "col": 14,
+              "endCol": 16,
+              "raw": "28"
+            },
+            "marginBottom": {
+              "line": 424,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:180": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 180
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.card",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 426,
+          "properties": {
+            "borderRadius": {
+              "line": 427,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 428,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "padding": {
+              "line": 429,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "marginBottom": {
+              "line": 430,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:184": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 184
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.chartHeader",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 433,
+          "properties": {
+            "flexDirection": {
+              "line": 434,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "justifyContent": {
+              "line": 435,
+              "col": 20,
+              "endCol": 35,
+              "raw": "\"space-between\""
+            },
+            "alignItems": {
+              "line": 436,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:185": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 185
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.chartTitle",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 438,
+          "properties": {
+            "fontSize": {
+              "line": 439,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:193": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 193
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.pill",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 441,
+          "properties": {
+            "paddingHorizontal": {
+              "line": 442,
+              "col": 23,
+              "endCol": 25,
+              "raw": "12"
+            },
+            "paddingVertical": {
+              "line": 443,
+              "col": 21,
+              "endCol": 22,
+              "raw": "6"
+            },
+            "borderRadius": {
+              "line": 444,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:194": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 194
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.pillText",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 446,
+          "properties": {
+            "fontSize": {
+              "line": 447,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:205": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 205
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/progress.tsx",
+          "properties": {
+            "marginTop": {
+              "line": 208,
+              "col": 30,
+              "endCol": 32,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:280": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 280
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiCard",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 449,
+          "properties": {
+            "borderRadius": {
+              "line": 450,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 451,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "padding": {
+              "line": 452,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "marginBottom": {
+              "line": 453,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "alignItems": {
+              "line": 454,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:284": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 284
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiText",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 457,
+          "properties": {
+            "fontSize": {
+              "line": 458,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:299": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 299
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.card",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 426,
+          "properties": {
+            "borderRadius": {
+              "line": 427,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 428,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "padding": {
+              "line": 429,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "marginBottom": {
+              "line": 430,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:303": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 303
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/progress.tsx",
+          "properties": {
+            "marginBottom": {
+              "line": 303,
+              "col": 74,
+              "endCol": 76,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:306": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 306
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heatmapDayLabels",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 461,
+          "properties": {
+            "flexDirection": {
+              "line": 462,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "justifyContent": {
+              "line": 463,
+              "col": 20,
+              "endCol": 34,
+              "raw": "\"space-around\""
+            },
+            "marginBottom": {
+              "line": 464,
+              "col": 18,
+              "endCol": 19,
+              "raw": "6"
+            },
+            "paddingHorizontal": {
+              "line": 465,
+              "col": 23,
+              "endCol": 24,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:308": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 308
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.dayLabel",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 467,
+          "properties": {
+            "fontSize": {
+              "line": 468,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "width": {
+              "line": 469,
+              "col": 11,
+              "endCol": 13,
+              "raw": "28"
+            },
+            "textAlign": {
+              "line": 470,
+              "col": 15,
+              "endCol": 23,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:321": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 321
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heatmapContainer",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 472,
+          "properties": {
+            "gap": {
+              "line": 473,
+              "col": 9,
+              "endCol": 10,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:323": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 323
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heatmapRow",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 475,
+          "properties": {
+            "flexDirection": {
+              "line": 476,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "justifyContent": {
+              "line": 477,
+              "col": 20,
+              "endCol": 34,
+              "raw": "\"space-around\""
+            },
+            "gap": {
+              "line": 478,
+              "col": 9,
+              "endCol": 10,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:327": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 327
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.heatmapCell",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 480,
+          "properties": {
+            "flex": {
+              "line": 481,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "aspectRatio": {
+              "line": 482,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderRadius": {
+              "line": 483,
+              "col": 18,
+              "endCol": 19,
+              "raw": "4"
+            },
+            "borderCurve": {
+              "line": 484,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "maxWidth": {
+              "line": 485,
+              "col": 14,
+              "endCol": 16,
+              "raw": "36"
+            },
+            "maxHeight": {
+              "line": 486,
+              "col": 15,
+              "endCol": 17,
+              "raw": "36"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:344": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 344
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.legendContainer",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 488,
+          "properties": {
+            "flexDirection": {
+              "line": 489,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 490,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 491,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            },
+            "marginTop": {
+              "line": 492,
+              "col": 15,
+              "endCol": 17,
+              "raw": "12"
+            },
+            "gap": {
+              "line": 493,
+              "col": 9,
+              "endCol": 10,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:345": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 345
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.legendText",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 500,
+          "properties": {
+            "fontSize": {
+              "line": 501,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "marginHorizontal": {
+              "line": 502,
+              "col": 22,
+              "endCol": 23,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:351": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 351
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.legendCell",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 495,
+          "properties": {
+            "width": {
+              "line": 496,
+              "col": 11,
+              "endCol": 13,
+              "raw": "12"
+            },
+            "height": {
+              "line": 497,
+              "col": 12,
+              "endCol": 14,
+              "raw": "12"
+            },
+            "borderRadius": {
+              "line": 498,
+              "col": 18,
+              "endCol": 19,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:363": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 363
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.legendText",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 500,
+          "properties": {
+            "fontSize": {
+              "line": 501,
+              "col": 14,
+              "endCol": 16,
+              "raw": "10"
+            },
+            "marginHorizontal": {
+              "line": 502,
+              "col": 22,
+              "endCol": 23,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:370": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 370
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.card",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 426,
+          "properties": {
+            "borderRadius": {
+              "line": 427,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 428,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "padding": {
+              "line": 429,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "marginBottom": {
+              "line": 430,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:374": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 374
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/progress.tsx",
+          "properties": {
+            "marginBottom": {
+              "line": 374,
+              "col": 71,
+              "endCol": 73,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:377": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 377
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.recordRow",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 504,
+          "properties": {
+            "flexDirection": {
+              "line": 505,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "justifyContent": {
+              "line": 506,
+              "col": 20,
+              "endCol": 35,
+              "raw": "\"space-between\""
+            },
+            "alignItems": {
+              "line": 507,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "paddingVertical": {
+              "line": 508,
+              "col": 21,
+              "endCol": 23,
+              "raw": "12"
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:387": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 387
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.recordLeft",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 510,
+          "properties": {
+            "flexDirection": {
+              "line": 511,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 512,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:388": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 388
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/progress.tsx",
+          "properties": {
+            "marginRight": {
+              "line": 392,
+              "col": 38,
+              "endCol": 40,
+              "raw": "10"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:394": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 394
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.recordLabel",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 514,
+          "properties": {
+            "fontSize": {
+              "line": 515,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressScreen@app/(tabs)/progress.tsx:403": {
+      "element": {
+        "file": "app/(tabs)/progress.tsx",
+        "line": 403
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.recordValue",
+          "file": "app/(tabs)/progress.tsx",
+          "defLine": 517,
+          "properties": {
+            "fontSize": {
+              "line": 518,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
     "RootLayout@app/_layout.tsx:41": {
       "element": {
         "file": "app/_layout.tsx",
@@ -767,1178 +1631,6 @@
               "col": 63,
               "endCol": 72,
               "raw": "\"#0A0E1A\""
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:221": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 221
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.container",
-          "file": "app/(tabs)/workouts.tsx",
-          "defLine": 712,
-          "properties": {
-            "flex": {
-              "line": 713,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:231": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 231
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "alignItems": {
-              "line": 231,
-              "col": 91,
-              "endCol": 99,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 231,
-              "col": 115,
-              "endCol": 116,
-              "raw": "8"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:232": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 232
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 235,
-              "col": 26,
-              "endCol": 28,
-              "raw": "22"
-            },
-            "textAlign": {
-              "line": 237,
-              "col": 27,
-              "endCol": 35,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:245": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 245
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "alignItems": {
-              "line": 245,
-              "col": 93,
-              "endCol": 101,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 245,
-              "col": 117,
-              "endCol": 119,
-              "raw": "24"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:246": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 246
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 249,
-              "col": 26,
-              "endCol": 28,
-              "raw": "36"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:256": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 256
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 259,
-              "col": 26,
-              "endCol": 28,
-              "raw": "13"
-            },
-            "marginTop": {
-              "line": 261,
-              "col": 27,
-              "endCol": 28,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:269": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 269
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "borderRadius": {
-              "line": 273,
-              "col": 28,
-              "endCol": 30,
-              "raw": "16"
-            },
-            "padding": {
-              "line": 274,
-              "col": 23,
-              "endCol": 25,
-              "raw": "20"
-            },
-            "marginBottom": {
-              "line": 275,
-              "col": 28,
-              "endCol": 30,
-              "raw": "16"
-            },
-            "borderWidth": {
-              "line": 276,
-              "col": 27,
-              "endCol": 28,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:280": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 280
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flexDirection": {
-              "line": 280,
-              "col": 42,
-              "endCol": 47,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 280,
-              "col": 61,
-              "endCol": 69,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 280,
-              "col": 85,
-              "endCol": 87,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:281": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 281
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "width": {
-              "line": 283,
-              "col": 25,
-              "endCol": 27,
-              "raw": "40"
-            },
-            "height": {
-              "line": 284,
-              "col": 26,
-              "endCol": 28,
-              "raw": "40"
-            },
-            "borderRadius": {
-              "line": 285,
-              "col": 32,
-              "endCol": 34,
-              "raw": "12"
-            },
-            "alignItems": {
-              "line": 287,
-              "col": 30,
-              "endCol": 38,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 288,
-              "col": 34,
-              "endCol": 42,
-              "raw": "\"center\""
-            },
-            "marginRight": {
-              "line": 289,
-              "col": 31,
-              "endCol": 33,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:294": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 294
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flex": {
-              "line": 294,
-              "col": 35,
-              "endCol": 36,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:295": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 295
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 298,
-              "col": 30,
-              "endCol": 32,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:304": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 304
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 307,
-              "col": 30,
-              "endCol": 32,
-              "raw": "13"
-            },
-            "marginTop": {
-              "line": 309,
-              "col": 31,
-              "endCol": 32,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:321": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 321
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flexDirection": {
-              "line": 324,
-              "col": 35,
-              "endCol": 40,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 325,
-              "col": 32,
-              "endCol": 40,
-              "raw": "\"center\""
-            },
-            "paddingVertical": {
-              "line": 326,
-              "col": 37,
-              "endCol": 39,
-              "raw": "10"
-            },
-            "borderBottomWidth": {
-              "line": 328,
-              "col": 39,
-              "endCol": 40,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:332": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 332
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flex": {
-              "line": 332,
-              "col": 39,
-              "endCol": 40,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:333": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 333
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 336,
-              "col": 34,
-              "endCol": 36,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:352": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 352
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flexDirection": {
-              "line": 354,
-              "col": 31,
-              "endCol": 36,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 355,
-              "col": 28,
-              "endCol": 36,
-              "raw": "\"center\""
-            },
-            "marginTop": {
-              "line": 356,
-              "col": 27,
-              "endCol": 29,
-              "raw": "16"
-            },
-            "gap": {
-              "line": 357,
-              "col": 21,
-              "endCol": 23,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:360": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 360
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flex": {
-              "line": 360,
-              "col": 35,
-              "endCol": 36,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:361": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 361
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 364,
-              "col": 30,
-              "endCol": 32,
-              "raw": "11"
-            },
-            "marginBottom": {
-              "line": 366,
-              "col": 34,
-              "endCol": 35,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:371": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 371
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "borderRadius": {
-              "line": 379,
-              "col": 34,
-              "endCol": 36,
-              "raw": "10"
-            },
-            "paddingHorizontal": {
-              "line": 380,
-              "col": 39,
-              "endCol": 41,
-              "raw": "12"
-            },
-            "paddingVertical": {
-              "line": 381,
-              "col": 37,
-              "endCol": 39,
-              "raw": "10"
-            },
-            "fontSize": {
-              "line": 383,
-              "col": 30,
-              "endCol": 32,
-              "raw": "16"
-            },
-            "borderWidth": {
-              "line": 385,
-              "col": 33,
-              "endCol": 34,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:391": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 391
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flex": {
-              "line": 391,
-              "col": 35,
-              "endCol": 36,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:392": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 392
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 395,
-              "col": 30,
-              "endCol": 32,
-              "raw": "11"
-            },
-            "marginBottom": {
-              "line": 397,
-              "col": 34,
-              "endCol": 35,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:402": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 402
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "borderRadius": {
-              "line": 410,
-              "col": 34,
-              "endCol": 36,
-              "raw": "10"
-            },
-            "paddingHorizontal": {
-              "line": 411,
-              "col": 39,
-              "endCol": 41,
-              "raw": "12"
-            },
-            "paddingVertical": {
-              "line": 412,
-              "col": 37,
-              "endCol": 39,
-              "raw": "10"
-            },
-            "fontSize": {
-              "line": 414,
-              "col": 30,
-              "endCol": 32,
-              "raw": "16"
-            },
-            "borderWidth": {
-              "line": 416,
-              "col": 33,
-              "endCol": 34,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:422": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 422
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "width": {
-              "line": 425,
-              "col": 25,
-              "endCol": 27,
-              "raw": "48"
-            },
-            "height": {
-              "line": 426,
-              "col": 26,
-              "endCol": 28,
-              "raw": "48"
-            },
-            "borderRadius": {
-              "line": 427,
-              "col": 32,
-              "endCol": 34,
-              "raw": "14"
-            },
-            "alignItems": {
-              "line": 429,
-              "col": 30,
-              "endCol": 38,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 430,
-              "col": 34,
-              "endCol": 42,
-              "raw": "\"center\""
-            },
-            "alignSelf": {
-              "line": 431,
-              "col": 29,
-              "endCol": 39,
-              "raw": "\"flex-end\""
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:441": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 441
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "alignItems": {
-              "line": 444,
-              "col": 28,
-              "endCol": 36,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 445,
-              "col": 30,
-              "endCol": 32,
-              "raw": "24"
-            },
-            "paddingVertical": {
-              "line": 446,
-              "col": 33,
-              "endCol": 35,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:449": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 449
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 452,
-              "col": 28,
-              "endCol": 30,
-              "raw": "14"
-            },
-            "marginBottom": {
-              "line": 454,
-              "col": 32,
-              "endCol": 34,
-              "raw": "12"
-            },
-            "textTransform": {
-              "line": 455,
-              "col": 33,
-              "endCol": 44,
-              "raw": "\"uppercase\""
-            },
-            "letterSpacing": {
-              "line": 456,
-              "col": 33,
-              "endCol": 34,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:468": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 468
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 471,
-              "col": 30,
-              "endCol": 32,
-              "raw": "32"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:479": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 479
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "marginTop": {
-              "line": 484,
-              "col": 36,
-              "endCol": 38,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:486": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 486
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 489,
-              "col": 30,
-              "endCol": 32,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:500": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 500
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flexDirection": {
-              "line": 502,
-              "col": 29,
-              "endCol": 34,
-              "raw": "\"row\""
-            },
-            "justifyContent": {
-              "line": 503,
-              "col": 30,
-              "endCol": 45,
-              "raw": "\"space-between\""
-            },
-            "alignItems": {
-              "line": 504,
-              "col": 26,
-              "endCol": 34,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 505,
-              "col": 28,
-              "endCol": 30,
-              "raw": "16"
-            },
-            "gap": {
-              "line": 506,
-              "col": 19,
-              "endCol": 21,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:509": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 509
-      },
-      "styles": [
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:527": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 527
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 530,
-              "col": 28,
-              "endCol": 30,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:538": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 538
-      },
-      "styles": [
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:560": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 560
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 563,
-              "col": 28,
-              "endCol": 30,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:587": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 587
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.container",
-          "file": "app/(tabs)/workouts.tsx",
-          "defLine": 712,
-          "properties": {
-            "flex": {
-              "line": 713,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:598": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 598
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 601,
-              "col": 24,
-              "endCol": 26,
-              "raw": "28"
-            },
-            "marginBottom": {
-              "line": 603,
-              "col": 28,
-              "endCol": 30,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:612": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 612
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "flexGrow": {
-              "line": 615,
-              "col": 31,
-              "endCol": 32,
-              "raw": "0"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:621": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 621
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "paddingHorizontal": {
-              "line": 625,
-              "col": 39,
-              "endCol": 41,
-              "raw": "16"
-            },
-            "paddingVertical": {
-              "line": 626,
-              "col": 37,
-              "endCol": 38,
-              "raw": "8"
-            },
-            "borderRadius": {
-              "line": 627,
-              "col": 34,
-              "endCol": 36,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:633": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 633
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 636,
-              "col": 32,
-              "endCol": 34,
-              "raw": "13"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:650": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 650
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "marginBottom": {
-              "line": 650,
-              "col": 74,
-              "endCol": 76,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:654": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 654
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "alignItems": {
-              "line": 657,
-              "col": 26,
-              "endCol": 34,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 658,
-              "col": 30,
-              "endCol": 38,
-              "raw": "\"center\""
-            },
-            "paddingVertical": {
-              "line": 659,
-              "col": 31,
-              "endCol": 33,
-              "raw": "60"
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:663": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 663
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 666,
-              "col": 26,
-              "endCol": 28,
-              "raw": "16"
-            },
-            "marginTop": {
-              "line": 668,
-              "col": 27,
-              "endCol": 29,
-              "raw": "12"
-            },
-            "textAlign": {
-              "line": 669,
-              "col": 27,
-              "endCol": 35,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:674": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 674
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 677,
-              "col": 26,
-              "endCol": 28,
-              "raw": "14"
-            },
-            "marginTop": {
-              "line": 679,
-              "col": 27,
-              "endCol": 28,
-              "raw": "4"
-            },
-            "textAlign": {
-              "line": 680,
-              "col": 27,
-              "endCol": 35,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "WorkoutsScreen@app/(tabs)/workouts.tsx:687": {
-      "element": {
-        "file": "app/(tabs)/workouts.tsx",
-        "line": 687
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/workouts.tsx",
-          "properties": {
-            "gap": {
-              "line": 687,
-              "col": 30,
-              "endCol": 32,
-              "raw": "12"
             }
           }
         }
@@ -4606,2060 +4298,6 @@
         }
       ]
     },
-    "ProgressScreen@app/(tabs)/progress.tsx:158": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 158
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.container",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 419,
-          "properties": {
-            "flex": {
-              "line": 420,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:169": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 169
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.title",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 422,
-          "properties": {
-            "fontSize": {
-              "line": 423,
-              "col": 14,
-              "endCol": 16,
-              "raw": "28"
-            },
-            "marginBottom": {
-              "line": 424,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:180": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 180
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.card",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 426,
-          "properties": {
-            "borderRadius": {
-              "line": 427,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 428,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "padding": {
-              "line": 429,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            },
-            "marginBottom": {
-              "line": 430,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:184": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 184
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.chartHeader",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 433,
-          "properties": {
-            "flexDirection": {
-              "line": 434,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "justifyContent": {
-              "line": 435,
-              "col": 20,
-              "endCol": 35,
-              "raw": "\"space-between\""
-            },
-            "alignItems": {
-              "line": 436,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:185": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 185
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.chartTitle",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 438,
-          "properties": {
-            "fontSize": {
-              "line": 439,
-              "col": 14,
-              "endCol": 16,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:193": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 193
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.pill",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 441,
-          "properties": {
-            "paddingHorizontal": {
-              "line": 442,
-              "col": 23,
-              "endCol": 25,
-              "raw": "12"
-            },
-            "paddingVertical": {
-              "line": 443,
-              "col": 21,
-              "endCol": 22,
-              "raw": "6"
-            },
-            "borderRadius": {
-              "line": 444,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:194": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 194
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.pillText",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 446,
-          "properties": {
-            "fontSize": {
-              "line": 447,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:205": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 205
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/progress.tsx",
-          "properties": {
-            "marginTop": {
-              "line": 208,
-              "col": 30,
-              "endCol": 32,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:280": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 280
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiCard",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 449,
-          "properties": {
-            "borderRadius": {
-              "line": 450,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 451,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "padding": {
-              "line": 452,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            },
-            "marginBottom": {
-              "line": 453,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "alignItems": {
-              "line": 454,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:284": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 284
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiText",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 457,
-          "properties": {
-            "fontSize": {
-              "line": 458,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:299": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 299
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.card",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 426,
-          "properties": {
-            "borderRadius": {
-              "line": 427,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 428,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "padding": {
-              "line": 429,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            },
-            "marginBottom": {
-              "line": 430,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:303": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 303
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/progress.tsx",
-          "properties": {
-            "marginBottom": {
-              "line": 303,
-              "col": 74,
-              "endCol": 76,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:306": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 306
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heatmapDayLabels",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 461,
-          "properties": {
-            "flexDirection": {
-              "line": 462,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "justifyContent": {
-              "line": 463,
-              "col": 20,
-              "endCol": 34,
-              "raw": "\"space-around\""
-            },
-            "marginBottom": {
-              "line": 464,
-              "col": 18,
-              "endCol": 19,
-              "raw": "6"
-            },
-            "paddingHorizontal": {
-              "line": 465,
-              "col": 23,
-              "endCol": 24,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:308": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 308
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.dayLabel",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 467,
-          "properties": {
-            "fontSize": {
-              "line": 468,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "width": {
-              "line": 469,
-              "col": 11,
-              "endCol": 13,
-              "raw": "28"
-            },
-            "textAlign": {
-              "line": 470,
-              "col": 15,
-              "endCol": 23,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:321": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 321
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heatmapContainer",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 472,
-          "properties": {
-            "gap": {
-              "line": 473,
-              "col": 9,
-              "endCol": 10,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:323": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 323
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heatmapRow",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 475,
-          "properties": {
-            "flexDirection": {
-              "line": 476,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "justifyContent": {
-              "line": 477,
-              "col": 20,
-              "endCol": 34,
-              "raw": "\"space-around\""
-            },
-            "gap": {
-              "line": 478,
-              "col": 9,
-              "endCol": 10,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:327": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 327
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.heatmapCell",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 480,
-          "properties": {
-            "flex": {
-              "line": 481,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "aspectRatio": {
-              "line": 482,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "borderRadius": {
-              "line": 483,
-              "col": 18,
-              "endCol": 19,
-              "raw": "4"
-            },
-            "borderCurve": {
-              "line": 484,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "maxWidth": {
-              "line": 485,
-              "col": 14,
-              "endCol": 16,
-              "raw": "36"
-            },
-            "maxHeight": {
-              "line": 486,
-              "col": 15,
-              "endCol": 17,
-              "raw": "36"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:344": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 344
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.legendContainer",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 488,
-          "properties": {
-            "flexDirection": {
-              "line": 489,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 490,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 491,
-              "col": 20,
-              "endCol": 28,
-              "raw": "\"center\""
-            },
-            "marginTop": {
-              "line": 492,
-              "col": 15,
-              "endCol": 17,
-              "raw": "12"
-            },
-            "gap": {
-              "line": 493,
-              "col": 9,
-              "endCol": 10,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:345": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 345
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.legendText",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 501,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "marginHorizontal": {
-              "line": 502,
-              "col": 22,
-              "endCol": 23,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:351": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 351
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.legendCell",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 495,
-          "properties": {
-            "width": {
-              "line": 496,
-              "col": 11,
-              "endCol": 13,
-              "raw": "12"
-            },
-            "height": {
-              "line": 497,
-              "col": 12,
-              "endCol": 14,
-              "raw": "12"
-            },
-            "borderRadius": {
-              "line": 498,
-              "col": 18,
-              "endCol": 19,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:363": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 363
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.legendText",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 501,
-              "col": 14,
-              "endCol": 16,
-              "raw": "10"
-            },
-            "marginHorizontal": {
-              "line": 502,
-              "col": 22,
-              "endCol": 23,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:370": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 370
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.card",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 426,
-          "properties": {
-            "borderRadius": {
-              "line": 427,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 428,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "padding": {
-              "line": 429,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            },
-            "marginBottom": {
-              "line": 430,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:374": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 374
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/progress.tsx",
-          "properties": {
-            "marginBottom": {
-              "line": 374,
-              "col": 71,
-              "endCol": 73,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:377": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 377
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.recordRow",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 504,
-          "properties": {
-            "flexDirection": {
-              "line": 505,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "justifyContent": {
-              "line": 506,
-              "col": 20,
-              "endCol": 35,
-              "raw": "\"space-between\""
-            },
-            "alignItems": {
-              "line": 507,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "paddingVertical": {
-              "line": 508,
-              "col": 21,
-              "endCol": 23,
-              "raw": "12"
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:387": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 387
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.recordLeft",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 510,
-          "properties": {
-            "flexDirection": {
-              "line": 511,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 512,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:388": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 388
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/progress.tsx",
-          "properties": {
-            "marginRight": {
-              "line": 392,
-              "col": 38,
-              "endCol": 40,
-              "raw": "10"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:394": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 394
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.recordLabel",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 514,
-          "properties": {
-            "fontSize": {
-              "line": 515,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "ProgressScreen@app/(tabs)/progress.tsx:403": {
-      "element": {
-        "file": "app/(tabs)/progress.tsx",
-        "line": 403
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.recordValue",
-          "file": "app/(tabs)/progress.tsx",
-          "defLine": 517,
-          "properties": {
-            "fontSize": {
-              "line": 518,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:141": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 141
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.container",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 392,
-          "properties": {
-            "flex": {
-              "line": 393,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:142": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 142
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.scroll",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 395,
-          "properties": {
-            "flex": {
-              "line": 396,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:152": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 152
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.screenTitle",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 401,
-          "properties": {
-            "fontSize": {
-              "line": 403,
-              "col": 14,
-              "endCol": 16,
-              "raw": "28"
-            },
-            "marginBottom": {
-              "line": 404,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:158": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 158
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.modeTabsContainer",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 406,
-          "properties": {
-            "flexDirection": {
-              "line": 407,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "borderRadius": {
-              "line": 408,
-              "col": 18,
-              "endCol": 20,
-              "raw": "12"
-            },
-            "borderCurve": {
-              "line": 409,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "borderWidth": {
-              "line": 410,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "padding": {
-              "line": 411,
-              "col": 13,
-              "endCol": 14,
-              "raw": "4"
-            },
-            "marginBottom": {
-              "line": 412,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:163": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 163
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.modeTab",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 414,
-          "properties": {
-            "flex": {
-              "line": 415,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "paddingVertical": {
-              "line": 416,
-              "col": 21,
-              "endCol": 23,
-              "raw": "10"
-            },
-            "alignItems": {
-              "line": 417,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "borderRadius": {
-              "line": 418,
-              "col": 18,
-              "endCol": 19,
-              "raw": "9"
-            },
-            "borderCurve": {
-              "line": 419,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            }
-          }
-        },
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:171": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 171
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.modeTabText",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 421,
-          "properties": {
-            "fontSize": {
-              "line": 422,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:188": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 188
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.pillsScroll",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 424,
-          "properties": {
-            "flexGrow": {
-              "line": 425,
-              "col": 14,
-              "endCol": 15,
-              "raw": "0"
-            },
-            "marginBottom": {
-              "line": 426,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:197": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 197
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.pill",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 432,
-          "properties": {
-            "flexDirection": {
-              "line": 433,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 434,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "gap": {
-              "line": 435,
-              "col": 9,
-              "endCol": 10,
-              "raw": "6"
-            },
-            "paddingHorizontal": {
-              "line": 436,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            },
-            "paddingVertical": {
-              "line": 437,
-              "col": 21,
-              "endCol": 23,
-              "raw": "10"
-            },
-            "borderRadius": {
-              "line": 438,
-              "col": 18,
-              "endCol": 20,
-              "raw": "24"
-            },
-            "borderCurve": {
-              "line": 439,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "borderWidth": {
-              "line": 440,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:215": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 215
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.pillText",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 442,
-          "properties": {
-            "fontSize": {
-              "line": 443,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:233": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 233
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.mapCard",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 445,
-          "properties": {
-            "borderRadius": {
-              "line": 446,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            },
-            "borderCurve": {
-              "line": 447,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "borderWidth": {
-              "line": 448,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "padding": {
-              "line": 449,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            },
-            "marginBottom": {
-              "line": 450,
-              "col": 18,
-              "endCol": 20,
-              "raw": "24"
-            },
-            "overflow": {
-              "line": 451,
-              "col": 14,
-              "endCol": 22,
-              "raw": "\"hidden\""
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:261": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 261
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statsSection",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 453,
-          "properties": {
-            "marginBottom": {
-              "line": 454,
-              "col": 18,
-              "endCol": 20,
-              "raw": "32"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:263": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 263
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.distanceContainer",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 456,
-          "properties": {
-            "alignItems": {
-              "line": 457,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 458,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:264": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 264
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.distanceLabel",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 460,
-          "properties": {
-            "fontSize": {
-              "line": 462,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            },
-            "marginBottom": {
-              "line": 463,
-              "col": 18,
-              "endCol": 19,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:267": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 267
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.distanceValue",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 465,
-          "properties": {
-            "fontSize": {
-              "line": 467,
-              "col": 14,
-              "endCol": 16,
-              "raw": "48"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:269": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 269
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.distanceUnit",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 473,
-          "properties": {
-            "fontSize": {
-              "line": 474,
-              "col": 14,
-              "endCol": 16,
-              "raw": "20"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:274": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 274
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statsRow",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 477,
-          "properties": {
-            "flexDirection": {
-              "line": 478,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 479,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 480,
-              "col": 20,
-              "endCol": 34,
-              "raw": "\"space-around\""
-            },
-            "marginBottom": {
-              "line": 481,
-              "col": 18,
-              "endCol": 20,
-              "raw": "24"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:275": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 275
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statItem",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 483,
-          "properties": {
-            "alignItems": {
-              "line": 484,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "flex": {
-              "line": 485,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:276": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 276
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statLabel",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 487,
-          "properties": {
-            "fontSize": {
-              "line": 489,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginBottom": {
-              "line": 490,
-              "col": 18,
-              "endCol": 19,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:279": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 279
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statValue",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 492,
-          "properties": {
-            "fontSize": {
-              "line": 494,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:282": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 282
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statUnit",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 502,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "marginTop": {
-              "line": 503,
-              "col": 15,
-              "endCol": 16,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:287": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 287
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statDivider",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 505,
-          "properties": {
-            "width": {
-              "line": 506,
-              "col": 11,
-              "endCol": 12,
-              "raw": "1"
-            },
-            "height": {
-              "line": 507,
-              "col": 12,
-              "endCol": 14,
-              "raw": "36"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:289": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 289
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statItem",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 483,
-          "properties": {
-            "alignItems": {
-              "line": 484,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "flex": {
-              "line": 485,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:290": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 290
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statLabel",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 487,
-          "properties": {
-            "fontSize": {
-              "line": 489,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginBottom": {
-              "line": 490,
-              "col": 18,
-              "endCol": 19,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:293": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 293
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statValue",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 492,
-          "properties": {
-            "fontSize": {
-              "line": 494,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:298": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 298
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statDivider",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 505,
-          "properties": {
-            "width": {
-              "line": 506,
-              "col": 11,
-              "endCol": 12,
-              "raw": "1"
-            },
-            "height": {
-              "line": 507,
-              "col": 12,
-              "endCol": 14,
-              "raw": "36"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:300": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 300
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statItem",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 483,
-          "properties": {
-            "alignItems": {
-              "line": 484,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "flex": {
-              "line": 485,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:301": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 301
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statLabel",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 487,
-          "properties": {
-            "fontSize": {
-              "line": 489,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginBottom": {
-              "line": 490,
-              "col": 18,
-              "endCol": 19,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:304": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 304
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statValue",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 492,
-          "properties": {
-            "fontSize": {
-              "line": 494,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:307": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 307
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statUnit",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 502,
-              "col": 14,
-              "endCol": 16,
-              "raw": "11"
-            },
-            "marginTop": {
-              "line": 503,
-              "col": 15,
-              "endCol": 16,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:314": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 314
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.controlButtons",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 509,
-          "properties": {
-            "flexDirection": {
-              "line": 510,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "gap": {
-              "line": 511,
-              "col": 9,
-              "endCol": 11,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:315": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 315
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/activity.tsx",
-          "properties": {
-            "flex": {
-              "line": 320,
-              "col": 31,
-              "endCol": 32,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:322": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 322
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/activity.tsx",
-          "properties": {
-            "flex": {
-              "line": 327,
-              "col": 31,
-              "endCol": 32,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:332": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 332
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.startSection",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 513,
-          "properties": {
-            "alignItems": {
-              "line": 514,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 515,
-              "col": 18,
-              "endCol": 20,
-              "raw": "32"
-            },
-            "paddingVertical": {
-              "line": 516,
-              "col": 21,
-              "endCol": 23,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:333": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 333
-      },
-      "styles": [
-        {
-          "origin": "dynamic",
-          "resolvable": false
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:344": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 344
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.startButtonText",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 536,
-          "properties": {
-            "fontSize": {
-              "line": 538,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            },
-            "color": {
-              "line": 539,
-              "col": 11,
-              "endCol": 20,
-              "raw": "\"#0A0E1A\""
-            },
-            "marginTop": {
-              "line": 540,
-              "col": 15,
-              "endCol": 16,
-              "raw": "6"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:350": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 350
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.recentSection",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 542,
-          "properties": {
-            "marginTop": {
-              "line": 543,
-              "col": 15,
-              "endCol": 16,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:351": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 351
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app/(tabs)/activity.tsx",
-          "properties": {
-            "marginBottom": {
-              "line": 351,
-              "col": 74,
-              "endCol": 76,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:354": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 354
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.emptyState",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 548,
-          "properties": {
-            "alignItems": {
-              "line": 549,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 550,
-              "col": 20,
-              "endCol": 28,
-              "raw": "\"center\""
-            },
-            "paddingVertical": {
-              "line": 551,
-              "col": 21,
-              "endCol": 23,
-              "raw": "40"
-            },
-            "borderRadius": {
-              "line": 552,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 553,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "borderWidth": {
-              "line": 554,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:356": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 356
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.emptyText",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 556,
-          "properties": {
-            "fontSize": {
-              "line": 558,
-              "col": 14,
-              "endCol": 16,
-              "raw": "16"
-            },
-            "marginTop": {
-              "line": 559,
-              "col": 15,
-              "endCol": 17,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:359": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 359
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.emptySubtext",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 561,
-          "properties": {
-            "fontSize": {
-              "line": 563,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "marginTop": {
-              "line": 564,
-              "col": 15,
-              "endCol": 16,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ActivityScreen@app/(tabs)/activity.tsx:364": {
-      "element": {
-        "file": "app/(tabs)/activity.tsx",
-        "line": 364
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.activityList",
-          "file": "app/(tabs)/activity.tsx",
-          "defLine": 545,
-          "properties": {
-            "gap": {
-              "line": 546,
-              "col": 9,
-              "endCol": 11,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
     "ProfileScreen@app/(tabs)/profile.tsx:63": {
       "element": {
         "file": "app/(tabs)/profile.tsx",
@@ -8418,10 +6056,982 @@
         }
       ]
     },
-    "ActionButton@components/action-button.tsx:60": {
+    "ActivityScreen@app/(tabs)/activity.tsx:141": {
       "element": {
-        "file": "components/action-button.tsx",
-        "line": 60
+        "file": "app/(tabs)/activity.tsx",
+        "line": 141
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 392,
+          "properties": {
+            "flex": {
+              "line": 393,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:142": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 142
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.scroll",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 395,
+          "properties": {
+            "flex": {
+              "line": 396,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:152": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 152
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.screenTitle",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 401,
+          "properties": {
+            "fontSize": {
+              "line": 403,
+              "col": 14,
+              "endCol": 16,
+              "raw": "28"
+            },
+            "marginBottom": {
+              "line": 404,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:158": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 158
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.modeTabsContainer",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 406,
+          "properties": {
+            "flexDirection": {
+              "line": 407,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "borderRadius": {
+              "line": 408,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            },
+            "borderCurve": {
+              "line": 409,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "borderWidth": {
+              "line": 410,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "padding": {
+              "line": 411,
+              "col": 13,
+              "endCol": 14,
+              "raw": "4"
+            },
+            "marginBottom": {
+              "line": 412,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:163": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 163
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.modeTab",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 414,
+          "properties": {
+            "flex": {
+              "line": 415,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "paddingVertical": {
+              "line": 416,
+              "col": 21,
+              "endCol": 23,
+              "raw": "10"
+            },
+            "alignItems": {
+              "line": 417,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "borderRadius": {
+              "line": 418,
+              "col": 18,
+              "endCol": 19,
+              "raw": "9"
+            },
+            "borderCurve": {
+              "line": 419,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            }
+          }
+        },
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:171": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 171
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.modeTabText",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 421,
+          "properties": {
+            "fontSize": {
+              "line": 422,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:188": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 188
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.pillsScroll",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 424,
+          "properties": {
+            "flexGrow": {
+              "line": 425,
+              "col": 14,
+              "endCol": 15,
+              "raw": "0"
+            },
+            "marginBottom": {
+              "line": 426,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:197": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 197
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.pill",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 432,
+          "properties": {
+            "flexDirection": {
+              "line": 433,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 434,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "gap": {
+              "line": 435,
+              "col": 9,
+              "endCol": 10,
+              "raw": "6"
+            },
+            "paddingHorizontal": {
+              "line": 436,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "paddingVertical": {
+              "line": 437,
+              "col": 21,
+              "endCol": 23,
+              "raw": "10"
+            },
+            "borderRadius": {
+              "line": 438,
+              "col": 18,
+              "endCol": 20,
+              "raw": "24"
+            },
+            "borderCurve": {
+              "line": 439,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "borderWidth": {
+              "line": 440,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:215": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 215
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.pillText",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 442,
+          "properties": {
+            "fontSize": {
+              "line": 443,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:233": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 233
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.mapCard",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 445,
+          "properties": {
+            "borderRadius": {
+              "line": 446,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            },
+            "borderCurve": {
+              "line": 447,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "borderWidth": {
+              "line": 448,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "padding": {
+              "line": 449,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            },
+            "marginBottom": {
+              "line": 450,
+              "col": 18,
+              "endCol": 20,
+              "raw": "24"
+            },
+            "overflow": {
+              "line": 451,
+              "col": 14,
+              "endCol": 22,
+              "raw": "\"hidden\""
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:261": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 261
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statsSection",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 453,
+          "properties": {
+            "marginBottom": {
+              "line": 454,
+              "col": 18,
+              "endCol": 20,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:263": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 263
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.distanceContainer",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 456,
+          "properties": {
+            "alignItems": {
+              "line": 457,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 458,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:264": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 264
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.distanceLabel",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 460,
+          "properties": {
+            "fontSize": {
+              "line": 462,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "marginBottom": {
+              "line": 463,
+              "col": 18,
+              "endCol": 19,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:267": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 267
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.distanceValue",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 465,
+          "properties": {
+            "fontSize": {
+              "line": 467,
+              "col": 14,
+              "endCol": 16,
+              "raw": "48"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:269": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 269
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.distanceUnit",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 473,
+          "properties": {
+            "fontSize": {
+              "line": 474,
+              "col": 14,
+              "endCol": 16,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:274": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 274
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statsRow",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 477,
+          "properties": {
+            "flexDirection": {
+              "line": 478,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 479,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 480,
+              "col": 20,
+              "endCol": 34,
+              "raw": "\"space-around\""
+            },
+            "marginBottom": {
+              "line": 481,
+              "col": 18,
+              "endCol": 20,
+              "raw": "24"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:275": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 275
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statItem",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 483,
+          "properties": {
+            "alignItems": {
+              "line": 484,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "flex": {
+              "line": 485,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:276": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 276
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statLabel",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 487,
+          "properties": {
+            "fontSize": {
+              "line": 489,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginBottom": {
+              "line": 490,
+              "col": 18,
+              "endCol": 19,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:279": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 279
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statValue",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 492,
+          "properties": {
+            "fontSize": {
+              "line": 494,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:282": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 282
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statUnit",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 500,
+          "properties": {
+            "fontSize": {
+              "line": 502,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "marginTop": {
+              "line": 503,
+              "col": 15,
+              "endCol": 16,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:287": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 287
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statDivider",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 505,
+          "properties": {
+            "width": {
+              "line": 506,
+              "col": 11,
+              "endCol": 12,
+              "raw": "1"
+            },
+            "height": {
+              "line": 507,
+              "col": 12,
+              "endCol": 14,
+              "raw": "36"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:289": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 289
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statItem",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 483,
+          "properties": {
+            "alignItems": {
+              "line": 484,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "flex": {
+              "line": 485,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:290": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 290
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statLabel",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 487,
+          "properties": {
+            "fontSize": {
+              "line": 489,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginBottom": {
+              "line": 490,
+              "col": 18,
+              "endCol": 19,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:293": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 293
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statValue",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 492,
+          "properties": {
+            "fontSize": {
+              "line": 494,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:298": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 298
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statDivider",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 505,
+          "properties": {
+            "width": {
+              "line": 506,
+              "col": 11,
+              "endCol": 12,
+              "raw": "1"
+            },
+            "height": {
+              "line": 507,
+              "col": 12,
+              "endCol": 14,
+              "raw": "36"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:300": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 300
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statItem",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 483,
+          "properties": {
+            "alignItems": {
+              "line": 484,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "flex": {
+              "line": 485,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:301": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 301
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statLabel",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 487,
+          "properties": {
+            "fontSize": {
+              "line": 489,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginBottom": {
+              "line": 490,
+              "col": 18,
+              "endCol": 19,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:304": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 304
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statValue",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 492,
+          "properties": {
+            "fontSize": {
+              "line": 494,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:307": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 307
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statUnit",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 500,
+          "properties": {
+            "fontSize": {
+              "line": 502,
+              "col": 14,
+              "endCol": 16,
+              "raw": "11"
+            },
+            "marginTop": {
+              "line": 503,
+              "col": 15,
+              "endCol": 16,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:314": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 314
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.controlButtons",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 509,
+          "properties": {
+            "flexDirection": {
+              "line": 510,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "gap": {
+              "line": 511,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:315": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 315
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/activity.tsx",
+          "properties": {
+            "flex": {
+              "line": 320,
+              "col": 31,
+              "endCol": 32,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:322": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 322
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/activity.tsx",
+          "properties": {
+            "flex": {
+              "line": 327,
+              "col": 31,
+              "endCol": 32,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:332": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 332
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.startSection",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 513,
+          "properties": {
+            "alignItems": {
+              "line": 514,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 515,
+              "col": 18,
+              "endCol": 20,
+              "raw": "32"
+            },
+            "paddingVertical": {
+              "line": 516,
+              "col": 21,
+              "endCol": 23,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:333": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 333
       },
       "styles": [
         {
@@ -8430,53 +7040,1379 @@
         }
       ]
     },
-    "ActionButton@components/action-button.tsx:85": {
+    "ActivityScreen@app/(tabs)/activity.tsx:344": {
       "element": {
-        "file": "components/action-button.tsx",
-        "line": 85
+        "file": "app/(tabs)/activity.tsx",
+        "line": 344
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.startButtonText",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 536,
+          "properties": {
+            "fontSize": {
+              "line": 538,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "color": {
+              "line": 539,
+              "col": 11,
+              "endCol": 20,
+              "raw": "\"#0A0E1A\""
+            },
+            "marginTop": {
+              "line": 540,
+              "col": 15,
+              "endCol": 16,
+              "raw": "6"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:350": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 350
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.recentSection",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 542,
+          "properties": {
+            "marginTop": {
+              "line": 543,
+              "col": 15,
+              "endCol": 16,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:351": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 351
       },
       "styles": [
         {
           "origin": "inline",
-          "file": "components/action-button.tsx",
+          "file": "app/(tabs)/activity.tsx",
           "properties": {
-            "flexDirection": {
-              "line": 85,
-              "col": 38,
-              "endCol": 43,
-              "raw": "\"row\""
-            },
+            "marginBottom": {
+              "line": 351,
+              "col": 74,
+              "endCol": 76,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:354": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 354
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.emptyState",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 548,
+          "properties": {
             "alignItems": {
-              "line": 85,
-              "col": 57,
-              "endCol": 65,
+              "line": 549,
+              "col": 16,
+              "endCol": 24,
               "raw": "\"center\""
             },
+            "justifyContent": {
+              "line": 550,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            },
+            "paddingVertical": {
+              "line": 551,
+              "col": 21,
+              "endCol": 23,
+              "raw": "40"
+            },
+            "borderRadius": {
+              "line": 552,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 553,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "borderWidth": {
+              "line": 554,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:356": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 356
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.emptyText",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 556,
+          "properties": {
+            "fontSize": {
+              "line": 558,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            },
+            "marginTop": {
+              "line": 559,
+              "col": 15,
+              "endCol": 17,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:359": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 359
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.emptySubtext",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 561,
+          "properties": {
+            "fontSize": {
+              "line": 563,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "marginTop": {
+              "line": 564,
+              "col": 15,
+              "endCol": 16,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ActivityScreen@app/(tabs)/activity.tsx:364": {
+      "element": {
+        "file": "app/(tabs)/activity.tsx",
+        "line": 364
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.activityList",
+          "file": "app/(tabs)/activity.tsx",
+          "defLine": 545,
+          "properties": {
             "gap": {
-              "line": 85,
-              "col": 72,
-              "endCol": 73,
+              "line": 546,
+              "col": 9,
+              "endCol": 11,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:221": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 221
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "app/(tabs)/workouts.tsx",
+          "defLine": 712,
+          "properties": {
+            "flex": {
+              "line": 713,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:231": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 231
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "alignItems": {
+              "line": 231,
+              "col": 91,
+              "endCol": 99,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 231,
+              "col": 115,
+              "endCol": 116,
               "raw": "8"
             }
           }
         }
       ]
     },
-    "ActionButton@components/action-button.tsx:87": {
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:232": {
       "element": {
-        "file": "components/action-button.tsx",
-        "line": 87
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 232
       },
       "styles": [
         {
           "origin": "inline",
-          "file": "components/action-button.tsx",
+          "file": "app/(tabs)/workouts.tsx",
           "properties": {
             "fontSize": {
-              "line": 90,
+              "line": 235,
+              "col": 26,
+              "endCol": 28,
+              "raw": "22"
+            },
+            "textAlign": {
+              "line": 237,
+              "col": 27,
+              "endCol": 35,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:245": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 245
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "alignItems": {
+              "line": 245,
+              "col": 93,
+              "endCol": 101,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 245,
+              "col": 117,
+              "endCol": 119,
+              "raw": "24"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:246": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 246
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 249,
+              "col": 26,
+              "endCol": 28,
+              "raw": "36"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:256": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 256
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 259,
+              "col": 26,
+              "endCol": 28,
+              "raw": "13"
+            },
+            "marginTop": {
+              "line": 261,
+              "col": 27,
+              "endCol": 28,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:269": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 269
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "borderRadius": {
+              "line": 273,
+              "col": 28,
+              "endCol": 30,
+              "raw": "16"
+            },
+            "padding": {
+              "line": 274,
+              "col": 23,
+              "endCol": 25,
+              "raw": "20"
+            },
+            "marginBottom": {
+              "line": 275,
+              "col": 28,
+              "endCol": 30,
+              "raw": "16"
+            },
+            "borderWidth": {
+              "line": 276,
+              "col": 27,
+              "endCol": 28,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:280": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 280
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flexDirection": {
+              "line": 280,
+              "col": 42,
+              "endCol": 47,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 280,
+              "col": 61,
+              "endCol": 69,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 280,
+              "col": 85,
+              "endCol": 87,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:281": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 281
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "width": {
+              "line": 283,
+              "col": 25,
+              "endCol": 27,
+              "raw": "40"
+            },
+            "height": {
+              "line": 284,
+              "col": 26,
+              "endCol": 28,
+              "raw": "40"
+            },
+            "borderRadius": {
+              "line": 285,
+              "col": 32,
+              "endCol": 34,
+              "raw": "12"
+            },
+            "alignItems": {
+              "line": 287,
+              "col": 30,
+              "endCol": 38,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 288,
+              "col": 34,
+              "endCol": 42,
+              "raw": "\"center\""
+            },
+            "marginRight": {
+              "line": 289,
+              "col": 31,
+              "endCol": 33,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:294": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 294
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flex": {
+              "line": 294,
+              "col": 35,
+              "endCol": 36,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:295": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 295
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 298,
+              "col": 30,
+              "endCol": 32,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:304": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 304
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 307,
+              "col": 30,
+              "endCol": 32,
+              "raw": "13"
+            },
+            "marginTop": {
+              "line": 309,
+              "col": 31,
+              "endCol": 32,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:321": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 321
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flexDirection": {
+              "line": 324,
+              "col": 35,
+              "endCol": 40,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 325,
+              "col": 32,
+              "endCol": 40,
+              "raw": "\"center\""
+            },
+            "paddingVertical": {
+              "line": 326,
+              "col": 37,
+              "endCol": 39,
+              "raw": "10"
+            },
+            "borderBottomWidth": {
+              "line": 328,
+              "col": 39,
+              "endCol": 40,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:332": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 332
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flex": {
+              "line": 332,
+              "col": 39,
+              "endCol": 40,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:333": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 333
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 336,
+              "col": 34,
+              "endCol": 36,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:352": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 352
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flexDirection": {
+              "line": 354,
+              "col": 31,
+              "endCol": 36,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 355,
+              "col": 28,
+              "endCol": 36,
+              "raw": "\"center\""
+            },
+            "marginTop": {
+              "line": 356,
+              "col": 27,
+              "endCol": 29,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 357,
+              "col": 21,
+              "endCol": 23,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:360": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 360
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flex": {
+              "line": 360,
+              "col": 35,
+              "endCol": 36,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:361": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 361
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 364,
+              "col": 30,
+              "endCol": 32,
+              "raw": "11"
+            },
+            "marginBottom": {
+              "line": 366,
+              "col": 34,
+              "endCol": 35,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:371": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 371
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "borderRadius": {
+              "line": 379,
+              "col": 34,
+              "endCol": 36,
+              "raw": "10"
+            },
+            "paddingHorizontal": {
+              "line": 380,
+              "col": 39,
+              "endCol": 41,
+              "raw": "12"
+            },
+            "paddingVertical": {
+              "line": 381,
+              "col": 37,
+              "endCol": 39,
+              "raw": "10"
+            },
+            "fontSize": {
+              "line": 383,
+              "col": 30,
+              "endCol": 32,
+              "raw": "16"
+            },
+            "borderWidth": {
+              "line": 385,
+              "col": 33,
+              "endCol": 34,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:391": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 391
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flex": {
+              "line": 391,
+              "col": 35,
+              "endCol": 36,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:392": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 392
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 395,
+              "col": 30,
+              "endCol": 32,
+              "raw": "11"
+            },
+            "marginBottom": {
+              "line": 397,
+              "col": 34,
+              "endCol": 35,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:402": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 402
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "borderRadius": {
+              "line": 410,
+              "col": 34,
+              "endCol": 36,
+              "raw": "10"
+            },
+            "paddingHorizontal": {
+              "line": 411,
+              "col": 39,
+              "endCol": 41,
+              "raw": "12"
+            },
+            "paddingVertical": {
+              "line": 412,
+              "col": 37,
+              "endCol": 39,
+              "raw": "10"
+            },
+            "fontSize": {
+              "line": 414,
+              "col": 30,
+              "endCol": 32,
+              "raw": "16"
+            },
+            "borderWidth": {
+              "line": 416,
+              "col": 33,
+              "endCol": 34,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:422": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 422
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "width": {
+              "line": 425,
+              "col": 25,
+              "endCol": 27,
+              "raw": "48"
+            },
+            "height": {
+              "line": 426,
+              "col": 26,
+              "endCol": 28,
+              "raw": "48"
+            },
+            "borderRadius": {
+              "line": 427,
+              "col": 32,
+              "endCol": 34,
+              "raw": "14"
+            },
+            "alignItems": {
+              "line": 429,
+              "col": 30,
+              "endCol": 38,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 430,
+              "col": 34,
+              "endCol": 42,
+              "raw": "\"center\""
+            },
+            "alignSelf": {
+              "line": 431,
+              "col": 29,
+              "endCol": 39,
+              "raw": "\"flex-end\""
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:441": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 441
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "alignItems": {
+              "line": 444,
+              "col": 28,
+              "endCol": 36,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 445,
+              "col": 30,
+              "endCol": 32,
+              "raw": "24"
+            },
+            "paddingVertical": {
+              "line": 446,
+              "col": 33,
+              "endCol": 35,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:449": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 449
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 452,
+              "col": 28,
+              "endCol": 30,
+              "raw": "14"
+            },
+            "marginBottom": {
+              "line": 454,
+              "col": 32,
+              "endCol": 34,
+              "raw": "12"
+            },
+            "textTransform": {
+              "line": 455,
+              "col": 33,
+              "endCol": 44,
+              "raw": "\"uppercase\""
+            },
+            "letterSpacing": {
+              "line": 456,
+              "col": 33,
+              "endCol": 34,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:468": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 468
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 471,
+              "col": 30,
+              "endCol": 32,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:479": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 479
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "marginTop": {
+              "line": 484,
+              "col": 36,
+              "endCol": 38,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:486": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 486
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 489,
+              "col": 30,
+              "endCol": 32,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:500": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 500
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flexDirection": {
+              "line": 502,
+              "col": 29,
+              "endCol": 34,
+              "raw": "\"row\""
+            },
+            "justifyContent": {
+              "line": 503,
+              "col": 30,
+              "endCol": 45,
+              "raw": "\"space-between\""
+            },
+            "alignItems": {
+              "line": 504,
+              "col": 26,
+              "endCol": 34,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 505,
+              "col": 28,
+              "endCol": 30,
+              "raw": "16"
+            },
+            "gap": {
+              "line": 506,
+              "col": 19,
+              "endCol": 21,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:509": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 509
+      },
+      "styles": [
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:527": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 527
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 530,
+              "col": 28,
+              "endCol": 30,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:538": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 538
+      },
+      "styles": [
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:560": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 560
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 563,
+              "col": 28,
+              "endCol": 30,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:587": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 587
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "app/(tabs)/workouts.tsx",
+          "defLine": 712,
+          "properties": {
+            "flex": {
+              "line": 713,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:598": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 598
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 601,
               "col": 24,
               "endCol": 26,
+              "raw": "28"
+            },
+            "marginBottom": {
+              "line": 603,
+              "col": 28,
+              "endCol": 30,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:612": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 612
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "flexGrow": {
+              "line": 615,
+              "col": 31,
+              "endCol": 32,
+              "raw": "0"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:621": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 621
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "paddingHorizontal": {
+              "line": 625,
+              "col": 39,
+              "endCol": 41,
               "raw": "16"
+            },
+            "paddingVertical": {
+              "line": 626,
+              "col": 37,
+              "endCol": 38,
+              "raw": "8"
+            },
+            "borderRadius": {
+              "line": 627,
+              "col": 34,
+              "endCol": 36,
+              "raw": "20"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:633": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 633
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 636,
+              "col": 32,
+              "endCol": 34,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:650": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 650
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "marginBottom": {
+              "line": 650,
+              "col": 74,
+              "endCol": 76,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:654": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 654
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "alignItems": {
+              "line": 657,
+              "col": 26,
+              "endCol": 34,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 658,
+              "col": 30,
+              "endCol": 38,
+              "raw": "\"center\""
+            },
+            "paddingVertical": {
+              "line": 659,
+              "col": 31,
+              "endCol": 33,
+              "raw": "60"
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:663": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 663
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 666,
+              "col": 26,
+              "endCol": 28,
+              "raw": "16"
+            },
+            "marginTop": {
+              "line": 668,
+              "col": 27,
+              "endCol": 29,
+              "raw": "12"
+            },
+            "textAlign": {
+              "line": 669,
+              "col": 27,
+              "endCol": 35,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:674": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 674
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 677,
+              "col": 26,
+              "endCol": 28,
+              "raw": "14"
+            },
+            "marginTop": {
+              "line": 679,
+              "col": 27,
+              "endCol": 28,
+              "raw": "4"
+            },
+            "textAlign": {
+              "line": 680,
+              "col": 27,
+              "endCol": 35,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "WorkoutsScreen@app/(tabs)/workouts.tsx:687": {
+      "element": {
+        "file": "app/(tabs)/workouts.tsx",
+        "line": 687
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app/(tabs)/workouts.tsx",
+          "properties": {
+            "gap": {
+              "line": 687,
+              "col": 30,
+              "endCol": 32,
+              "raw": "12"
             }
           }
         }
@@ -8597,6 +8533,294 @@
               "col": 24,
               "endCol": 26,
               "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "ActionButton@components/action-button.tsx:60": {
+      "element": {
+        "file": "components/action-button.tsx",
+        "line": 60
+      },
+      "styles": [
+        {
+          "origin": "dynamic",
+          "resolvable": false
+        }
+      ]
+    },
+    "ActionButton@components/action-button.tsx:85": {
+      "element": {
+        "file": "components/action-button.tsx",
+        "line": 85
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/action-button.tsx",
+          "properties": {
+            "flexDirection": {
+              "line": 85,
+              "col": 38,
+              "endCol": 43,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 85,
+              "col": 57,
+              "endCol": 65,
+              "raw": "\"center\""
+            },
+            "gap": {
+              "line": 85,
+              "col": 72,
+              "endCol": 73,
+              "raw": "8"
+            }
+          }
+        }
+      ]
+    },
+    "ActionButton@components/action-button.tsx:87": {
+      "element": {
+        "file": "components/action-button.tsx",
+        "line": 87
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/action-button.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 90,
+              "col": 24,
+              "endCol": 26,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProgressRing@components/progress-ring.tsx:51": {
+      "element": {
+        "file": "components/progress-ring.tsx",
+        "line": 51
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/progress-ring.tsx",
+          "properties": {
+            "alignItems": {
+              "line": 55,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 56,
+              "col": 24,
+              "endCol": 32,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProgressRing@components/progress-ring.tsx:59": {
+      "element": {
+        "file": "components/progress-ring.tsx",
+        "line": 59
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/progress-ring.tsx",
+          "properties": {
+            "position": {
+              "line": 59,
+              "col": 57,
+              "endCol": 67,
+              "raw": "\"absolute\""
+            }
+          }
+        }
+      ]
+    },
+    "ProgressRing@components/progress-ring.tsx:82": {
+      "element": {
+        "file": "components/progress-ring.tsx",
+        "line": 82
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/progress-ring.tsx",
+          "properties": {
+            "alignItems": {
+              "line": 82,
+              "col": 35,
+              "endCol": 43,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 82,
+              "col": 61,
+              "endCol": 69,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "AchievementBadge@components/achievement-badge.tsx:23": {
+      "element": {
+        "file": "components/achievement-badge.tsx",
+        "line": 23
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/achievement-badge.tsx",
+          "properties": {
+            "borderRadius": {
+              "line": 26,
+              "col": 22,
+              "endCol": 24,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 27,
+              "col": 21,
+              "endCol": 33,
+              "raw": "\"continuous\""
+            },
+            "padding": {
+              "line": 28,
+              "col": 17,
+              "endCol": 19,
+              "raw": "16"
+            },
+            "borderWidth": {
+              "line": 29,
+              "col": 21,
+              "endCol": 22,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 31,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            },
+            "minWidth": {
+              "line": 33,
+              "col": 18,
+              "endCol": 21,
+              "raw": "110"
+            }
+          }
+        }
+      ]
+    },
+    "AchievementBadge@components/achievement-badge.tsx:36": {
+      "element": {
+        "file": "components/achievement-badge.tsx",
+        "line": 36
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/achievement-badge.tsx",
+          "properties": {
+            "width": {
+              "line": 38,
+              "col": 17,
+              "endCol": 19,
+              "raw": "56"
+            },
+            "height": {
+              "line": 39,
+              "col": 18,
+              "endCol": 20,
+              "raw": "56"
+            },
+            "borderRadius": {
+              "line": 40,
+              "col": 24,
+              "endCol": 26,
+              "raw": "28"
+            },
+            "alignItems": {
+              "line": 44,
+              "col": 22,
+              "endCol": 30,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 45,
+              "col": 26,
+              "endCol": 34,
+              "raw": "\"center\""
+            },
+            "marginBottom": {
+              "line": 46,
+              "col": 24,
+              "endCol": 26,
+              "raw": "10"
+            }
+          }
+        }
+      ]
+    },
+    "AchievementBadge@components/achievement-badge.tsx:56": {
+      "element": {
+        "file": "components/achievement-badge.tsx",
+        "line": 56
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/achievement-badge.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 59,
+              "col": 20,
+              "endCol": 22,
+              "raw": "13"
+            },
+            "textAlign": {
+              "line": 61,
+              "col": 21,
+              "endCol": 29,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "AchievementBadge@components/achievement-badge.tsx:70": {
+      "element": {
+        "file": "components/achievement-badge.tsx",
+        "line": 70
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "components/achievement-badge.tsx",
+          "properties": {
+            "fontSize": {
+              "line": 73,
+              "col": 22,
+              "endCol": 24,
+              "raw": "11"
+            },
+            "textAlign": {
+              "line": 75,
+              "col": 23,
+              "endCol": 31,
+              "raw": "\"center\""
             }
           }
         }
@@ -8951,158 +9175,6 @@
               "col": 26,
               "endCol": 28,
               "raw": "11"
-            }
-          }
-        }
-      ]
-    },
-    "AchievementBadge@components/achievement-badge.tsx:23": {
-      "element": {
-        "file": "components/achievement-badge.tsx",
-        "line": 23
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "components/achievement-badge.tsx",
-          "properties": {
-            "borderRadius": {
-              "line": 26,
-              "col": 22,
-              "endCol": 24,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 27,
-              "col": 21,
-              "endCol": 33,
-              "raw": "\"continuous\""
-            },
-            "padding": {
-              "line": 28,
-              "col": 17,
-              "endCol": 19,
-              "raw": "16"
-            },
-            "borderWidth": {
-              "line": 29,
-              "col": 21,
-              "endCol": 22,
-              "raw": "1"
-            },
-            "alignItems": {
-              "line": 31,
-              "col": 20,
-              "endCol": 28,
-              "raw": "\"center\""
-            },
-            "minWidth": {
-              "line": 33,
-              "col": 18,
-              "endCol": 21,
-              "raw": "110"
-            }
-          }
-        }
-      ]
-    },
-    "AchievementBadge@components/achievement-badge.tsx:36": {
-      "element": {
-        "file": "components/achievement-badge.tsx",
-        "line": 36
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "components/achievement-badge.tsx",
-          "properties": {
-            "width": {
-              "line": 38,
-              "col": 17,
-              "endCol": 19,
-              "raw": "56"
-            },
-            "height": {
-              "line": 39,
-              "col": 18,
-              "endCol": 20,
-              "raw": "56"
-            },
-            "borderRadius": {
-              "line": 40,
-              "col": 24,
-              "endCol": 26,
-              "raw": "28"
-            },
-            "alignItems": {
-              "line": 44,
-              "col": 22,
-              "endCol": 30,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 45,
-              "col": 26,
-              "endCol": 34,
-              "raw": "\"center\""
-            },
-            "marginBottom": {
-              "line": 46,
-              "col": 24,
-              "endCol": 26,
-              "raw": "10"
-            }
-          }
-        }
-      ]
-    },
-    "AchievementBadge@components/achievement-badge.tsx:56": {
-      "element": {
-        "file": "components/achievement-badge.tsx",
-        "line": 56
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "components/achievement-badge.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 59,
-              "col": 20,
-              "endCol": 22,
-              "raw": "13"
-            },
-            "textAlign": {
-              "line": 61,
-              "col": 21,
-              "endCol": 29,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "AchievementBadge@components/achievement-badge.tsx:70": {
-      "element": {
-        "file": "components/achievement-badge.tsx",
-        "line": 70
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "components/achievement-badge.tsx",
-          "properties": {
-            "fontSize": {
-              "line": 73,
-              "col": 22,
-              "endCol": 24,
-              "raw": "11"
-            },
-            "textAlign": {
-              "line": 75,
-              "col": 23,
-              "endCol": 31,
-              "raw": "\"center\""
             }
           }
         }
