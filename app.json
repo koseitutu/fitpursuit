@@ -36,7 +36,8 @@
       ]
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/077cc5a6-5457-4097-a391-1db9ac57c70a/dev-preview/"
     },
     "extra": {
       "eas": {
