@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
+import Animated, { FadeInDown } from "react-native-reanimated";
 import Svg, { Path, Circle } from "react-native-svg";
 import { useTheme } from "@/hooks/useTheme";
 import { useAppStore } from "@/store/useAppStore";
@@ -232,7 +232,7 @@ export default function ActivityScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <Animated.View entering={FadeIn.duration(400)} style={styles.headerRow}>
+        <View style={styles.headerRow}>
           <Text style={[styles.screenTitle, { color: colors.textPrimary }]}>
             {selectedLabel}
           </Text>
@@ -243,7 +243,7 @@ export default function ActivityScreen() {
           >
             <Ionicons name="add" size={20} color="#0A0E1A" />
           </Pressable>
-        </Animated.View>
+        </View>
 
         {/* Mode Tabs */}
         <Animated.View

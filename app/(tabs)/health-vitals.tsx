@@ -141,7 +141,7 @@ export default function HealthVitalsScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <Animated.View entering={FadeInDown.duration(400)} style={styles.headerRow}>
+        <View style={styles.headerRow}>
           <Text style={[styles.screenTitle, { color: colors.textPrimary }]}>
             Health Vitals
           </Text>
@@ -161,7 +161,7 @@ export default function HealthVitalsScreen() {
               <Ionicons name="add" size={20} color="#0A0E1A" />
             </Pressable>
           </View>
-        </Animated.View>
+        </View>
 
         {/* Latest Reading Card */}
         {latestReading ? (
@@ -467,7 +467,7 @@ export default function HealthVitalsScreen() {
             />
 
             {/* Preview category */}
-            {systolic && diastolic && Number(systolic) > 0 && Number(diastolic) > 0 && (
+            {systolic.length > 0 && diastolic.length > 0 && Number(systolic) > 0 && Number(diastolic) > 0 ? (
               <View style={styles.previewCategory}>
                 <View
                   style={[
@@ -502,7 +502,7 @@ export default function HealthVitalsScreen() {
                   </Text>
                 </View>
               </View>
-            )}
+            ) : null}
 
             {/* Save Button */}
             <Pressable
