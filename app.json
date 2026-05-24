@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Fitpursuit",
-    "slug": "fitpursuit",
+    "name": "FitPursuit",
+    "slug": "fitPursuit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/app-icon.png",
@@ -12,6 +12,7 @@
       "supportsTablet": false
     },
     "android": {
+      "package": "com.ktutu.fitpursuit",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#10192b"
@@ -40,7 +41,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "your-project-id-from-expo-dev"
+        "projectId": "8882cc7d-db7f-482f-9e97-b37f64b6afc1"
       }
     }
   }
