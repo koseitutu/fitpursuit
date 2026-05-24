@@ -13,6 +13,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const [loaded, error] = useFonts(FontMap);
   const onboardingCompleted = useAppStore((state) => state.onboardingCompleted);
+  const themeMode = useAppStore((state) => state.themeMode);
   const router = useRouter();
   const segments = useSegments();
 
@@ -37,14 +38,16 @@ export default function RootLayout() {
     return null;
   }
 
+  const bgColor = themeMode === "dark" ? "#0A0E1A" : "#F5F7FA";
+
   return (
-    <GestureHandlerRootView style={{ flex: 1, backgroundColor: "#0A0E1A" }}>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: bgColor }}>
       <SafeAreaProvider>
-        <StatusBar style="light" />
+        <StatusBar style={themeMode === "dark" ? "light" : "dark"} />
         <Stack
           screenOptions={{
             headerShown: false,
-            contentStyle: { backgroundColor: "#0A0E1A" },
+            contentStyle: { backgroundColor: bgColor },
             animation: "fade",
           }}
         >

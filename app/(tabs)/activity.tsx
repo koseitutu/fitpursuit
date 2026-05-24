@@ -6,6 +6,9 @@ import {
   Pressable,
   StyleSheet,
   Platform,
+  Modal,
+  TextInput,
+  Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -17,7 +20,7 @@ import { Fonts } from "@/constants/Typography";
 import { ActionButton } from "@/components/action-button";
 import { ActivityCard } from "@/components/activity-card";
 import { SectionHeader } from "@/components/section-header";
-import type { ActivityType } from "@/store/types";
+import type { Activity, ActivityType } from "@/store/types";
 
 const ACTIVITY_TYPES: { key: ActivityType; label: string; icon: keyof typeof Ionicons.glyphMap }[] = [
   { key: "running", label: "Running", icon: "footsteps-outline" },
@@ -62,17 +65,28 @@ export default function ActivityScreen() {
   const activeActivity = useAppStore((state) => state.activeActivity);
   const startActivity = useAppStore((state) => state.startActivity);
   const endActivity = useAppStore((state) => state.endActivity);
+  const addActivity = useAppStore((state) => state.addActivity);
+  const updateActivity = useAppStore((state) => state.updateActivity);
+  const deleteActivity = useAppStore((state) => state.deleteActivity);
 
   const [selectedType, setSelectedType] = useState<ActivityType>("running");
   const [selectedMode, setSelectedMode] = useState<typeof MODE_TABS[number]>("Outdoor Run");
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // Modal state
+  const [showModal, setShowModal] = useState(false);
+  const [editingActivity, setEditingActivity] = useState<Activity | null>(null);
+  const [formType, setFormType] = useState<ActivityType>("running");
+  const [formDuration, setFormDuration] = useState("");
+  const [formDistance, setFormDistance] = useState("");
+  const [formSteps, setFormSteps] = useState("");
+  const [formCalories, setFormCalories] = useState("");
+
   // Timer logic
   useEffect(() => {
     if (activeActivity) {
       const startTime = new Date(activeActivity.startedAt).getTime();
-      // Initialize elapsed time from when activity started
       const now = Date.now();
       setElapsedSeconds(Math.floor((now - startTime) / 1000));
 
@@ -114,7 +128,6 @@ export default function ActivityScreen() {
   const handleStop = useCallback(() => {
     if (!activeActivity) return;
     const durationMin = Math.round(elapsedSeconds / 60);
-    // Simulated values based on elapsed time
     const distance = parseFloat((elapsedSeconds * 0.0022).toFixed(2));
     const calories = Math.round(elapsedSeconds * 0.15);
     const pace = distance > 0 ? parseFloat(((durationMin / distance)).toFixed(2)) : 0;
@@ -127,6 +140,77 @@ export default function ActivityScreen() {
       steps: Math.round(elapsedSeconds * 2.5),
     });
   }, [activeActivity, elapsedSeconds, endActivity]);
+
+  // Add/Edit Modal
+  const handleOpenAdd = () => {
+    setEditingActivity(null);
+    setFormType("running");
+    setFormDuration("");
+    setFormDistance("");
+    setFormSteps("");
+    setFormCalories("");
+    setShowModal(true);
+  };
+
+  const handleOpenEdit = (activity: Activity) => {
+    setEditingActivity(activity);
+    setFormType(activity.type);
+    setFormDuration(String(activity.duration));
+    setFormDistance(String(activity.distance));
+    setFormSteps(String(activity.steps));
+    setFormCalories(String(activity.caloriesBurned));
+    setShowModal(true);
+  };
+
+  const handleDelete = (id: string) => {
+    Alert.alert("Delete Activity", "Are you sure you want to delete this activity?", [
+      { text: "Cancel", style: "cancel" },
+      {
+        text: "Delete",
+        style: "destructive",
+        onPress: () => deleteActivity(id),
+      },
+    ]);
+  };
+
+  const handleSaveActivity = () => {
+    const duration = Number(formDuration) || 0;
+    const distance = Number(formDistance) || 0;
+    const steps = Number(formSteps) || 0;
+    const calories = Number(formCalories) || 0;
+
+    if (duration <= 0) {
+      Alert.alert("Error", "Duration must be greater than 0");
+      return;
+    }
+
+    if (editingActivity) {
+      updateActivity(editingActivity.id, {
+        type: formType,
+        duration,
+        distance,
+        steps,
+        caloriesBurned: calories,
+        pace: distance > 0 ? Math.round((duration / distance) * 100) / 100 : 0,
+      });
+    } else {
+      const newActivity: Activity = {
+        id: `activity-manual-${Date.now()}`,
+        type: formType,
+        duration,
+        distance,
+        steps,
+        pace: distance > 0 ? Math.round((duration / distance) * 100) / 100 : 0,
+        caloriesBurned: calories,
+        route: [],
+        startedAt: new Date().toISOString(),
+        endedAt: new Date().toISOString(),
+      };
+      addActivity(newActivity);
+    }
+
+    setShowModal(false);
+  };
 
   // Simulated live stats
   const liveDistance = (elapsedSeconds * 0.0022).toFixed(2);
@@ -148,10 +232,17 @@ export default function ActivityScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* Header */}
-        <Animated.View entering={FadeIn.duration(400)}>
+        <Animated.View entering={FadeIn.duration(400)} style={styles.headerRow}>
           <Text style={[styles.screenTitle, { color: colors.textPrimary }]}>
             {selectedLabel}
           </Text>
+          <Pressable
+            onPress={handleOpenAdd}
+            style={[styles.addBtn, { backgroundColor: colors.primary }]}
+            hitSlop={8}
+          >
+            <Ionicons name="add" size={20} color="#0A0E1A" />
+          </Pressable>
         </Animated.View>
 
         {/* Mode Tabs */}
@@ -235,7 +326,6 @@ export default function ActivityScreen() {
           style={[styles.mapCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
         >
           <Svg width="100%" height={160} viewBox="0 0 320 160">
-            {/* Stylized route path */}
             <Path
               d="M 30 130 C 60 110, 80 40, 120 60 S 180 120, 220 80 S 260 20, 290 50"
               stroke={colors.primary}
@@ -244,12 +334,10 @@ export default function ActivityScreen() {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-            {/* Route dots */}
             <Circle cx={30} cy={130} r={5} fill={colors.primary} />
             <Circle cx={120} cy={60} r={4} fill={colors.primary} opacity={0.7} />
             <Circle cx={220} cy={80} r={4} fill={colors.primary} opacity={0.7} />
             <Circle cx={290} cy={50} r={6} fill={colors.accent} />
-            {/* Decorative faded dots */}
             <Circle cx={75} cy={55} r={2} fill={colors.primary} opacity={0.3} />
             <Circle cx={150} cy={100} r={2} fill={colors.primary} opacity={0.3} />
             <Circle cx={255} cy={35} r={2} fill={colors.primary} opacity={0.3} />
@@ -259,7 +347,6 @@ export default function ActivityScreen() {
         {/* Active Activity Stats or Start Button */}
         {activeActivity ? (
           <Animated.View entering={FadeInDown.delay(250).duration(400)} style={styles.statsSection}>
-            {/* Distance - large */}
             <View style={styles.distanceContainer}>
               <Text style={[styles.distanceLabel, { color: colors.textSecondary }]}>
                 Distance
@@ -270,26 +357,19 @@ export default function ActivityScreen() {
               </Text>
             </View>
 
-            {/* Stats row */}
             <View style={styles.statsRow}>
               <View style={styles.statItem}>
-                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
-                  Pace
-                </Text>
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Pace</Text>
                 <Text style={[styles.statValue, { color: colors.textPrimary }]}>
                   {livePaceMinPerKm > 0 ? formatPace(livePaceMinPerKm) : "--'--\""}
                 </Text>
-                <Text style={[styles.statUnit, { color: colors.textSecondary }]}>
-                  /km
-                </Text>
+                <Text style={[styles.statUnit, { color: colors.textSecondary }]}>/km</Text>
               </View>
 
               <View style={[styles.statDivider, { backgroundColor: colors.border }]} />
 
               <View style={styles.statItem}>
-                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
-                  Duration
-                </Text>
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Duration</Text>
                 <Text style={[styles.statValue, { color: colors.textPrimary }]}>
                   {formatDuration(elapsedSeconds)}
                 </Text>
@@ -298,31 +378,17 @@ export default function ActivityScreen() {
               <View style={[styles.statDivider, { backgroundColor: colors.border }]} />
 
               <View style={styles.statItem}>
-                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
-                  Calories
-                </Text>
-                <Text style={[styles.statValue, { color: colors.accent }]}>
-                  {liveCalories}
-                </Text>
-                <Text style={[styles.statUnit, { color: colors.textSecondary }]}>
-                  kcal
-                </Text>
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Calories</Text>
+                <Text style={[styles.statValue, { color: colors.accent }]}>{liveCalories}</Text>
+                <Text style={[styles.statUnit, { color: colors.textSecondary }]}>kcal</Text>
               </View>
             </View>
 
-            {/* Control buttons */}
             <View style={styles.controlButtons}>
               <ActionButton
-                title="Start/Stop"
+                title="Stop"
                 icon="stop-circle-outline"
                 variant="primary"
-                onPress={handleStop}
-                style={{ flex: 1 }}
-              />
-              <ActionButton
-                title="Pause"
-                icon="pause-outline"
-                variant="accent"
                 onPress={handleStop}
                 style={{ flex: 1 }}
               />
@@ -362,7 +428,7 @@ export default function ActivityScreen() {
             </View>
           ) : (
             <View style={styles.activityList}>
-              {activities.slice(0, 5).map((activity, index) => {
+              {activities.slice(0, 10).map((activity, index) => {
                 const typeLabel =
                   activity.type.charAt(0).toUpperCase() + activity.type.slice(1);
                 return (
@@ -376,7 +442,25 @@ export default function ActivityScreen() {
                       distance={activity.distance}
                       calories={activity.caloriesBurned}
                       date={formatRelativeDate(activity.startedAt)}
+                      onPress={() => handleOpenEdit(activity)}
                     />
+                    {/* Action overlay */}
+                    <View style={styles.activityActions}>
+                      <Pressable
+                        onPress={() => handleOpenEdit(activity)}
+                        hitSlop={8}
+                        style={[styles.activityActionBtn, { backgroundColor: colors.surface }]}
+                      >
+                        <Ionicons name="pencil" size={12} color={colors.primary} />
+                      </Pressable>
+                      <Pressable
+                        onPress={() => handleDelete(activity.id)}
+                        hitSlop={8}
+                        style={[styles.activityActionBtn, { backgroundColor: colors.surface }]}
+                      >
+                        <Ionicons name="trash-outline" size={12} color={colors.error} />
+                      </Pressable>
+                    </View>
                   </Animated.View>
                 );
               })}
@@ -384,6 +468,135 @@ export default function ActivityScreen() {
           )}
         </Animated.View>
       </ScrollView>
+
+      {/* Add/Edit Activity Modal */}
+      <Modal
+        visible={showModal}
+        animationType="slide"
+        transparent
+        onRequestClose={() => setShowModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <Pressable style={styles.modalBackdrop} onPress={() => setShowModal(false)} />
+          <View
+            style={[
+              styles.modalContent,
+              { backgroundColor: colors.background, paddingBottom: insets.bottom + 20 },
+            ]}
+          >
+            <View style={styles.modalHandle}>
+              <View style={[styles.handleBar, { backgroundColor: colors.border }]} />
+            </View>
+
+            <Text style={[styles.modalTitle, { color: colors.textPrimary }]}>
+              {editingActivity ? "Edit Activity" : "Add Activity"}
+            </Text>
+
+            {/* Activity Type */}
+            <Text style={[styles.modalLabel, { color: colors.textSecondary }]}>Type</Text>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              style={{ flexGrow: 0, marginBottom: 16 }}
+              contentContainerStyle={{ gap: 8 }}
+            >
+              {ACTIVITY_TYPES.map((type) => (
+                <Pressable
+                  key={type.key}
+                  onPress={() => setFormType(type.key)}
+                  style={[
+                    styles.modalTypeChip,
+                    {
+                      backgroundColor: formType === type.key ? colors.primary : colors.surface,
+                      borderColor: formType === type.key ? colors.primary : colors.border,
+                    },
+                  ]}
+                >
+                  <Ionicons
+                    name={type.icon}
+                    size={14}
+                    color={formType === type.key ? "#0A0E1A" : colors.textSecondary}
+                  />
+                  <Text
+                    style={{
+                      fontFamily: formType === type.key ? Fonts.semiBold : Fonts.medium,
+                      fontSize: 12,
+                      color: formType === type.key ? "#0A0E1A" : colors.textSecondary,
+                    }}
+                  >
+                    {type.label}
+                  </Text>
+                </Pressable>
+              ))}
+            </ScrollView>
+
+            {/* Form Fields */}
+            <View style={styles.modalFormGrid}>
+              <View style={styles.modalFormCol}>
+                <Text style={[styles.modalLabel, { color: colors.textSecondary }]}>
+                  Duration (min)
+                </Text>
+                <TextInput
+                  style={[styles.modalInput, { color: colors.textPrimary, backgroundColor: colors.surface, borderColor: colors.border }]}
+                  value={formDuration}
+                  onChangeText={setFormDuration}
+                  placeholder="30"
+                  placeholderTextColor={colors.textSecondary}
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.modalFormCol}>
+                <Text style={[styles.modalLabel, { color: colors.textSecondary }]}>
+                  Distance (km)
+                </Text>
+                <TextInput
+                  style={[styles.modalInput, { color: colors.textPrimary, backgroundColor: colors.surface, borderColor: colors.border }]}
+                  value={formDistance}
+                  onChangeText={setFormDistance}
+                  placeholder="5.0"
+                  placeholderTextColor={colors.textSecondary}
+                  keyboardType="numeric"
+                />
+              </View>
+            </View>
+
+            <View style={styles.modalFormGrid}>
+              <View style={styles.modalFormCol}>
+                <Text style={[styles.modalLabel, { color: colors.textSecondary }]}>Steps</Text>
+                <TextInput
+                  style={[styles.modalInput, { color: colors.textPrimary, backgroundColor: colors.surface, borderColor: colors.border }]}
+                  value={formSteps}
+                  onChangeText={setFormSteps}
+                  placeholder="6000"
+                  placeholderTextColor={colors.textSecondary}
+                  keyboardType="numeric"
+                />
+              </View>
+              <View style={styles.modalFormCol}>
+                <Text style={[styles.modalLabel, { color: colors.textSecondary }]}>Calories</Text>
+                <TextInput
+                  style={[styles.modalInput, { color: colors.textPrimary, backgroundColor: colors.surface, borderColor: colors.border }]}
+                  value={formCalories}
+                  onChangeText={setFormCalories}
+                  placeholder="300"
+                  placeholderTextColor={colors.textSecondary}
+                  keyboardType="numeric"
+                />
+              </View>
+            </View>
+
+            {/* Save Button */}
+            <Pressable
+              onPress={handleSaveActivity}
+              style={[styles.modalSaveBtn, { backgroundColor: colors.primary }]}
+            >
+              <Text style={styles.modalSaveBtnText}>
+                {editingActivity ? "Update Activity" : "Add Activity"}
+              </Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -398,10 +611,23 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingHorizontal: 20,
   },
+  headerRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 16,
+  },
   screenTitle: {
     fontFamily: Fonts.bold,
     fontSize: 28,
-    marginBottom: 16,
+  },
+  addBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    borderCurve: "continuous",
+    alignItems: "center",
+    justifyContent: "center",
   },
   modeTabsContainer: {
     flexDirection: "row",
@@ -545,6 +771,20 @@ const styles = StyleSheet.create({
   activityList: {
     gap: 12,
   },
+  activityActions: {
+    position: "absolute",
+    top: 8,
+    right: 8,
+    flexDirection: "row",
+    gap: 4,
+  },
+  activityActionBtn: {
+    width: 28,
+    height: 28,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   emptyState: {
     alignItems: "center",
     justifyContent: "center",
@@ -562,5 +802,79 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.regular,
     fontSize: 13,
     marginTop: 4,
+  },
+  // Modal styles
+  modalOverlay: {
+    flex: 1,
+    justifyContent: "flex-end",
+  },
+  modalBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  modalContent: {
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    padding: 20,
+  },
+  modalHandle: {
+    alignItems: "center",
+    marginBottom: 16,
+  },
+  handleBar: {
+    width: 36,
+    height: 4,
+    borderRadius: 2,
+  },
+  modalTitle: {
+    fontFamily: Fonts.bold,
+    fontSize: 20,
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  modalLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 12,
+    marginBottom: 6,
+  },
+  modalTypeChip: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 16,
+    borderCurve: "continuous",
+    borderWidth: 1,
+  },
+  modalFormGrid: {
+    flexDirection: "row",
+    gap: 12,
+    marginBottom: 14,
+  },
+  modalFormCol: {
+    flex: 1,
+  },
+  modalInput: {
+    height: 48,
+    borderRadius: 12,
+    borderCurve: "continuous",
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    fontFamily: Fonts.regular,
+    fontSize: 15,
+  },
+  modalSaveBtn: {
+    height: 52,
+    borderRadius: 14,
+    borderCurve: "continuous",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+  },
+  modalSaveBtnText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 16,
+    color: "#0A0E1A",
   },
 });

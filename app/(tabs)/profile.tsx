@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   Text,
   ScrollView,
-  Switch,
   Pressable,
   StyleSheet,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "@/hooks/useTheme";
@@ -27,21 +27,23 @@ const SAMPLE_BADGES = [
 
 export default function ProfileScreen() {
   const insets = useSafeAreaInsets();
-  const { colors, isDark, toggle } = useTheme();
+  const { colors } = useTheme();
+  const router = useRouter();
+
   const userProfile = useAppStore((state) => state.userProfile);
   const workouts = useAppStore((state) => state.workouts);
   const activities = useAppStore((state) => state.activities);
   const streaks = useAppStore((state) => state.streaks);
   const achievements = useAppStore((state) => state.achievements);
-
-  const [units, setUnits] = useState<"metric" | "imperial">("metric");
-  const [notifications, setNotifications] = useState(true);
+  const weightLog = useAppStore((state) => state.weightLog);
 
   const name = userProfile?.name ?? "Alex Johnson";
   const fitnessLevel = userProfile?.fitnessLevel ?? "intermediate";
   const stepGoal = userProfile?.dailyStepGoal ?? 10000;
   const calorieTarget = userProfile?.dailyCalorieTarget ?? 2200;
   const waterGoal = userProfile?.dailyWaterGoal ?? 2500;
+  const heightCm = userProfile?.height ?? 170;
+  const weightKg = userProfile?.weight ?? 70;
 
   const initials = name
     .split(" ")
@@ -54,6 +56,11 @@ export default function ProfileScreen() {
   const totalDistance = activities.reduce((sum, a) => sum + (a.distance ?? 0), 0);
   const bestStreak = streaks.longestStreak;
 
+  // BMI calculation
+  const bmi = heightCm > 0 && weightKg > 0
+    ? Math.round((weightKg / ((heightCm / 100) * (heightCm / 100))) * 10) / 10
+    : 0;
+
   const displayBadges =
     achievements.length > 0
       ? achievements.slice(0, 6)
@@ -62,7 +69,10 @@ export default function ProfileScreen() {
   return (
     <ScrollView
       style={[styles.container, { backgroundColor: colors.background }]}
-      contentContainerStyle={{ paddingBottom: insets.bottom + 32 }}
+      contentContainerStyle={{
+        paddingTop: insets.top + 16,
+        paddingBottom: insets.bottom + 32,
+      }}
       showsVerticalScrollIndicator={false}
     >
       {/* Avatar */}
@@ -73,9 +83,7 @@ export default function ProfileScreen() {
         <View
           style={[
             styles.avatarOuter,
-            {
-              borderColor: colors.primary,
-            },
+            { borderColor: colors.primary },
           ]}
         >
           <View
@@ -119,6 +127,17 @@ export default function ProfileScreen() {
             {fitnessLevel.charAt(0).toUpperCase() + fitnessLevel.slice(1)}
           </Text>
         </View>
+
+        {/* Edit Profile Button */}
+        <Pressable
+          onPress={() => router.push("/(tabs)/edit-profile")}
+          style={[styles.editProfileBtn, { borderColor: colors.primary }]}
+        >
+          <Ionicons name="pencil" size={14} color={colors.primary} />
+          <Text style={[styles.editProfileText, { color: colors.primary }]}>
+            Edit Profile
+          </Text>
+        </Pressable>
       </Animated.View>
 
       {/* Stats Row */}
@@ -128,18 +147,12 @@ export default function ProfileScreen() {
       >
         <View style={styles.statItem}>
           <Text
-            style={[
-              styles.statValue,
-              { color: colors.textPrimary, fontFamily: Fonts.bold },
-            ]}
+            style={[styles.statValue, { color: colors.textPrimary, fontFamily: Fonts.bold }]}
           >
             {totalWorkouts}
           </Text>
           <Text
-            style={[
-              styles.statLabel,
-              { color: colors.textSecondary, fontFamily: Fonts.regular },
-            ]}
+            style={[styles.statLabel, { color: colors.textSecondary, fontFamily: Fonts.regular }]}
           >
             Workouts
           </Text>
@@ -149,18 +162,12 @@ export default function ProfileScreen() {
 
         <View style={styles.statItem}>
           <Text
-            style={[
-              styles.statValue,
-              { color: colors.textPrimary, fontFamily: Fonts.bold },
-            ]}
+            style={[styles.statValue, { color: colors.textPrimary, fontFamily: Fonts.bold }]}
           >
             {totalDistance.toFixed(1)} km
           </Text>
           <Text
-            style={[
-              styles.statLabel,
-              { color: colors.textSecondary, fontFamily: Fonts.regular },
-            ]}
+            style={[styles.statLabel, { color: colors.textSecondary, fontFamily: Fonts.regular }]}
           >
             Distance
           </Text>
@@ -170,23 +177,50 @@ export default function ProfileScreen() {
 
         <View style={styles.statItem}>
           <Text
-            style={[
-              styles.statValue,
-              { color: colors.textPrimary, fontFamily: Fonts.bold },
-            ]}
+            style={[styles.statValue, { color: colors.textPrimary, fontFamily: Fonts.bold }]}
           >
             {bestStreak} days
           </Text>
           <Text
-            style={[
-              styles.statLabel,
-              { color: colors.textSecondary, fontFamily: Fonts.regular },
-            ]}
+            style={[styles.statLabel, { color: colors.textSecondary, fontFamily: Fonts.regular }]}
           >
             Best Streak
           </Text>
         </View>
       </Animated.View>
+
+      {/* BMI Card */}
+      {bmi > 0 && (
+        <Animated.View
+          entering={FadeInDown.delay(250).duration(500)}
+          style={[styles.bmiCard, { backgroundColor: colors.surface }]}
+        >
+          <View style={styles.bmiRow}>
+            <View style={[styles.bmiCircle, { borderColor: colors.primary }]}>
+              <Text style={[styles.bmiValue, { color: colors.primary }]}>
+                {bmi}
+              </Text>
+            </View>
+            <View style={{ flex: 1, marginLeft: 14 }}>
+              <Text style={[styles.bmiTitle, { color: colors.textPrimary }]}>
+                Body Mass Index
+              </Text>
+              <Text style={[styles.bmiCategory, { color: colors.success }]}>
+                {bmi < 18.5
+                  ? "Underweight"
+                  : bmi < 25
+                    ? "Normal"
+                    : bmi < 30
+                      ? "Overweight"
+                      : "Obese"}
+              </Text>
+              <Text style={[styles.bmiDetail, { color: colors.textSecondary }]}>
+                {heightCm}cm · {weightKg}kg
+              </Text>
+            </View>
+          </View>
+        </Animated.View>
+      )}
 
       {/* Daily Goals Section */}
       <Animated.View entering={FadeInDown.delay(300).duration(500)} style={styles.section}>
@@ -215,111 +249,74 @@ export default function ProfileScreen() {
         </View>
       </Animated.View>
 
-      {/* Preferences Section */}
+      {/* Quick Actions Section */}
       <Animated.View entering={FadeInDown.delay(400).duration(500)} style={styles.section}>
-        <SectionHeader title="Preferences" />
-        <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <View style={styles.settingsRow}>
-            <View style={styles.settingsRowLeft}>
-              <Ionicons
-                name={isDark ? "moon" : "sunny"}
-                size={20}
-                color={colors.primary}
-                style={styles.rowIcon}
-              />
-              <Text
-                style={[
-                  styles.rowLabel,
-                  { color: colors.textPrimary, fontFamily: Fonts.medium },
-                ]}
-              >
-                Dark Mode
-              </Text>
-            </View>
-            <Switch
-              value={isDark}
-              onValueChange={toggle}
-              trackColor={{ false: colors.border, true: colors.primary }}
-              thumbColor="#FFFFFF"
-            />
-          </View>
-
-          <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
-
-          <Pressable
-            style={styles.settingsRow}
-            onPress={() => setUnits(units === "metric" ? "imperial" : "metric")}
-            android_ripple={{ color: colors.primary + "20" }}
-          >
-            <View style={styles.settingsRowLeft}>
-              <Ionicons
-                name="speedometer"
-                size={20}
-                color={colors.primary}
-                style={styles.rowIcon}
-              />
-              <Text
-                style={[
-                  styles.rowLabel,
-                  { color: colors.textPrimary, fontFamily: Fonts.medium },
-                ]}
-              >
-                Units
-              </Text>
-            </View>
-            <Text
-              style={[
-                styles.rowValue,
-                { color: colors.textSecondary, fontFamily: Fonts.regular },
-              ]}
-            >
-              {units === "metric" ? "Metric" : "Imperial"}
-            </Text>
-          </Pressable>
-
-          <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
-
-          <View style={styles.settingsRow}>
-            <View style={styles.settingsRowLeft}>
-              <Ionicons
-                name="notifications"
-                size={20}
-                color={colors.primary}
-                style={styles.rowIcon}
-              />
-              <Text
-                style={[
-                  styles.rowLabel,
-                  { color: colors.textPrimary, fontFamily: Fonts.medium },
-                ]}
-              >
-                Notifications
-              </Text>
-            </View>
-            <Switch
-              value={notifications}
-              onValueChange={setNotifications}
-              trackColor={{ false: colors.border, true: colors.primary }}
-              thumbColor="#FFFFFF"
-            />
-          </View>
-        </View>
-      </Animated.View>
-
-      {/* Account Section */}
-      <Animated.View entering={FadeInDown.delay(500).duration(500)} style={styles.section}>
         <SectionHeader title="Account" />
         <View style={[styles.card, { backgroundColor: colors.surface }]}>
-          <AccountRow icon="person" label="Edit Profile" colors={colors} />
+          <AccountRow
+            icon="person"
+            label="Edit Profile"
+            colors={colors}
+            onPress={() => router.push("/(tabs)/edit-profile")}
+          />
           <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
-          <AccountRow icon="download" label="Export Data" colors={colors} />
+          <AccountRow
+            icon="settings"
+            label="Settings"
+            colors={colors}
+            onPress={() => router.push("/(tabs)/settings")}
+          />
           <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
-          <AccountRow icon="information-circle" label="About" colors={colors} />
+          <AccountRow
+            icon="cloud-upload"
+            label="Import Data"
+            colors={colors}
+            onPress={() => router.push("/(tabs)/import-data")}
+          />
+          <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
+          <AccountRow
+            icon="heart"
+            label="Health Vitals"
+            colors={colors}
+            onPress={() => router.push("/(tabs)/health-vitals")}
+          />
+          <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
+          <AccountRow
+            icon="trending-up"
+            label="Progress"
+            colors={colors}
+            onPress={() => router.push("/(tabs)/progress")}
+          />
         </View>
       </Animated.View>
 
+      {/* Weight History */}
+      {weightLog.length > 0 && (
+        <Animated.View entering={FadeInDown.delay(450).duration(500)} style={styles.section}>
+          <SectionHeader title="Weight History" onSeeAll={() => router.push("/(tabs)/progress")} />
+          <View style={[styles.card, { backgroundColor: colors.surface }]}>
+            {weightLog.slice(-5).reverse().map((entry, i) => (
+              <View key={entry.date}>
+                {i > 0 && <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />}
+                <View style={styles.weightRow}>
+                  <Text style={[styles.weightDate, { color: colors.textSecondary }]}>
+                    {entry.date}
+                  </Text>
+                  <Text style={[styles.weightValue, { color: colors.textPrimary }]}>
+                    {entry.weight} kg
+                  </Text>
+                  <Text style={[styles.weightBmi, { color: colors.primary }]}>
+                    BMI {entry.bmi}
+                  </Text>
+                </View>
+              </View>
+            ))}
+          </View>
+        </Animated.View>
+      )}
+
       {/* Achievement Badges */}
-      <Animated.View entering={FadeInDown.delay(600).duration(500)} style={styles.section}>
+      <Animated.View entering={FadeInDown.delay(500).duration(500)} style={styles.section}>
         <SectionHeader title="Achievements" onSeeAll={() => {}} />
         <ScrollView
           horizontal
@@ -341,7 +338,7 @@ export default function ProfileScreen() {
       </Animated.View>
 
       {/* Version Info */}
-      <Animated.View entering={FadeInDown.delay(700).duration(500)} style={styles.versionSection}>
+      <Animated.View entering={FadeInDown.delay(600).duration(500)} style={styles.versionSection}>
         <Text
           style={[
             styles.versionText,
@@ -397,12 +394,14 @@ interface AccountRowProps {
   icon: keyof typeof Ionicons.glyphMap;
   label: string;
   colors: ReturnType<typeof useTheme>["colors"];
+  onPress?: () => void;
 }
 
-function AccountRow({ icon, label, colors }: AccountRowProps) {
+function AccountRow({ icon, label, colors, onPress }: AccountRowProps) {
   return (
     <Pressable
       style={styles.settingsRow}
+      onPress={onPress}
       android_ripple={{ color: colors.primary + "20" }}
     >
       <View style={styles.settingsRowLeft}>
@@ -432,7 +431,7 @@ const styles = StyleSheet.create({
   },
   avatarSection: {
     alignItems: "center",
-    paddingTop: 32,
+    paddingTop: 16,
     paddingBottom: 24,
   },
   avatarOuter: {
@@ -470,6 +469,21 @@ const styles = StyleSheet.create({
   badgeText: {
     fontSize: 13,
   },
+  editProfileBtn: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginTop: 14,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderCurve: "continuous",
+    borderWidth: 1.5,
+  },
+  editProfileText: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 13,
+  },
   statsCard: {
     flexDirection: "row",
     marginHorizontal: 16,
@@ -493,6 +507,44 @@ const styles = StyleSheet.create({
   statDivider: {
     width: 1,
     height: 32,
+  },
+  bmiCard: {
+    marginHorizontal: 16,
+    marginTop: 12,
+    borderRadius: 16,
+    borderCurve: "continuous",
+    padding: 16,
+  },
+  bmiRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  bmiCircle: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    borderWidth: 2.5,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  bmiValue: {
+    fontFamily: Fonts.bold,
+    fontSize: 16,
+    fontVariant: ["tabular-nums"],
+  },
+  bmiTitle: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 14,
+  },
+  bmiCategory: {
+    fontFamily: Fonts.medium,
+    fontSize: 13,
+    marginTop: 2,
+  },
+  bmiDetail: {
+    fontFamily: Fonts.regular,
+    fontSize: 12,
+    marginTop: 2,
   },
   section: {
     marginTop: 24,
@@ -528,6 +580,26 @@ const styles = StyleSheet.create({
   rowDivider: {
     height: StyleSheet.hairlineWidth,
     marginLeft: 52,
+  },
+  weightRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    minHeight: 44,
+  },
+  weightDate: {
+    fontFamily: Fonts.regular,
+    fontSize: 13,
+    flex: 1,
+  },
+  weightValue: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 14,
+    marginRight: 12,
+  },
+  weightBmi: {
+    fontFamily: Fonts.medium,
+    fontSize: 12,
   },
   badgesContainer: {
     paddingTop: 12,

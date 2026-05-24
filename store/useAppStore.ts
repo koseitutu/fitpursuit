@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { AppState, Streaks } from './types';
+import type { AppState, AppSettings, Streaks } from './types';
 import {
   sampleWorkoutTemplates,
   sampleAchievements,
@@ -19,6 +19,14 @@ const defaultStreaks: Streaks = {
   lastActiveDate: '',
 };
 
+const defaultSettings: AppSettings = {
+  units: 'metric',
+  notifications: true,
+  reminderTime: '08:00',
+  weeklyReport: true,
+  soundEffects: true,
+};
+
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
@@ -32,6 +40,8 @@ export const useAppStore = create<AppState>()(
       achievements: sampleAchievements,
       streaks: defaultStreaks,
       workoutTemplates: sampleWorkoutTemplates,
+      bloodPressureReadings: [],
+      settings: defaultSettings,
       themeMode: 'dark',
       onboardingCompleted: false,
       activeActivity: null,
@@ -129,6 +139,20 @@ export const useAppStore = create<AppState>()(
         }));
       },
 
+      updateActivity: (id, updates) => {
+        set((state) => ({
+          activities: state.activities.map((a) =>
+            a.id === id ? { ...a, ...updates } : a
+          ),
+        }));
+      },
+
+      deleteActivity: (id) => {
+        set((state) => ({
+          activities: state.activities.filter((a) => a.id !== id),
+        }));
+      },
+
       // --- Weight Log Actions ---
       addWeightEntry: (entry) => {
         set((state) => {
@@ -183,6 +207,34 @@ export const useAppStore = create<AppState>()(
         });
       },
 
+      // --- Blood Pressure Actions ---
+      addBloodPressureReading: (reading) => {
+        set((state) => ({
+          bloodPressureReadings: [reading, ...state.bloodPressureReadings],
+        }));
+      },
+
+      updateBloodPressureReading: (id, updates) => {
+        set((state) => ({
+          bloodPressureReadings: state.bloodPressureReadings.map((r) =>
+            r.id === id ? { ...r, ...updates } : r
+          ),
+        }));
+      },
+
+      deleteBloodPressureReading: (id) => {
+        set((state) => ({
+          bloodPressureReadings: state.bloodPressureReadings.filter((r) => r.id !== id),
+        }));
+      },
+
+      // --- Settings Actions ---
+      updateSettings: (updates) => {
+        set((state) => ({
+          settings: { ...state.settings, ...updates },
+        }));
+      },
+
       // --- Achievement Actions ---
       unlockAchievement: (id) => {
         set((state) => ({
@@ -199,7 +251,6 @@ export const useAppStore = create<AppState>()(
         const today = getTodayDate();
         const streaks = get().streaks;
 
-        // If already updated today, do nothing
         if (streaks.lastActiveDate === today) return;
 
         const yesterday = new Date(Date.now() - 86400000)
@@ -224,9 +275,48 @@ export const useAppStore = create<AppState>()(
         }));
       },
 
+      setThemeMode: (mode) => {
+        set({ themeMode: mode });
+      },
+
       // --- Onboarding Actions ---
       completeOnboarding: () => {
         set({ onboardingCompleted: true });
+      },
+
+      // --- Import Actions ---
+      importActivities: (newActivities) => {
+        set((state) => ({
+          activities: [...newActivities, ...state.activities],
+        }));
+      },
+
+      importWorkouts: (newWorkouts) => {
+        set((state) => ({
+          workouts: [...newWorkouts, ...state.workouts],
+        }));
+      },
+
+      importWeightLog: (entries) => {
+        set((state) => {
+          const existing = new Set(state.weightLog.map((e) => e.date));
+          const newEntries = entries.filter((e) => !existing.has(e.date));
+          return { weightLog: [...state.weightLog, ...newEntries] };
+        });
+      },
+
+      importNutritionLog: (entries) => {
+        set((state) => {
+          const existing = new Set(state.nutritionLog.map((e) => e.date));
+          const newEntries = entries.filter((e) => !existing.has(e.date));
+          return { nutritionLog: [...state.nutritionLog, ...newEntries] };
+        });
+      },
+
+      importBloodPressureReadings: (readings) => {
+        set((state) => ({
+          bloodPressureReadings: [...readings, ...state.bloodPressureReadings],
+        }));
       },
 
       // --- Sample Data ---
@@ -260,6 +350,8 @@ export const useAppStore = create<AppState>()(
         achievements: state.achievements,
         streaks: state.streaks,
         workoutTemplates: state.workoutTemplates,
+        bloodPressureReadings: state.bloodPressureReadings,
+        settings: state.settings,
         themeMode: state.themeMode,
         onboardingCompleted: state.onboardingCompleted,
       }),

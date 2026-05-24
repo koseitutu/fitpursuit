@@ -33,7 +33,13 @@ export type ActivityType =
 
 export type ThemeMode = 'dark' | 'light';
 
+export type UnitSystem = 'metric' | 'imperial';
+
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'extreme';
+
+export type BPTimeSlot = 'AM' | 'PM';
+
+export type BPCategory = 'normal' | 'elevated' | 'high_stage1' | 'high_stage2' | 'crisis';
 
 export interface UserProfile {
   id: string;
@@ -155,6 +161,25 @@ export interface WorkoutTemplate {
   isFavorite: boolean;
 }
 
+export interface BloodPressureReading {
+  id: string;
+  date: string; // ISO date YYYY-MM-DD
+  timeSlot: BPTimeSlot;
+  systolic: number;
+  diastolic: number;
+  pulse: number;
+  notes?: string;
+  createdAt: string; // ISO string
+}
+
+export interface AppSettings {
+  units: UnitSystem;
+  notifications: boolean;
+  reminderTime: string; // HH:mm format
+  weeklyReport: boolean;
+  soundEffects: boolean;
+}
+
 export interface AppState {
   // Data
   userProfile: UserProfile | null;
@@ -166,6 +191,8 @@ export interface AppState {
   achievements: Achievement[];
   streaks: Streaks;
   workoutTemplates: WorkoutTemplate[];
+  bloodPressureReadings: BloodPressureReading[];
+  settings: AppSettings;
   themeMode: ThemeMode;
   onboardingCompleted: boolean;
   activeActivity: Activity | null;
@@ -189,6 +216,8 @@ export interface AppState {
   startActivity: (activity: Omit<Activity, 'endedAt'>) => void;
   endActivity: (id: string, updates: Partial<Activity>) => void;
   addActivity: (activity: Activity) => void;
+  updateActivity: (id: string, updates: Partial<Activity>) => void;
+  deleteActivity: (id: string) => void;
 
   // Weight Log Actions
   addWeightEntry: (entry: WeightEntry) => void;
@@ -196,6 +225,14 @@ export interface AppState {
   // Nutrition Actions
   addMeal: (date: string, meal: Meal) => void;
   updateWaterIntake: (date: string, amount: number) => void;
+
+  // Blood Pressure Actions
+  addBloodPressureReading: (reading: BloodPressureReading) => void;
+  updateBloodPressureReading: (id: string, updates: Partial<BloodPressureReading>) => void;
+  deleteBloodPressureReading: (id: string) => void;
+
+  // Settings Actions
+  updateSettings: (updates: Partial<AppSettings>) => void;
 
   // Achievement Actions
   unlockAchievement: (id: string) => void;
@@ -205,9 +242,17 @@ export interface AppState {
 
   // Theme Actions
   toggleTheme: () => void;
+  setThemeMode: (mode: ThemeMode) => void;
 
   // Onboarding Actions
   completeOnboarding: () => void;
+
+  // Import Actions
+  importActivities: (activities: Activity[]) => void;
+  importWorkouts: (workouts: Workout[]) => void;
+  importWeightLog: (entries: WeightEntry[]) => void;
+  importNutritionLog: (entries: NutritionLog[]) => void;
+  importBloodPressureReadings: (readings: BloodPressureReading[]) => void;
 
   // Sample Data
   loadSampleData: () => void;
