@@ -19,84 +19,224 @@ function daysAgoISO(days: number): string {
   return date.toISOString();
 }
 
-// --- Workout Template Exercises ---
+// --- FinPulse Home Gym Custom Exercises (Strength) ---
 
-const benchPressExercise: Exercise = {
-  id: 'ex-bench-press',
-  name: 'Bench Press',
-  sets: [
-    { setNumber: 1, reps: 12, weight: 60, isCompleted: false },
-    { setNumber: 2, reps: 10, weight: 70, isCompleted: false },
-    { setNumber: 3, reps: 8, weight: 80, isCompleted: false },
-  ],
-  restTime: 90,
-};
-
-const squatExercise: Exercise = {
-  id: 'ex-squat',
-  name: 'Barbell Squat',
-  sets: [
-    { setNumber: 1, reps: 12, weight: 80, isCompleted: false },
-    { setNumber: 2, reps: 10, weight: 90, isCompleted: false },
-    { setNumber: 3, reps: 8, weight: 100, isCompleted: false },
-  ],
-  restTime: 120,
-};
-
-const deadliftExercise: Exercise = {
-  id: 'ex-deadlift',
-  name: 'Deadlift',
-  sets: [
-    { setNumber: 1, reps: 10, weight: 100, isCompleted: false },
-    { setNumber: 2, reps: 8, weight: 110, isCompleted: false },
-    { setNumber: 3, reps: 6, weight: 120, isCompleted: false },
-  ],
-  restTime: 120,
-};
-
-const pullUpExercise: Exercise = {
-  id: 'ex-pull-up',
-  name: 'Pull-Ups',
-  sets: [
-    { setNumber: 1, reps: 10, weight: 0, isCompleted: false },
-    { setNumber: 2, reps: 8, weight: 0, isCompleted: false },
-    { setNumber: 3, reps: 6, weight: 0, isCompleted: false },
-  ],
-  restTime: 90,
-};
-
-const overheadPressExercise: Exercise = {
-  id: 'ex-overhead-press',
-  name: 'Overhead Press',
+const chestPressExercise: Exercise = {
+  id: 'ex-chest-press',
+  name: 'Chest Press',
   sets: [
     { setNumber: 1, reps: 12, weight: 40, isCompleted: false },
-    { setNumber: 2, reps: 10, weight: 45, isCompleted: false },
-    { setNumber: 3, reps: 8, weight: 50, isCompleted: false },
+    { setNumber: 2, reps: 10, weight: 50, isCompleted: false },
+    { setNumber: 3, reps: 10, weight: 50, isCompleted: false },
+    { setNumber: 4, reps: 12, weight: 40, isCompleted: false },
   ],
   restTime: 90,
 };
 
-const bicepCurlExercise: Exercise = {
-  id: 'ex-bicep-curl',
-  name: 'Bicep Curls',
+const pecFlyExercise: Exercise = {
+  id: 'ex-pec-fly',
+  name: 'Pec Fly',
   sets: [
-    { setNumber: 1, reps: 12, weight: 15, isCompleted: false },
-    { setNumber: 2, reps: 10, weight: 17.5, isCompleted: false },
-    { setNumber: 3, reps: 8, weight: 20, isCompleted: false },
+    { setNumber: 1, reps: 15, weight: 20, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 25, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 25, isCompleted: false },
   ],
   restTime: 60,
 };
 
-const lungeExercise: Exercise = {
-  id: 'ex-lunge',
-  name: 'Walking Lunges',
+const overheadTricepExercise: Exercise = {
+  id: 'ex-overhead-tricep',
+  name: 'Seated Overhead Tricep Extension',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 15, isCompleted: false },
+    { setNumber: 2, reps: 10, weight: 20, isCompleted: false },
+    { setNumber: 3, reps: 10, weight: 20, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const tricepPushdownExercise: Exercise = {
+  id: 'ex-tricep-pushdown',
+  name: 'Tricep Pushdowns',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 20, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 25, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 25, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const latPulldownExercise: Exercise = {
+  id: 'ex-lat-pulldown',
+  name: 'Wide-Grip Lat Pulldown',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 40, isCompleted: false },
+    { setNumber: 2, reps: 10, weight: 50, isCompleted: false },
+    { setNumber: 3, reps: 10, weight: 50, isCompleted: false },
+    { setNumber: 4, reps: 12, weight: 40, isCompleted: false },
+  ],
+  restTime: 90,
+};
+
+const seatedRowExercise: Exercise = {
+  id: 'ex-seated-row',
+  name: 'Seated Low Row',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 35, isCompleted: false },
+    { setNumber: 2, reps: 10, weight: 45, isCompleted: false },
+    { setNumber: 3, reps: 10, weight: 45, isCompleted: false },
+    { setNumber: 4, reps: 12, weight: 35, isCompleted: false },
+  ],
+  restTime: 90,
+};
+
+const straightArmPulldownExercise: Exercise = {
+  id: 'ex-straight-arm-pulldown',
+  name: 'Straight-Arm Pulldown',
   sets: [
     { setNumber: 1, reps: 12, weight: 20, isCompleted: false },
     { setNumber: 2, reps: 12, weight: 25, isCompleted: false },
-    { setNumber: 3, reps: 10, weight: 30, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 25, isCompleted: false },
   ],
   restTime: 60,
 };
+
+const bicepCurlExercise: Exercise = {
+  id: 'ex-cable-bicep-curl',
+  name: 'Cable Bicep Curls',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 15, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 20, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 20, isCompleted: false },
+    { setNumber: 4, reps: 12, weight: 15, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const legPressExercise: Exercise = {
+  id: 'ex-leg-press',
+  name: 'Seated Leg Press',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 80, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 100, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 100, isCompleted: false },
+    { setNumber: 4, reps: 15, weight: 80, isCompleted: false },
+  ],
+  restTime: 90,
+};
+
+const legExtensionExercise: Exercise = {
+  id: 'ex-leg-extension',
+  name: 'Leg Extensions',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 30, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 40, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 40, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const legCurlExercise: Exercise = {
+  id: 'ex-leg-curl',
+  name: 'Seated Leg Curls',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 25, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 30, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 30, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const cableCrunchExercise: Exercise = {
+  id: 'ex-cable-crunch',
+  name: 'Cable Crunch',
+  sets: [
+    { setNumber: 1, reps: 20, weight: 30, isCompleted: false },
+    { setNumber: 2, reps: 15, weight: 40, isCompleted: false },
+    { setNumber: 3, reps: 15, weight: 40, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const shoulderPressExercise: Exercise = {
+  id: 'ex-shoulder-press',
+  name: 'Seated Shoulder Press',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 20, isCompleted: false },
+    { setNumber: 2, reps: 10, weight: 25, isCompleted: false },
+    { setNumber: 3, reps: 10, weight: 25, isCompleted: false },
+    { setNumber: 4, reps: 12, weight: 20, isCompleted: false },
+  ],
+  restTime: 90,
+};
+
+const lateralRaiseExercise: Exercise = {
+  id: 'ex-lateral-raise',
+  name: 'Cable Lateral Raises',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 7.5, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 10, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 10, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const frontRaiseExercise: Exercise = {
+  id: 'ex-front-raise',
+  name: 'Cable Front Raises',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 10, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 12.5, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 12.5, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const shrugsExercise: Exercise = {
+  id: 'ex-shrugs',
+  name: 'Cable Shrugs',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 40, isCompleted: false },
+    { setNumber: 2, reps: 15, weight: 50, isCompleted: false },
+    { setNumber: 3, reps: 15, weight: 50, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const legPressBurnoutExercise: Exercise = {
+  id: 'ex-leg-press-burnout',
+  name: 'Seated Leg Press (Burnout)',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 60, isCompleted: false },
+    { setNumber: 2, reps: 15, weight: 60, isCompleted: false },
+    { setNumber: 3, reps: 15, weight: 60, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const closeGripLatPulldownExercise: Exercise = {
+  id: 'ex-close-grip-pulldown',
+  name: 'Close-Grip Lat Pulldown',
+  sets: [
+    { setNumber: 1, reps: 12, weight: 35, isCompleted: false },
+    { setNumber: 2, reps: 12, weight: 45, isCompleted: false },
+    { setNumber: 3, reps: 12, weight: 45, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+const woodchopperExercise: Exercise = {
+  id: 'ex-woodchoppers',
+  name: 'Woodchoppers',
+  sets: [
+    { setNumber: 1, reps: 15, weight: 15, isCompleted: false },
+    { setNumber: 2, reps: 15, weight: 20, isCompleted: false },
+    { setNumber: 3, reps: 15, weight: 20, isCompleted: false },
+  ],
+  restTime: 60,
+};
+
+// --- Retained Original Non-Strength Exercises ---
 
 const plankExercise: Exercise = {
   id: 'ex-plank',
@@ -145,28 +285,6 @@ const warriorPoseExercise: Exercise = {
   restTime: 30,
 };
 
-const legPressExercise: Exercise = {
-  id: 'ex-leg-press',
-  name: 'Leg Press',
-  sets: [
-    { setNumber: 1, reps: 12, weight: 120, isCompleted: false },
-    { setNumber: 2, reps: 10, weight: 140, isCompleted: false },
-    { setNumber: 3, reps: 8, weight: 160, isCompleted: false },
-  ],
-  restTime: 90,
-};
-
-const tricepDipExercise: Exercise = {
-  id: 'ex-tricep-dip',
-  name: 'Tricep Dips',
-  sets: [
-    { setNumber: 1, reps: 12, weight: 0, isCompleted: false },
-    { setNumber: 2, reps: 10, weight: 0, isCompleted: false },
-    { setNumber: 3, reps: 8, weight: 0, isCompleted: false },
-  ],
-  restTime: 60,
-};
-
 const boxJumpExercise: Exercise = {
   id: 'ex-box-jump',
   name: 'Box Jumps',
@@ -178,41 +296,64 @@ const boxJumpExercise: Exercise = {
   restTime: 60,
 };
 
-// --- 10 Workout Templates ---
+
+// --- The Blended 9 Workout Templates ---
 
 export const sampleWorkoutTemplates: WorkoutTemplate[] = [
+  // Your Custom Strength Templates
   {
     id: 'template-1',
-    name: 'Full Body Strength',
+    name: 'Monday: Push I (Chest/Triceps)',
     category: 'strength',
-    exercises: [squatExercise, benchPressExercise, deadliftExercise, pullUpExercise],
+    exercises: [chestPressExercise, pecFlyExercise, overheadTricepExercise, tricepPushdownExercise],
+    estimatedDuration: 60,
+    difficulty: 'medium',
+    isCustom: false,
+    isFavorite: true,
+  },
+  {
+    id: 'template-2',
+    name: 'Tuesday: Pull I (Back/Biceps)',
+    category: 'strength',
+    exercises: [latPulldownExercise, seatedRowExercise, straightArmPulldownExercise, bicepCurlExercise],
+    estimatedDuration: 60,
+    difficulty: 'medium',
+    isCustom: false,
+    isFavorite: true,
+  },
+  {
+    id: 'template-3',
+    name: 'Wednesday: Legs & Core',
+    category: 'strength',
+    exercises: [legPressExercise, legExtensionExercise, legCurlExercise, cableCrunchExercise],
     estimatedDuration: 60,
     difficulty: 'hard',
     isCustom: false,
     isFavorite: true,
   },
   {
-    id: 'template-2',
-    name: 'Upper Body Push',
+    id: 'template-4',
+    name: 'Thursday: Shoulders & Traps',
     category: 'strength',
-    exercises: [benchPressExercise, overheadPressExercise, tricepDipExercise],
-    estimatedDuration: 45,
+    exercises: [shoulderPressExercise, lateralRaiseExercise, frontRaiseExercise, shrugsExercise],
+    estimatedDuration: 60,
     difficulty: 'medium',
-    isCustom: false,
-    isFavorite: false,
-  },
-  {
-    id: 'template-3',
-    name: 'Lower Body Power',
-    category: 'strength',
-    exercises: [squatExercise, legPressExercise, lungeExercise],
-    estimatedDuration: 50,
-    difficulty: 'hard',
     isCustom: false,
     isFavorite: true,
   },
   {
-    id: 'template-4',
+    id: 'template-5',
+    name: 'Friday: Full Body Finisher',
+    category: 'strength',
+    exercises: [legPressBurnoutExercise, closeGripLatPulldownExercise, tricepPushdownExercise, bicepCurlExercise, woodchopperExercise],
+    estimatedDuration: 60,
+    difficulty: 'hard',
+    isCustom: false,
+    isFavorite: true,
+  },
+  // Retained Original Framework Specialty Routines
+  {
+    id: 'template-6',
     name: 'HIIT Blast',
     category: 'hiit',
     exercises: [burpeeExercise, mountainClimberExercise, boxJumpExercise],
@@ -222,29 +363,19 @@ export const sampleWorkoutTemplates: WorkoutTemplate[] = [
     isFavorite: false,
   },
   {
-    id: 'template-5',
+    id: 'template-7',
     name: 'Morning Yoga Flow',
     category: 'yoga',
     exercises: [downwardDogExercise, warriorPoseExercise, plankExercise],
     estimatedDuration: 30,
     difficulty: 'easy',
     isCustom: false,
-    isFavorite: true,
-  },
-  {
-    id: 'template-6',
-    name: 'Pull Day',
-    category: 'strength',
-    exercises: [pullUpExercise, deadliftExercise, bicepCurlExercise],
-    estimatedDuration: 50,
-    difficulty: 'medium',
-    isCustom: false,
     isFavorite: false,
   },
   {
-    id: 'template-7',
+    id: 'template-8',
     name: 'Core Crusher',
-    category: 'strength',
+    category: 'hiit',
     exercises: [plankExercise, mountainClimberExercise, burpeeExercise],
     estimatedDuration: 25,
     difficulty: 'medium',
@@ -252,7 +383,7 @@ export const sampleWorkoutTemplates: WorkoutTemplate[] = [
     isFavorite: false,
   },
   {
-    id: 'template-8',
+    id: 'template-9',
     name: 'Cardio Circuit',
     category: 'cardio',
     exercises: [burpeeExercise, boxJumpExercise, mountainClimberExercise],
@@ -260,26 +391,6 @@ export const sampleWorkoutTemplates: WorkoutTemplate[] = [
     difficulty: 'hard',
     isCustom: false,
     isFavorite: false,
-  },
-  {
-    id: 'template-9',
-    name: 'Arms & Shoulders',
-    category: 'strength',
-    exercises: [overheadPressExercise, bicepCurlExercise, tricepDipExercise],
-    estimatedDuration: 40,
-    difficulty: 'medium',
-    isCustom: false,
-    isFavorite: false,
-  },
-  {
-    id: 'template-10',
-    name: 'CrossFit WOD',
-    category: 'crossfit',
-    exercises: [deadliftExercise, pullUpExercise, boxJumpExercise, burpeeExercise],
-    estimatedDuration: 45,
-    difficulty: 'extreme',
-    isCustom: false,
-    isFavorite: true,
   },
 ];
 
@@ -501,38 +612,5 @@ export const sampleWeeklyActivities: Activity[] = [
     ],
     startedAt: daysAgoISO(3),
     endedAt: daysAgoISO(3),
-  },
-  {
-    id: 'activity-sample-4',
-    type: 'running',
-    duration: 28,
-    distance: 4.8,
-    steps: 5600,
-    pace: 5.83,
-    caloriesBurned: 310,
-    route: [
-      { latitude: 40.7831, longitude: -73.9712, timestamp: daysAgoISO(2) },
-      { latitude: 40.7841, longitude: -73.9702, timestamp: daysAgoISO(2) },
-      { latitude: 40.7851, longitude: -73.9692, timestamp: daysAgoISO(2) },
-    ],
-    startedAt: daysAgoISO(2),
-    endedAt: daysAgoISO(2),
-  },
-  {
-    id: 'activity-sample-5',
-    type: 'hiking',
-    duration: 90,
-    distance: 8.5,
-    steps: 11200,
-    pace: 10.59,
-    caloriesBurned: 520,
-    route: [
-      { latitude: 40.7934, longitude: -73.9531, timestamp: daysAgoISO(1) },
-      { latitude: 40.7944, longitude: -73.9521, timestamp: daysAgoISO(1) },
-      { latitude: 40.7954, longitude: -73.9511, timestamp: daysAgoISO(1) },
-      { latitude: 40.7964, longitude: -73.9501, timestamp: daysAgoISO(1) },
-    ],
-    startedAt: daysAgoISO(1),
-    endedAt: daysAgoISO(1),
   },
 ];
