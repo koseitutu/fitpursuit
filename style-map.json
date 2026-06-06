@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": 1780786703789,
+  "generatedAt": 1780788046324,
   "entries": {
     "RootLayout@app\\_layout.tsx:44": {
       "element": {
@@ -9746,1854 +9746,6 @@
         }
       ]
     },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:70": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 70
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.container",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 429,
-          "properties": {
-            "flex": {
-              "line": 430,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:79": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 79
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.avatarSection",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 432,
-          "properties": {
-            "alignItems": {
-              "line": 433,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "paddingTop": {
-              "line": 434,
-              "col": 16,
-              "endCol": 18,
-              "raw": "16"
-            },
-            "paddingBottom": {
-              "line": 435,
-              "col": 19,
-              "endCol": 21,
-              "raw": "24"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:83": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 83
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.avatarOuter",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 437,
-          "properties": {
-            "width": {
-              "line": 438,
-              "col": 11,
-              "endCol": 13,
-              "raw": "88"
-            },
-            "height": {
-              "line": 439,
-              "col": 12,
-              "endCol": 14,
-              "raw": "88"
-            },
-            "borderRadius": {
-              "line": 440,
-              "col": 18,
-              "endCol": 20,
-              "raw": "44"
-            },
-            "borderWidth": {
-              "line": 441,
-              "col": 17,
-              "endCol": 18,
-              "raw": "3"
-            },
-            "borderCurve": {
-              "line": 442,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "alignItems": {
-              "line": 443,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 444,
-              "col": 20,
-              "endCol": 28,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:89": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 89
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.avatarInner",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 446,
-          "properties": {
-            "width": {
-              "line": 447,
-              "col": 11,
-              "endCol": 13,
-              "raw": "80"
-            },
-            "height": {
-              "line": 448,
-              "col": 12,
-              "endCol": 14,
-              "raw": "80"
-            },
-            "borderRadius": {
-              "line": 449,
-              "col": 18,
-              "endCol": 20,
-              "raw": "40"
-            },
-            "borderCurve": {
-              "line": 450,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "alignItems": {
-              "line": 451,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 452,
-              "col": 20,
-              "endCol": 28,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:95": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 95
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.avatarText",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 454,
-          "properties": {
-            "fontSize": {
-              "line": 455,
-              "col": 14,
-              "endCol": 16,
-              "raw": "28"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:106": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 106
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.nameText",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 457,
-          "properties": {
-            "fontSize": {
-              "line": 458,
-              "col": 14,
-              "endCol": 16,
-              "raw": "22"
-            },
-            "marginTop": {
-              "line": 459,
-              "col": 15,
-              "endCol": 17,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:115": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 115
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.badge",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 461,
-          "properties": {
-            "marginTop": {
-              "line": 462,
-              "col": 15,
-              "endCol": 16,
-              "raw": "8"
-            },
-            "paddingHorizontal": {
-              "line": 463,
-              "col": 23,
-              "endCol": 25,
-              "raw": "14"
-            },
-            "paddingVertical": {
-              "line": 464,
-              "col": 21,
-              "endCol": 22,
-              "raw": "5"
-            },
-            "borderRadius": {
-              "line": 465,
-              "col": 18,
-              "endCol": 20,
-              "raw": "12"
-            },
-            "borderWidth": {
-              "line": 466,
-              "col": 17,
-              "endCol": 18,
-              "raw": "1"
-            },
-            "borderCurve": {
-              "line": 467,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:121": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 121
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.badgeText",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 469,
-          "properties": {
-            "fontSize": {
-              "line": 470,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:132": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 132
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.editProfileBtn",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 472,
-          "properties": {
-            "flexDirection": {
-              "line": 473,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 474,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "gap": {
-              "line": 475,
-              "col": 9,
-              "endCol": 10,
-              "raw": "6"
-            },
-            "marginTop": {
-              "line": 476,
-              "col": 15,
-              "endCol": 17,
-              "raw": "14"
-            },
-            "paddingHorizontal": {
-              "line": 477,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            },
-            "paddingVertical": {
-              "line": 478,
-              "col": 21,
-              "endCol": 22,
-              "raw": "8"
-            },
-            "borderRadius": {
-              "line": 479,
-              "col": 18,
-              "endCol": 20,
-              "raw": "20"
-            },
-            "borderCurve": {
-              "line": 480,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "borderWidth": {
-              "line": 481,
-              "col": 17,
-              "endCol": 20,
-              "raw": "1.5"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:137": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 137
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.editProfileText",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 483,
-          "properties": {
-            "fontSize": {
-              "line": 485,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:144": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 144
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statsCard",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 487,
-          "properties": {
-            "flexDirection": {
-              "line": 488,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "marginHorizontal": {
-              "line": 489,
-              "col": 22,
-              "endCol": 24,
-              "raw": "16"
-            },
-            "borderRadius": {
-              "line": 490,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 491,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "paddingVertical": {
-              "line": 492,
-              "col": 21,
-              "endCol": 23,
-              "raw": "20"
-            },
-            "paddingHorizontal": {
-              "line": 493,
-              "col": 23,
-              "endCol": 24,
-              "raw": "8"
-            },
-            "alignItems": {
-              "line": 494,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:148": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 148
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statItem",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 496,
-          "properties": {
-            "flex": {
-              "line": 497,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "alignItems": {
-              "line": 498,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:149": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 149
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statValue",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 501,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:154": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 154
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statLabel",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 503,
-          "properties": {
-            "fontSize": {
-              "line": 504,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginTop": {
-              "line": 505,
-              "col": 15,
-              "endCol": 16,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:161": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 161
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 507,
-          "properties": {
-            "width": {
-              "line": 508,
-              "col": 11,
-              "endCol": 12,
-              "raw": "1"
-            },
-            "height": {
-              "line": 509,
-              "col": 12,
-              "endCol": 14,
-              "raw": "32"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:163": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 163
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statItem",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 496,
-          "properties": {
-            "flex": {
-              "line": 497,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "alignItems": {
-              "line": 498,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:164": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 164
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statValue",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 501,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:169": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 169
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statLabel",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 503,
-          "properties": {
-            "fontSize": {
-              "line": 504,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginTop": {
-              "line": 505,
-              "col": 15,
-              "endCol": 16,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:176": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 176
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 507,
-          "properties": {
-            "width": {
-              "line": 508,
-              "col": 11,
-              "endCol": 12,
-              "raw": "1"
-            },
-            "height": {
-              "line": 509,
-              "col": 12,
-              "endCol": 14,
-              "raw": "32"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:178": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 178
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statItem",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 496,
-          "properties": {
-            "flex": {
-              "line": 497,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            },
-            "alignItems": {
-              "line": 498,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:179": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 179
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statValue",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 500,
-          "properties": {
-            "fontSize": {
-              "line": 501,
-              "col": 14,
-              "endCol": 16,
-              "raw": "18"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:184": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 184
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.statLabel",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 503,
-          "properties": {
-            "fontSize": {
-              "line": 504,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginTop": {
-              "line": 505,
-              "col": 15,
-              "endCol": 16,
-              "raw": "4"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:194": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 194
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiCard",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 511,
-          "properties": {
-            "marginHorizontal": {
-              "line": 512,
-              "col": 22,
-              "endCol": 24,
-              "raw": "16"
-            },
-            "marginTop": {
-              "line": 513,
-              "col": 15,
-              "endCol": 17,
-              "raw": "12"
-            },
-            "borderRadius": {
-              "line": 514,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 515,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "padding": {
-              "line": 516,
-              "col": 13,
-              "endCol": 15,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:198": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 198
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiRow",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 518,
-          "properties": {
-            "flexDirection": {
-              "line": 519,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 520,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:199": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 199
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiCircle",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 522,
-          "properties": {
-            "width": {
-              "line": 523,
-              "col": 11,
-              "endCol": 13,
-              "raw": "56"
-            },
-            "height": {
-              "line": 524,
-              "col": 12,
-              "endCol": 14,
-              "raw": "56"
-            },
-            "borderRadius": {
-              "line": 525,
-              "col": 18,
-              "endCol": 20,
-              "raw": "28"
-            },
-            "borderWidth": {
-              "line": 526,
-              "col": 17,
-              "endCol": 20,
-              "raw": "2.5"
-            },
-            "alignItems": {
-              "line": 527,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 528,
-              "col": 20,
-              "endCol": 28,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:200": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 200
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiValue",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 530,
-          "properties": {
-            "fontSize": {
-              "line": 532,
-              "col": 14,
-              "endCol": 16,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:204": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 204
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app\\(tabs)\\profile.tsx",
-          "properties": {
-            "flex": {
-              "line": 204,
-              "col": 33,
-              "endCol": 34,
-              "raw": "1"
-            },
-            "marginLeft": {
-              "line": 204,
-              "col": 48,
-              "endCol": 50,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:205": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 205
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiTitle",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 535,
-          "properties": {
-            "fontSize": {
-              "line": 537,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:208": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 208
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiCategory",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 539,
-          "properties": {
-            "fontSize": {
-              "line": 541,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "marginTop": {
-              "line": 542,
-              "col": 15,
-              "endCol": 16,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:217": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 217
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.bmiDetail",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 544,
-          "properties": {
-            "fontSize": {
-              "line": 546,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            },
-            "marginTop": {
-              "line": 547,
-              "col": 15,
-              "endCol": 16,
-              "raw": "2"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:226": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 226
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 549,
-          "properties": {
-            "marginTop": {
-              "line": 550,
-              "col": 15,
-              "endCol": 17,
-              "raw": "24"
-            },
-            "paddingHorizontal": {
-              "line": 551,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:228": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 228
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.card",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 553,
-          "properties": {
-            "marginTop": {
-              "line": 554,
-              "col": 15,
-              "endCol": 17,
-              "raw": "12"
-            },
-            "borderRadius": {
-              "line": 555,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 556,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "overflow": {
-              "line": 557,
-              "col": 14,
-              "endCol": 22,
-              "raw": "\"hidden\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:235": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 235
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:242": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 242
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:253": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 253
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 549,
-          "properties": {
-            "marginTop": {
-              "line": 550,
-              "col": 15,
-              "endCol": 17,
-              "raw": "24"
-            },
-            "paddingHorizontal": {
-              "line": 551,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:255": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 255
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.card",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 553,
-          "properties": {
-            "marginTop": {
-              "line": 554,
-              "col": 15,
-              "endCol": 17,
-              "raw": "12"
-            },
-            "borderRadius": {
-              "line": 555,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 556,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "overflow": {
-              "line": 557,
-              "col": 14,
-              "endCol": 22,
-              "raw": "\"hidden\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:262": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 262
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:269": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 269
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:276": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 276
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:283": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 283
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:295": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 295
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 549,
-          "properties": {
-            "marginTop": {
-              "line": 550,
-              "col": 15,
-              "endCol": 17,
-              "raw": "24"
-            },
-            "paddingHorizontal": {
-              "line": 551,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:297": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 297
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.card",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 553,
-          "properties": {
-            "marginTop": {
-              "line": 554,
-              "col": 15,
-              "endCol": 17,
-              "raw": "12"
-            },
-            "borderRadius": {
-              "line": 555,
-              "col": 18,
-              "endCol": 20,
-              "raw": "16"
-            },
-            "borderCurve": {
-              "line": 556,
-              "col": 17,
-              "endCol": 29,
-              "raw": "\"continuous\""
-            },
-            "overflow": {
-              "line": 557,
-              "col": 14,
-              "endCol": 22,
-              "raw": "\"hidden\""
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:300": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 300
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowDivider",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 580,
-          "properties": {
-            "marginLeft": {
-              "line": 582,
-              "col": 16,
-              "endCol": 18,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:301": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 301
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.weightRow",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 584,
-          "properties": {
-            "flexDirection": {
-              "line": 585,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 586,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "paddingHorizontal": {
-              "line": 587,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            },
-            "minHeight": {
-              "line": 588,
-              "col": 15,
-              "endCol": 17,
-              "raw": "44"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:302": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 302
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.weightDate",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 590,
-          "properties": {
-            "fontSize": {
-              "line": 592,
-              "col": 14,
-              "endCol": 16,
-              "raw": "13"
-            },
-            "flex": {
-              "line": 593,
-              "col": 10,
-              "endCol": 11,
-              "raw": "1"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:305": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 305
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.weightValue",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 595,
-          "properties": {
-            "fontSize": {
-              "line": 597,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            },
-            "marginRight": {
-              "line": 598,
-              "col": 17,
-              "endCol": 19,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:308": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 308
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.weightBmi",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 600,
-          "properties": {
-            "fontSize": {
-              "line": 602,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:319": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 319
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.section",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 549,
-          "properties": {
-            "marginTop": {
-              "line": 550,
-              "col": 15,
-              "endCol": 17,
-              "raw": "24"
-            },
-            "paddingHorizontal": {
-              "line": 551,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:321": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 321
-      },
-      "styles": [
-        {
-          "origin": "inline",
-          "file": "app\\(tabs)\\profile.tsx",
-          "properties": {
-            "flexGrow": {
-              "line": 325,
-              "col": 29,
-              "endCol": 30,
-              "raw": "0"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:328": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 328
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.badgeItem",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 609,
-          "properties": {
-            "marginRight": {
-              "line": 610,
-              "col": 17,
-              "endCol": 18,
-              "raw": "0"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:341": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 341
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.versionSection",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 612,
-          "properties": {
-            "alignItems": {
-              "line": 613,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "marginTop": {
-              "line": 614,
-              "col": 15,
-              "endCol": 17,
-              "raw": "32"
-            }
-          }
-        }
-      ]
-    },
-    "ProfileScreen@app\\(tabs)\\profile.tsx:342": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 342
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.versionText",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 616,
-          "properties": {
-            "fontSize": {
-              "line": 617,
-              "col": 14,
-              "endCol": 16,
-              "raw": "12"
-            }
-          }
-        }
-      ]
-    },
-    "SettingsRow@app\\(tabs)\\profile.tsx:364": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 364
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.settingsRow",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 559,
-          "properties": {
-            "flexDirection": {
-              "line": 560,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 561,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 562,
-              "col": 20,
-              "endCol": 35,
-              "raw": "\"space-between\""
-            },
-            "paddingHorizontal": {
-              "line": 563,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            },
-            "minHeight": {
-              "line": 564,
-              "col": 15,
-              "endCol": 17,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "SettingsRow@app\\(tabs)\\profile.tsx:365": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 365
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.settingsRowLeft",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 566,
-          "properties": {
-            "flexDirection": {
-              "line": 567,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 568,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "SettingsRow@app\\(tabs)\\profile.tsx:366": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 366
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowIcon",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 570,
-          "properties": {
-            "marginRight": {
-              "line": 571,
-              "col": 17,
-              "endCol": 19,
-              "raw": "12"
-            },
-            "width": {
-              "line": 572,
-              "col": 11,
-              "endCol": 13,
-              "raw": "24"
-            }
-          }
-        }
-      ]
-    },
-    "SettingsRow@app\\(tabs)\\profile.tsx:372": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 372
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowLabel",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 574,
-          "properties": {
-            "fontSize": {
-              "line": 575,
-              "col": 14,
-              "endCol": 16,
-              "raw": "15"
-            }
-          }
-        }
-      ]
-    },
-    "SettingsRow@app\\(tabs)\\profile.tsx:381": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 381
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowValue",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 577,
-          "properties": {
-            "fontSize": {
-              "line": 578,
-              "col": 14,
-              "endCol": 16,
-              "raw": "14"
-            }
-          }
-        }
-      ]
-    },
-    "AccountRow@app\\(tabs)\\profile.tsx:402": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 402
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.settingsRow",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 559,
-          "properties": {
-            "flexDirection": {
-              "line": 560,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 561,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            },
-            "justifyContent": {
-              "line": 562,
-              "col": 20,
-              "endCol": 35,
-              "raw": "\"space-between\""
-            },
-            "paddingHorizontal": {
-              "line": 563,
-              "col": 23,
-              "endCol": 25,
-              "raw": "16"
-            },
-            "minHeight": {
-              "line": 564,
-              "col": 15,
-              "endCol": 17,
-              "raw": "52"
-            }
-          }
-        }
-      ]
-    },
-    "AccountRow@app\\(tabs)\\profile.tsx:407": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 407
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.settingsRowLeft",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 566,
-          "properties": {
-            "flexDirection": {
-              "line": 567,
-              "col": 19,
-              "endCol": 24,
-              "raw": "\"row\""
-            },
-            "alignItems": {
-              "line": 568,
-              "col": 16,
-              "endCol": 24,
-              "raw": "\"center\""
-            }
-          }
-        }
-      ]
-    },
-    "AccountRow@app\\(tabs)\\profile.tsx:408": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 408
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowIcon",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 570,
-          "properties": {
-            "marginRight": {
-              "line": 571,
-              "col": 17,
-              "endCol": 19,
-              "raw": "12"
-            },
-            "width": {
-              "line": 572,
-              "col": 11,
-              "endCol": 13,
-              "raw": "24"
-            }
-          }
-        }
-      ]
-    },
-    "AccountRow@app\\(tabs)\\profile.tsx:414": {
-      "element": {
-        "file": "app\\(tabs)\\profile.tsx",
-        "line": 414
-      },
-      "styles": [
-        {
-          "origin": "stylesheet",
-          "ref": "styles.rowLabel",
-          "file": "app\\(tabs)\\profile.tsx",
-          "defLine": 574,
-          "properties": {
-            "fontSize": {
-              "line": 575,
-              "col": 14,
-              "endCol": 16,
-              "raw": "15"
-            }
-          }
-        }
-      ]
-    },
     "SettingsScreen@app\\(tabs)\\settings.tsx:74": {
       "element": {
         "file": "app\\(tabs)\\settings.tsx",
@@ -18439,6 +16591,1876 @@
               "col": 26,
               "endCol": 28,
               "raw": "11"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:105": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 105
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.container",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 471,
+          "properties": {
+            "flex": {
+              "line": 472,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:114": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 114
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.avatarSection",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 474,
+          "properties": {
+            "alignItems": {
+              "line": 475,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "paddingTop": {
+              "line": 476,
+              "col": 16,
+              "endCol": 18,
+              "raw": "16"
+            },
+            "paddingBottom": {
+              "line": 477,
+              "col": 19,
+              "endCol": 21,
+              "raw": "24"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:118": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 118
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.avatarOuter",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 479,
+          "properties": {
+            "width": {
+              "line": 480,
+              "col": 11,
+              "endCol": 13,
+              "raw": "88"
+            },
+            "height": {
+              "line": 481,
+              "col": 12,
+              "endCol": 14,
+              "raw": "88"
+            },
+            "borderRadius": {
+              "line": 482,
+              "col": 18,
+              "endCol": 20,
+              "raw": "44"
+            },
+            "borderWidth": {
+              "line": 483,
+              "col": 17,
+              "endCol": 18,
+              "raw": "3"
+            },
+            "borderCurve": {
+              "line": 484,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "alignItems": {
+              "line": 485,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 486,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:124": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 124
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.avatarInner",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 488,
+          "properties": {
+            "width": {
+              "line": 489,
+              "col": 11,
+              "endCol": 13,
+              "raw": "80"
+            },
+            "height": {
+              "line": 490,
+              "col": 12,
+              "endCol": 14,
+              "raw": "80"
+            },
+            "borderRadius": {
+              "line": 491,
+              "col": 18,
+              "endCol": 20,
+              "raw": "40"
+            },
+            "borderCurve": {
+              "line": 492,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "alignItems": {
+              "line": 493,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 494,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:130": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 130
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.avatarText",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 496,
+          "properties": {
+            "fontSize": {
+              "line": 497,
+              "col": 14,
+              "endCol": 16,
+              "raw": "28"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:141": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 141
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.nameText",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 499,
+          "properties": {
+            "fontSize": {
+              "line": 500,
+              "col": 14,
+              "endCol": 16,
+              "raw": "22"
+            },
+            "marginTop": {
+              "line": 501,
+              "col": 15,
+              "endCol": 17,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:150": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 150
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.badge",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 503,
+          "properties": {
+            "marginTop": {
+              "line": 504,
+              "col": 15,
+              "endCol": 16,
+              "raw": "8"
+            },
+            "paddingHorizontal": {
+              "line": 505,
+              "col": 23,
+              "endCol": 25,
+              "raw": "14"
+            },
+            "paddingVertical": {
+              "line": 506,
+              "col": 21,
+              "endCol": 22,
+              "raw": "5"
+            },
+            "borderRadius": {
+              "line": 507,
+              "col": 18,
+              "endCol": 20,
+              "raw": "12"
+            },
+            "borderWidth": {
+              "line": 508,
+              "col": 17,
+              "endCol": 18,
+              "raw": "1"
+            },
+            "borderCurve": {
+              "line": 509,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:156": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 156
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.badgeText",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 511,
+          "properties": {
+            "fontSize": {
+              "line": 512,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:167": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 167
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.editProfileBtn",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 514,
+          "properties": {
+            "flexDirection": {
+              "line": 515,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 516,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "gap": {
+              "line": 517,
+              "col": 9,
+              "endCol": 10,
+              "raw": "6"
+            },
+            "marginTop": {
+              "line": 518,
+              "col": 15,
+              "endCol": 17,
+              "raw": "14"
+            },
+            "paddingHorizontal": {
+              "line": 519,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "paddingVertical": {
+              "line": 520,
+              "col": 21,
+              "endCol": 22,
+              "raw": "8"
+            },
+            "borderRadius": {
+              "line": 521,
+              "col": 18,
+              "endCol": 20,
+              "raw": "20"
+            },
+            "borderCurve": {
+              "line": 522,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "borderWidth": {
+              "line": 523,
+              "col": 17,
+              "endCol": 20,
+              "raw": "1.5"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:172": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 172
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.editProfileText",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 525,
+          "properties": {
+            "fontSize": {
+              "line": 527,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:179": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 179
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statsCard",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 529,
+          "properties": {
+            "flexDirection": {
+              "line": 530,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "marginHorizontal": {
+              "line": 531,
+              "col": 22,
+              "endCol": 24,
+              "raw": "16"
+            },
+            "borderRadius": {
+              "line": 532,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 533,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "paddingVertical": {
+              "line": 534,
+              "col": 21,
+              "endCol": 23,
+              "raw": "20"
+            },
+            "paddingHorizontal": {
+              "line": 535,
+              "col": 23,
+              "endCol": 24,
+              "raw": "8"
+            },
+            "alignItems": {
+              "line": 536,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:183": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 183
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statItem",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 538,
+          "properties": {
+            "flex": {
+              "line": 539,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 540,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:184": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 184
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statValue",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 542,
+          "properties": {
+            "fontSize": {
+              "line": 543,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:189": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 189
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statLabel",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 545,
+          "properties": {
+            "fontSize": {
+              "line": 546,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginTop": {
+              "line": 547,
+              "col": 15,
+              "endCol": 16,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:196": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 196
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 549,
+          "properties": {
+            "width": {
+              "line": 550,
+              "col": 11,
+              "endCol": 12,
+              "raw": "1"
+            },
+            "height": {
+              "line": 551,
+              "col": 12,
+              "endCol": 14,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:198": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 198
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statItem",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 538,
+          "properties": {
+            "flex": {
+              "line": 539,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 540,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:199": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 199
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statValue",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 542,
+          "properties": {
+            "fontSize": {
+              "line": 543,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:204": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 204
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statLabel",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 545,
+          "properties": {
+            "fontSize": {
+              "line": 546,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginTop": {
+              "line": 547,
+              "col": 15,
+              "endCol": 16,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:211": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 211
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 549,
+          "properties": {
+            "width": {
+              "line": 550,
+              "col": 11,
+              "endCol": 12,
+              "raw": "1"
+            },
+            "height": {
+              "line": 551,
+              "col": 12,
+              "endCol": 14,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:213": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 213
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statItem",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 538,
+          "properties": {
+            "flex": {
+              "line": 539,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            },
+            "alignItems": {
+              "line": 540,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:214": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 214
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statValue",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 542,
+          "properties": {
+            "fontSize": {
+              "line": 543,
+              "col": 14,
+              "endCol": 16,
+              "raw": "18"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:219": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 219
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.statLabel",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 545,
+          "properties": {
+            "fontSize": {
+              "line": 546,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginTop": {
+              "line": 547,
+              "col": 15,
+              "endCol": 16,
+              "raw": "4"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:229": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 229
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiCard",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 553,
+          "properties": {
+            "marginHorizontal": {
+              "line": 554,
+              "col": 22,
+              "endCol": 24,
+              "raw": "16"
+            },
+            "marginTop": {
+              "line": 555,
+              "col": 15,
+              "endCol": 17,
+              "raw": "12"
+            },
+            "borderRadius": {
+              "line": 556,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 557,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "padding": {
+              "line": 558,
+              "col": 13,
+              "endCol": 15,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:233": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 233
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiRow",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 560,
+          "properties": {
+            "flexDirection": {
+              "line": 561,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 562,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:234": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 234
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiCircle",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 564,
+          "properties": {
+            "width": {
+              "line": 565,
+              "col": 11,
+              "endCol": 13,
+              "raw": "56"
+            },
+            "height": {
+              "line": 566,
+              "col": 12,
+              "endCol": 14,
+              "raw": "56"
+            },
+            "borderRadius": {
+              "line": 567,
+              "col": 18,
+              "endCol": 20,
+              "raw": "28"
+            },
+            "borderWidth": {
+              "line": 568,
+              "col": 17,
+              "endCol": 20,
+              "raw": "2.5"
+            },
+            "alignItems": {
+              "line": 569,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 570,
+              "col": 20,
+              "endCol": 28,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:235": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 235
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiValue",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 572,
+          "properties": {
+            "fontSize": {
+              "line": 574,
+              "col": 14,
+              "endCol": 16,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:239": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 239
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app\\(tabs)\\profile.tsx",
+          "properties": {
+            "flex": {
+              "line": 239,
+              "col": 33,
+              "endCol": 34,
+              "raw": "1"
+            },
+            "marginLeft": {
+              "line": 239,
+              "col": 48,
+              "endCol": 50,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:240": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 240
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiTitle",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 577,
+          "properties": {
+            "fontSize": {
+              "line": 579,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:243": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 243
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiCategory",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 581,
+          "properties": {
+            "fontSize": {
+              "line": 583,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "marginTop": {
+              "line": 584,
+              "col": 15,
+              "endCol": 16,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:252": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 252
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.bmiDetail",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 586,
+          "properties": {
+            "fontSize": {
+              "line": 588,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            },
+            "marginTop": {
+              "line": 589,
+              "col": 15,
+              "endCol": 16,
+              "raw": "2"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:261": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 261
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 591,
+          "properties": {
+            "marginTop": {
+              "line": 592,
+              "col": 15,
+              "endCol": 17,
+              "raw": "24"
+            },
+            "paddingHorizontal": {
+              "line": 593,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:263": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 263
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.card",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 595,
+          "properties": {
+            "marginTop": {
+              "line": 596,
+              "col": 15,
+              "endCol": 17,
+              "raw": "12"
+            },
+            "borderRadius": {
+              "line": 597,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 598,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "overflow": {
+              "line": 599,
+              "col": 14,
+              "endCol": 22,
+              "raw": "\"hidden\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:270": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 270
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:277": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 277
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:288": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 288
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 591,
+          "properties": {
+            "marginTop": {
+              "line": 592,
+              "col": 15,
+              "endCol": 17,
+              "raw": "24"
+            },
+            "paddingHorizontal": {
+              "line": 593,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:290": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 290
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.card",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 595,
+          "properties": {
+            "marginTop": {
+              "line": 596,
+              "col": 15,
+              "endCol": 17,
+              "raw": "12"
+            },
+            "borderRadius": {
+              "line": 597,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 598,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "overflow": {
+              "line": 599,
+              "col": 14,
+              "endCol": 22,
+              "raw": "\"hidden\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:297": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 297
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:304": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 304
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:311": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 311
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:318": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 318
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:325": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 325
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:337": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 337
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 591,
+          "properties": {
+            "marginTop": {
+              "line": 592,
+              "col": 15,
+              "endCol": 17,
+              "raw": "24"
+            },
+            "paddingHorizontal": {
+              "line": 593,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:339": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 339
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.card",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 595,
+          "properties": {
+            "marginTop": {
+              "line": 596,
+              "col": 15,
+              "endCol": 17,
+              "raw": "12"
+            },
+            "borderRadius": {
+              "line": 597,
+              "col": 18,
+              "endCol": 20,
+              "raw": "16"
+            },
+            "borderCurve": {
+              "line": 598,
+              "col": 17,
+              "endCol": 29,
+              "raw": "\"continuous\""
+            },
+            "overflow": {
+              "line": 599,
+              "col": 14,
+              "endCol": 22,
+              "raw": "\"hidden\""
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:342": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 342
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowDivider",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 622,
+          "properties": {
+            "marginLeft": {
+              "line": 624,
+              "col": 16,
+              "endCol": 18,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:343": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 343
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.weightRow",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 626,
+          "properties": {
+            "flexDirection": {
+              "line": 627,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 628,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "paddingHorizontal": {
+              "line": 629,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "minHeight": {
+              "line": 630,
+              "col": 15,
+              "endCol": 17,
+              "raw": "44"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:344": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 344
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.weightDate",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 632,
+          "properties": {
+            "fontSize": {
+              "line": 634,
+              "col": 14,
+              "endCol": 16,
+              "raw": "13"
+            },
+            "flex": {
+              "line": 635,
+              "col": 10,
+              "endCol": 11,
+              "raw": "1"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:347": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 347
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.weightValue",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 637,
+          "properties": {
+            "fontSize": {
+              "line": 639,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            },
+            "marginRight": {
+              "line": 640,
+              "col": 17,
+              "endCol": 19,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:350": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 350
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.weightBmi",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 642,
+          "properties": {
+            "fontSize": {
+              "line": 644,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:361": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 361
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.section",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 591,
+          "properties": {
+            "marginTop": {
+              "line": 592,
+              "col": 15,
+              "endCol": 17,
+              "raw": "24"
+            },
+            "paddingHorizontal": {
+              "line": 593,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:363": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 363
+      },
+      "styles": [
+        {
+          "origin": "inline",
+          "file": "app\\(tabs)\\profile.tsx",
+          "properties": {
+            "flexGrow": {
+              "line": 367,
+              "col": 29,
+              "endCol": 30,
+              "raw": "0"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:370": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 370
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.badgeItem",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 651,
+          "properties": {
+            "marginRight": {
+              "line": 652,
+              "col": 17,
+              "endCol": 18,
+              "raw": "0"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:383": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 383
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.versionSection",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 654,
+          "properties": {
+            "alignItems": {
+              "line": 655,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "marginTop": {
+              "line": 656,
+              "col": 15,
+              "endCol": 17,
+              "raw": "32"
+            }
+          }
+        }
+      ]
+    },
+    "ProfileScreen@app\\(tabs)\\profile.tsx:384": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 384
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.versionText",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 658,
+          "properties": {
+            "fontSize": {
+              "line": 659,
+              "col": 14,
+              "endCol": 16,
+              "raw": "12"
+            }
+          }
+        }
+      ]
+    },
+    "SettingsRow@app\\(tabs)\\profile.tsx:406": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 406
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.settingsRow",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 601,
+          "properties": {
+            "flexDirection": {
+              "line": 602,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 603,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 604,
+              "col": 20,
+              "endCol": 35,
+              "raw": "\"space-between\""
+            },
+            "paddingHorizontal": {
+              "line": 605,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "minHeight": {
+              "line": 606,
+              "col": 15,
+              "endCol": 17,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "SettingsRow@app\\(tabs)\\profile.tsx:407": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 407
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.settingsRowLeft",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 608,
+          "properties": {
+            "flexDirection": {
+              "line": 609,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 610,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "SettingsRow@app\\(tabs)\\profile.tsx:408": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 408
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowIcon",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 612,
+          "properties": {
+            "marginRight": {
+              "line": 613,
+              "col": 17,
+              "endCol": 19,
+              "raw": "12"
+            },
+            "width": {
+              "line": 614,
+              "col": 11,
+              "endCol": 13,
+              "raw": "24"
+            }
+          }
+        }
+      ]
+    },
+    "SettingsRow@app\\(tabs)\\profile.tsx:414": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 414
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowLabel",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 616,
+          "properties": {
+            "fontSize": {
+              "line": 617,
+              "col": 14,
+              "endCol": 16,
+              "raw": "15"
+            }
+          }
+        }
+      ]
+    },
+    "SettingsRow@app\\(tabs)\\profile.tsx:423": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 423
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowValue",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 619,
+          "properties": {
+            "fontSize": {
+              "line": 620,
+              "col": 14,
+              "endCol": 16,
+              "raw": "14"
+            }
+          }
+        }
+      ]
+    },
+    "AccountRow@app\\(tabs)\\profile.tsx:444": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 444
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.settingsRow",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 601,
+          "properties": {
+            "flexDirection": {
+              "line": 602,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 603,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            },
+            "justifyContent": {
+              "line": 604,
+              "col": 20,
+              "endCol": 35,
+              "raw": "\"space-between\""
+            },
+            "paddingHorizontal": {
+              "line": 605,
+              "col": 23,
+              "endCol": 25,
+              "raw": "16"
+            },
+            "minHeight": {
+              "line": 606,
+              "col": 15,
+              "endCol": 17,
+              "raw": "52"
+            }
+          }
+        }
+      ]
+    },
+    "AccountRow@app\\(tabs)\\profile.tsx:449": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 449
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.settingsRowLeft",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 608,
+          "properties": {
+            "flexDirection": {
+              "line": 609,
+              "col": 19,
+              "endCol": 24,
+              "raw": "\"row\""
+            },
+            "alignItems": {
+              "line": 610,
+              "col": 16,
+              "endCol": 24,
+              "raw": "\"center\""
+            }
+          }
+        }
+      ]
+    },
+    "AccountRow@app\\(tabs)\\profile.tsx:450": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 450
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowIcon",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 612,
+          "properties": {
+            "marginRight": {
+              "line": 613,
+              "col": 17,
+              "endCol": 19,
+              "raw": "12"
+            },
+            "width": {
+              "line": 614,
+              "col": 11,
+              "endCol": 13,
+              "raw": "24"
+            }
+          }
+        }
+      ]
+    },
+    "AccountRow@app\\(tabs)\\profile.tsx:456": {
+      "element": {
+        "file": "app\\(tabs)\\profile.tsx",
+        "line": 456
+      },
+      "styles": [
+        {
+          "origin": "stylesheet",
+          "ref": "styles.rowLabel",
+          "file": "app\\(tabs)\\profile.tsx",
+          "defLine": 616,
+          "properties": {
+            "fontSize": {
+              "line": 617,
+              "col": 14,
+              "endCol": 16,
+              "raw": "15"
             }
           }
         }

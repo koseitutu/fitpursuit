@@ -5,6 +5,8 @@ import {
   ScrollView,
   Pressable,
   StyleSheet,
+  Alert,
+  Share,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
@@ -65,6 +67,39 @@ export default function ProfileScreen() {
     achievements.length > 0
       ? achievements.slice(0, 6)
       : SAMPLE_BADGES;
+
+  // New Export Subroutine explicitly added here
+  const handleExportData = async () => {
+    try {
+      const dailyStats = useAppStore.getState().dailyStats || [];
+      
+      if (dailyStats.length === 0) {
+        Alert.alert("No Data", "There is no recorded tracker data available to export yet.");
+        return;
+      }
+
+      const headers = ["Date", "Steps", "Calories Burned", "Active Minutes", "Water Intake (ml)"];
+      const rows = dailyStats.map(stat => [
+        stat.date,
+        stat.steps ?? 0,
+        stat.caloriesBurned ?? 0,
+        stat.activeMinutes ?? 0,
+        stat.waterIntake ?? 0
+      ]);
+
+      const csvContent = [
+        headers.join(","),
+        ...rows.map(row => row.join(","))
+      ].join("\n");
+
+      await Share.share({
+        title: "FitTrack Pro Export Data",
+        message: csvContent,
+      });
+    } catch (error: any) {
+      Alert.alert("Export Failed", error.message || "An error occurred while generating your CSV export.");
+    }
+  };
 
   return (
     <ScrollView
@@ -272,6 +307,13 @@ export default function ProfileScreen() {
             label="Import Data"
             colors={colors}
             onPress={() => router.push("/(tabs)/import-data")}
+          />
+          <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
+          <AccountRow
+            icon="cloud-download"
+            label="Export Data"
+            colors={colors}
+            onPress={handleExportData}
           />
           <View style={[styles.rowDivider, { backgroundColor: colors.border }]} />
           <AccountRow
