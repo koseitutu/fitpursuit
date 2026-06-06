@@ -38,17 +38,37 @@ export default function DashboardScreen() {
   const addWorkout = useAppStore((state) => state.addWorkout);
   const loadSampleData = useAppStore((state) => state.loadSampleData);
 
-  // Fallback state update hook modifier context for tracking water consumption records
-  const updateWaterIntake = useAppStore((state) => (state as any).updateWaterIntake ?? ((amount: number) => {
-    const todayRecord = dailyStats.find((s) => s.date === todayString);
-    if (todayRecord) {
-      todayRecord.waterIntake = Math.max(0, (todayRecord.waterIntake ?? 0) + amount);
-    }
-  }));
-
   // --- Local Date/Calendar State ---
   const todayString = useMemo(() => formatDateString(new Date()), []);
   const [selectedDateStr, setSelectedDateStr] = useState<string>(todayString);
+
+  // Heavy-duty direct state update handler for tracking water consumption records
+  const updateWaterIntake = (amount: number) => {
+    // 1. Grab a clean snapshot of the live data array directly from the state engine
+    const currentStats = useAppStore.getState().dailyStats || [];
+    
+    // 2. Generate a completely fresh array using immutable mapping
+    const updatedStats = currentStats.map((stat) => {
+      if (stat.date === todayString) {
+        const currentWater = stat.waterIntake ?? 0;
+        let newWater = currentWater + amount;
+        
+        // Handle negative amounts safely (for the clear/reset callback action)
+        if (amount < 0) {
+          newWater = Math.abs(amount) === currentWater ? 0 : Math.max(0, currentWater + amount);
+        }
+        
+        return {
+          ...stat,
+          waterIntake: newWater,
+        };
+      }
+      return stat;
+    });
+
+    // 3. Force an immediate global state dispatch to trigger the UI re-render
+    useAppStore.setState({ dailyStats: updatedStats });
+  };
 
   useEffect(() => {
     if (dailyStats.length === 0) {
