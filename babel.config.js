@@ -17,15 +17,17 @@ module.exports = function (api) {
         'babel-preset-expo',
         {
           unstable_transformImportMeta: true,
-          // Compiles modern public/private fields 
           setPublicClassFields: true,
-          // Safely intercepts and strips rogue TypeScript syntax in third-party modules
-          unstable_transformTypeScriptModules: true,
         },
       ],
     ],
     plugins,
     overrides: [
+      {
+        // FORCE compilation on all third-party code to catch rogue syntax
+        test: /[\\/]node_modules[\\/]/,
+        presets: ['babel-preset-expo'],
+      },
       {
         // Include @fastshot/* packages for env var inlining
         include: /node_modules\/@fastshot\/(ai|auth)/,
