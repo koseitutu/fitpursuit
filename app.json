@@ -42,8 +42,10 @@
     },
     "extra": {
       "eas": {
-        "projectId": "8882cc7d-db7f-482f-9e97-b37f64b6afc1"
-      }
-    }
+        "projectId": "6685c84e-7c37-4cfb-9216-2cddf9834142"
+      },
+      "router": {}
+    },
+    "owner": "koaosei-tutu"
   }
 }
