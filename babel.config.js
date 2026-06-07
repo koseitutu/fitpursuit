@@ -6,7 +6,6 @@ module.exports = function (api) {
 
   const plugins = [];
 
-  // Source metadata for AI agent inspection (web preview + local dev only)
   if (platform === 'web' && (isDev || process.env.EXPO_SOURCE_METADATA === '1')) {
     plugins.push('./babel-plugin-source-metadata');
   }
@@ -17,19 +16,12 @@ module.exports = function (api) {
         'babel-preset-expo',
         {
           unstable_transformImportMeta: true,
-          setPublicClassFields: true,
         },
       ],
     ],
     plugins,
     overrides: [
       {
-        // FORCE compilation on all third-party code to catch rogue syntax
-        test: /[\\/]node_modules[\\/]/,
-        presets: ['babel-preset-expo'],
-      },
-      {
-        // Include @fastshot/* packages for env var inlining
         include: /node_modules\/@fastshot\/(ai|auth)/,
         plugins: [
           [
