@@ -4,12 +4,13 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  // Combined plugins to resolve Hermes syntax and loose-mode compatibility issues
+  // All compilation plugins unified with explicit loose-mode definitions
   const plugins = [
     ['@babel/plugin-transform-class-properties', { loose: true }],
     ['@babel/plugin-transform-private-methods', { loose: true }],
     ['@babel/plugin-transform-private-property-in-object', { loose: true }],
-    '@babel/plugin-transform-classes'
+    '@babel/plugin-transform-classes',
+    '@babel/plugin-transform-typescript'
   ];
 
   // Source metadata for AI agent inspection (web preview + local dev only)
