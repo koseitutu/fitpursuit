@@ -4,14 +4,8 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  // All compilation plugins unified with explicit loose-mode definitions
-  const plugins = [
-    ['@babel/plugin-transform-class-properties', { loose: true }],
-    ['@babel/plugin-transform-private-methods', { loose: true }],
-    ['@babel/plugin-transform-private-property-in-object', { loose: true }],
-    '@babel/plugin-transform-classes',
-    '@babel/plugin-transform-typescript'
-  ];
+  // Clean, minimal plugins list keeping your layout completely stable
+  const plugins = [];
 
   // Source metadata for AI agent inspection (web preview + local dev only)
   if (platform === 'web' && (isDev || process.env.EXPO_SOURCE_METADATA === '1')) {
@@ -24,6 +18,9 @@ module.exports = function (api) {
         'babel-preset-expo',
         {
           unstable_transformImportMeta: true,
+          // This safely instructs the core Expo preset to compile all modern 
+          // TypeScript/JavaScript class properties and methods down for Hermes
+          setPublicClassFields: true,
         },
       ],
     ],
