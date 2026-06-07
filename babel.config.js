@@ -4,7 +4,6 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  // Clean, minimal plugins list keeping your layout completely stable
   const plugins = [];
 
   // Source metadata for AI agent inspection (web preview + local dev only)
@@ -18,9 +17,10 @@ module.exports = function (api) {
         'babel-preset-expo',
         {
           unstable_transformImportMeta: true,
-          // This safely instructs the core Expo preset to compile all modern 
-          // TypeScript/JavaScript class properties and methods down for Hermes
+          // Compiles modern public/private fields 
           setPublicClassFields: true,
+          // Safely intercepts and strips rogue TypeScript syntax in third-party modules
+          unstable_transformTypeScriptModules: true,
         },
       ],
     ],
