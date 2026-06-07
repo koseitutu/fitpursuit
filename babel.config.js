@@ -4,7 +4,12 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  const plugins = [];
+  // Explicitly bundle the class feature plugins together with matching 'loose' settings
+  const plugins = [
+    ['@babel/plugin-transform-class-properties', { loose: true }],
+    ['@babel/plugin-transform-private-methods', { loose: true }],
+    ['@babel/plugin-transform-private-property-in-object', { loose: true }]
+  ];
 
   // Source metadata for AI agent inspection (web preview + local dev only)
   // isDev is true during Metro dev server; EXPO_SOURCE_METADATA is set by
@@ -36,6 +41,7 @@ module.exports = function (api) {
                 'EXPO_PUBLIC_PROJECT_ID',
                 'EXPO_PUBLIC_NEWELL_API_URL',
                 'EXPO_PUBLIC_AUTH_BROKER_URL',
+                'EXPO_PUBLIC_AUTH_CLIENT_ID',
               ],
             },
           ],
