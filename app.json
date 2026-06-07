@@ -19,6 +19,7 @@
       },
       "edgeToEdgeEnabled": true,
       "jsEngine": "hermes"
+      "hermesFlags": ["-strip"]
     },
     "web": {
       "bundler": "metro",
