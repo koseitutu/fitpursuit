@@ -4,7 +4,12 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  const plugins = [];
+  // Safely inject specific transformations to strip private properties before Hermes compilation
+  const plugins = [
+    ['@babel/plugin-transform-class-properties', { loose: true }],
+    ['@babel/plugin-transform-private-methods', { loose: true }],
+    ['@babel/plugin-transform-private-property-in-object', { loose: true }]
+  ];
 
   if (platform === 'web' && (isDev || process.env.EXPO_SOURCE_METADATA === '1')) {
     plugins.push('./babel-plugin-source-metadata');
