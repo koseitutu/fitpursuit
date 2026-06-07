@@ -4,16 +4,15 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  // Explicitly bundle the class feature plugins together with matching 'loose' settings
+  // Combined plugins to resolve Hermes syntax and loose-mode compatibility issues
   const plugins = [
     ['@babel/plugin-transform-class-properties', { loose: true }],
     ['@babel/plugin-transform-private-methods', { loose: true }],
-    ['@babel/plugin-transform-private-property-in-object', { loose: true }]
+    ['@babel/plugin-transform-private-property-in-object', { loose: true }],
+    '@babel/plugin-transform-classes'
   ];
 
   // Source metadata for AI agent inspection (web preview + local dev only)
-  // isDev is true during Metro dev server; EXPO_SOURCE_METADATA is set by
-  // build_manager.py so that `expo export` (always production) still injects metadata.
   if (platform === 'web' && (isDev || process.env.EXPO_SOURCE_METADATA === '1')) {
     plugins.push('./babel-plugin-source-metadata');
   }
@@ -31,7 +30,6 @@ module.exports = function (api) {
     overrides: [
       {
         // Include @fastshot/* packages for env var inlining
-        // babel-preset-expo skips node_modules, so we need this override
         include: /node_modules\/@fastshot\/(ai|auth)/,
         plugins: [
           [
