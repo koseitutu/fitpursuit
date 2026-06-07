@@ -18,7 +18,7 @@
         "backgroundColor": "#10192b"
       },
       "edgeToEdgeEnabled": true,
-      "jsEngine": "hermes"
+      "jsEngine": "hermes",
       "hermesFlags": ["-strip"]
     },
     "web": {
