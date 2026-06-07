@@ -4,12 +4,7 @@ module.exports = function (api) {
   const sourceMeta = process.env.EXPO_SOURCE_METADATA;
   api.cache.using(() => `${platform}:${isDev}:${sourceMeta}`);
 
-  // Safely inject specific transformations to strip private properties before Hermes compilation
-  const plugins = [
-    ['@babel/plugin-transform-class-properties', { loose: true }],
-    ['@babel/plugin-transform-private-methods', { loose: true }],
-    ['@babel/plugin-transform-private-property-in-object', { loose: true }]
-  ];
+  const plugins = [];
 
   if (platform === 'web' && (isDev || process.env.EXPO_SOURCE_METADATA === '1')) {
     plugins.push('./babel-plugin-source-metadata');
@@ -27,6 +22,16 @@ module.exports = function (api) {
     plugins,
     overrides: [
       {
+        // Target ALL files including node_modules to guarantee private fields are stripped
+        test: /[\s\S]*/,
+        plugins: [
+          ['@babel/plugin-transform-class-properties', { loose: true }],
+          ['@babel/plugin-transform-private-methods', { loose: true }],
+          ['@babel/plugin-transform-private-property-in-object', { loose: true }]
+        ]
+      },
+      {
+        // Include @fastshot/* packages for env var inlining
         include: /node_modules\/@fastshot\/(ai|auth)/,
         plugins: [
           [
