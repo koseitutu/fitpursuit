@@ -7,7 +7,6 @@
     "icon": "./assets/app-icon.png",
     "scheme": "fastshot",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": false
     },
@@ -18,8 +17,7 @@
         "backgroundColor": "#10192b"
       },
       "edgeToEdgeEnabled": true,
-      "jsEngine": "hermes",
-      "hermesFlags": ["-strip"]
+      "jsEngine": "hermes"
     },
     "web": {
       "bundler": "metro",
@@ -44,8 +42,7 @@
     "extra": {
       "eas": {
         "projectId": "6685c84e-7c37-4cfb-9216-2cddf9834142"
-      },
-      "router": {}
+      }
     },
     "owner": "koaosei-tutu"
   }
