@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import {
   View,
   Text,
@@ -24,6 +24,22 @@ import {
 } from "@/utils/blood-pressure";
 import type { BPTimeSlot, BloodPressureReading } from "@/store/types";
 
+const WEEKDAYS = ["S", "M", "T", "W", "T", "F", "S"];
+
+function getDaysInMonth(year: number, month: number) {
+  const date = new Date(year, month, 1);
+  const days = [];
+  const startDay = date.getDay();
+  for (let i = 0; i < startDay; i++) {
+    days.push(null);
+  }
+  while (date.getMonth() === month) {
+    days.push(new Date(date));
+    date.setDate(date.getDate() + 1);
+  }
+  return days;
+}
+
 export default function HealthVitalsScreen() {
   const insets = useSafeAreaInsets();
   const { colors } = useTheme();
@@ -41,6 +57,12 @@ export default function HealthVitalsScreen() {
   const [pulse, setPulse] = useState("");
   const [timeSlot, setTimeSlot] = useState<BPTimeSlot>("AM");
   const [notes, setNotes] = useState("");
+  
+  // Custom Inline Calendar States
+  const [formDate, setFormDate] = useState(new Date().toISOString().split("T")[0]);
+  const [showCalendarPicker, setShowCalendarPicker] = useState(false);
+  const [calendarYear, setCalendarYear] = useState(new Date().getFullYear());
+  const [calendarMonth, setCalendarMonth] = useState(new Date().getMonth());
 
   const stats = calculateBPStats(bloodPressureReadings);
 
@@ -51,6 +73,10 @@ export default function HealthVitalsScreen() {
     setTimeSlot("AM");
     setNotes("");
     setEditingReading(null);
+    setFormDate(new Date().toISOString().split("T")[0]);
+    setShowCalendarPicker(false);
+    setCalendarYear(new Date().getFullYear());
+    setCalendarMonth(new Date().getMonth());
   };
 
   const handleAdd = () => {
@@ -65,6 +91,19 @@ export default function HealthVitalsScreen() {
     setPulse(String(reading.pulse));
     setTimeSlot(reading.timeSlot);
     setNotes(reading.notes ?? "");
+    
+    if (reading.date) {
+      setFormDate(reading.date);
+      const parsedDate = new Date(reading.date);
+      if (!isNaN(parsedDate.getTime())) {
+        setCalendarYear(parsedDate.getFullYear());
+        setCalendarMonth(parsedDate.getMonth());
+      }
+    } else {
+      setFormDate(new Date().toISOString().split("T")[0]);
+    }
+    
+    setShowCalendarPicker(false);
     setShowAddModal(true);
   };
 
@@ -97,10 +136,9 @@ export default function HealthVitalsScreen() {
       return;
     }
 
-    const today = new Date().toISOString().split("T")[0];
-
     if (editingReading) {
       updateBloodPressureReading(editingReading.id, {
+        date: formDate,
         systolic: sys,
         diastolic: dia,
         pulse: pul,
@@ -110,7 +148,7 @@ export default function HealthVitalsScreen() {
     } else {
       const reading: BloodPressureReading = {
         id: `bp-${Date.now()}`,
-        date: today,
+        date: formDate,
         timeSlot,
         systolic: sys,
         diastolic: dia,
@@ -123,6 +161,23 @@ export default function HealthVitalsScreen() {
 
     setShowAddModal(false);
     resetForm();
+  };
+
+  const monthDays = useMemo(() => getDaysInMonth(calendarYear, calendarMonth), [calendarYear, calendarMonth]);
+  const currentMonthLabel = new Date(calendarYear, calendarMonth).toLocaleString(undefined, { month: "long", year: "numeric" });
+  
+  const changeMonth = (direction: number) => {
+    let nextMonth = calendarMonth + direction;
+    let nextYear = calendarYear;
+    if (nextMonth < 0) {
+      nextMonth = 11;
+      nextYear -= 1;
+    } else if (nextMonth > 11) {
+      nextMonth = 0;
+      nextYear += 1;
+    }
+    setCalendarMonth(nextMonth);
+    setCalendarYear(nextYear);
   };
 
   const latestReading = bloodPressureReadings[0];
@@ -358,7 +413,13 @@ export default function HealthVitalsScreen() {
         visible={showAddModal}
         animationType="slide"
         transparent
-        onRequestClose={() => setShowAddModal(false)}
+        onRequestClose={() => {
+          if (showCalendarPicker) {
+            setShowCalendarPicker(false);
+          } else {
+            setShowAddModal(false);
+          }
+        }}
       >
         <View style={styles.modalOverlay}>
           <Pressable style={styles.modalBackdrop} onPress={() => setShowAddModal(false)} />
@@ -375,6 +436,83 @@ export default function HealthVitalsScreen() {
             <Text style={[styles.modalTitle, { color: colors.textPrimary }]}>
               {editingReading ? "Edit Reading" : "New Reading"}
             </Text>
+
+            {/* Custom Embedded Activity-Style Calendar */}
+            <View style={{ marginBottom: 14 }}>
+              <Text style={[styles.inputLabel, { color: colors.textSecondary }]}>
+                Date
+              </Text>
+              
+              <Pressable
+                onPress={() => setShowCalendarPicker(!showCalendarPicker)}
+                style={[styles.calendarTriggerField, { backgroundColor: colors.surface, borderColor: colors.border }]}
+              >
+                <Text style={{ color: colors.textPrimary, fontFamily: Fonts.regular, fontSize: 15 }}>
+                  {formDate}
+                </Text>
+                <Ionicons name="calendar-outline" size={18} color={colors.primary} />
+              </Pressable>
+
+              {showCalendarPicker && (
+                <Animated.View 
+                  entering={FadeInDown.duration(250)} 
+                  style={[styles.calendarEmbedContainer, { backgroundColor: colors.surface, borderColor: colors.border }]}
+                >
+                  <View style={styles.calendarControlHeader}>
+                    <Pressable onPress={() => changeMonth(-1)} hitSlop={8}>
+                      <Ionicons name="chevron-back" size={20} color={colors.textPrimary} />
+                    </Pressable>
+                    <Text style={[styles.calendarMonthTitle, { color: colors.textPrimary }]}>
+                      {currentMonthLabel}
+                    </Text>
+                    <Pressable onPress={() => changeMonth(1)} hitSlop={8}>
+                      <Ionicons name="chevron-forward" size={20} color={colors.textPrimary} />
+                    </Pressable>
+                  </View>
+
+                  <View style={styles.calendarWeekdayRow}>
+                    {WEEKDAYS.map((day, idx) => (
+                      <Text key={idx} style={[styles.calendarWeekdayLabel, { color: colors.textSecondary }]}>
+                        {day}
+                      </Text>
+                    ))}
+                  </View>
+
+                  <View style={styles.calendarGrid}>
+                    {monthDays.map((dayObj, idx) => {
+                      if (!dayObj) return <View key={`empty-${idx}`} style={styles.calendarDayCell} />;
+                      
+                      const dateStringIso = dayObj.toISOString().split("T")[0];
+                      const isSelected = formDate === dateStringIso;
+
+                      return (
+                        <Pressable
+                          key={dateStringIso}
+                          onPress={() => {
+                            setFormDate(dateStringIso);
+                            setShowCalendarPicker(false);
+                          }}
+                          style={[
+                            styles.calendarDayCell,
+                            isSelected && { backgroundColor: colors.primary, borderRadius: 8 },
+                          ]}
+                        >
+                          <Text style={[
+                            styles.calendarDayText, 
+                            { 
+                              color: isSelected ? "#0A0E1A" : colors.textPrimary,
+                              fontFamily: isSelected ? Fonts.bold : Fonts.regular 
+                            }
+                          ]}>
+                            {dayObj.getDate()}
+                          </Text>
+                        </Pressable>
+                      );
+                    })}
+                  </View>
+                </Animated.View>
+              )}
+            </View>
 
             {/* Time Slot */}
             <View style={styles.timeSlotRow}>
@@ -744,7 +882,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  // Modal
   modalOverlay: {
     flex: 1,
     justifyContent: "flex-end",
@@ -773,6 +910,62 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "center",
   },
+  inputLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 12,
+    marginBottom: 6,
+  },
+  calendarTriggerField: {
+    height: 48,
+    borderRadius: 12,
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  calendarEmbedContainer: {
+    borderWidth: 1,
+    borderRadius: 16,
+    padding: 12,
+    marginTop: 6,
+    marginBottom: 10,
+    gap: 10,
+  },
+  calendarControlHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 4,
+  },
+  calendarMonthTitle: {
+    fontFamily: Fonts.semiBold,
+    fontSize: 14,
+  },
+  calendarWeekdayRow: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  calendarWeekdayLabel: {
+    fontFamily: Fonts.medium,
+    fontSize: 11,
+    width: 32,
+    textAlign: "center",
+  },
+  calendarGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    rowGap: 6,
+  },
+  calendarDayCell: {
+    width: `${100 / 7}%`,
+    height: 32,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  calendarDayText: {
+    fontSize: 13,
+  },
   timeSlotRow: {
     flexDirection: "row",
     gap: 12,
@@ -798,11 +991,6 @@ const styles = StyleSheet.create({
   },
   inputCol: {
     flex: 1,
-  },
-  inputLabel: {
-    fontFamily: Fonts.medium,
-    fontSize: 12,
-    marginBottom: 6,
   },
   modalInput: {
     height: 48,

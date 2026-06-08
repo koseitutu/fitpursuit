@@ -6,10 +6,13 @@ import {
   Pressable,
   TextInput,
   StyleSheet,
+  AppState,
+  AppStateStatus,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { Ionicons } from "@expo/vector-icons";
+import { Audio } from "expo-av";
 import { useTheme } from "@/hooks/useTheme";
 import { useAppStore } from "@/store/useAppStore";
 import { Fonts } from "@/constants/Typography";
@@ -42,13 +45,10 @@ function formatTime(seconds: number): string {
 
 function mapDifficulty(difficulty: Difficulty): "Beginner" | "Intermediate" | "Advanced" {
   switch (difficulty) {
-    case "easy":
-      return "Beginner";
-    case "medium":
-      return "Intermediate";
+    case "easy": return "Beginner";
+    case "medium": return "Intermediate";
     case "hard":
-    case "extreme":
-      return "Advanced";
+    case "extreme": return "Advanced";
   }
 }
 
@@ -64,10 +64,7 @@ export default function WorkoutsScreen() {
   const workoutTemplates = useAppStore((state) => state.workoutTemplates);
   const addWorkout = useAppStore((state) => state.addWorkout);
 
-  // Template list state
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("all");
-
-  // Active workout state
   const [activeWorkoutId, setActiveWorkoutId] = useState<string | null>(null);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [restTimerActive, setRestTimerActive] = useState(false);
@@ -80,6 +77,10 @@ export default function WorkoutsScreen() {
   const workoutIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const restIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  const soundObjectRef = useRef<Audio.Sound | null>(null);
+  const restEndTimeRef = useRef<number | null>(null);
+  const appStateRef = useRef(AppState.currentState);
+
   const activeTemplate = activeWorkoutId
     ? workoutTemplates.find((t) => t.id === activeWorkoutId) ?? null
     : null;
@@ -87,6 +88,31 @@ export default function WorkoutsScreen() {
   const currentExercise = activeTemplate
     ? activeTemplate.exercises[currentExerciseIndex] ?? null
     : null;
+
+  async function playTimerEndSound() {
+    try {
+      if (soundObjectRef.current) {
+        await soundObjectRef.current.unloadAsync();
+      }
+
+      // @ts-ignore - Direct inline override bypassing declaration file requirements
+      const localSoundAsset = require("@/assets/sounds/timer-beep.mp3");
+
+      const { sound } = await Audio.Sound.createAsync(localSoundAsset);
+      soundObjectRef.current = sound;
+      await sound.playAsync();
+    } catch (error) {
+      console.log("Error handling workout timer audio:", error);
+    }
+  }
+
+  useEffect(() => {
+    return () => {
+      if (soundObjectRef.current) {
+        soundObjectRef.current.unloadAsync();
+      }
+    };
+  }, []);
 
   // Workout duration timer
   useEffect(() => {
@@ -103,17 +129,27 @@ export default function WorkoutsScreen() {
     };
   }, [activeWorkoutId]);
 
-  // Rest timer countdown
+  // Rest timer countdown tracking via Delta Timestamps
   useEffect(() => {
     if (restTimerActive && restTimeRemaining > 0) {
+      if (!restEndTimeRef.current) {
+        restEndTimeRef.current = Date.now() + restTimeRemaining * 1000;
+      }
+
       restIntervalRef.current = setInterval(() => {
-        setRestTimeRemaining((prev) => {
-          if (prev <= 1) {
-            setRestTimerActive(false);
-            return 0;
-          }
-          return prev - 1;
-        });
+        const now = Date.now();
+        const distance = restEndTimeRef.current! - now;
+        const calculatedSecondsLeft = Math.ceil(distance / 1000);
+
+        if (calculatedSecondsLeft <= 0) {
+          setRestTimerActive(false);
+          setRestTimeRemaining(0);
+          restEndTimeRef.current = null;
+          if (restIntervalRef.current) clearInterval(restIntervalRef.current);
+          playTimerEndSound();
+        } else {
+          setRestTimeRemaining(calculatedSecondsLeft);
+        }
       }, 1000);
     }
     return () => {
@@ -124,12 +160,57 @@ export default function WorkoutsScreen() {
     };
   }, [restTimerActive, restTimeRemaining]);
 
+  // Foreground app cycle re-synchronization state hook
+  useEffect(() => {
+    const handleAppStateChange = (nextAppState: AppStateStatus) => {
+      if (appStateRef.current.match(/inactive|background/) && nextAppState === "active") {
+        if (restTimerActive && restEndTimeRef.current) {
+          const now = Date.now();
+          const distance = restEndTimeRef.current - now;
+          const remaining = Math.ceil(distance / 1000);
+
+          if (remaining <= 0) {
+            setRestTimeRemaining(0);
+            setRestTimerActive(false);
+            restEndTimeRef.current = null;
+            playTimerEndSound();
+          } else {
+            setRestTimeRemaining(remaining);
+          }
+        }
+      }
+      appStateRef.current = nextAppState;
+    };
+
+    const subscription = AppState.addEventListener("change", handleAppStateChange);
+    return () => subscription.remove();
+  }, [restTimerActive]);
+
+  // Handle runtime micro-adjustments to the active rest clock
+  const adjustRestTime = useCallback((amountInSeconds: number) => {
+    if (!restTimerActive) return;
+
+    setRestTimeRemaining((prev) => {
+      const newTime = Math.max(0, prev + amountInSeconds);
+      
+      if (newTime === 0) {
+        restEndTimeRef.current = null;
+        setRestTimerActive(false);
+      } else {
+        restEndTimeRef.current = Date.now() + newTime * 1000;
+      }
+      
+      return newTime;
+    });
+  }, [restTimerActive]);
+
   const startWorkout = useCallback((templateId: string) => {
     setActiveWorkoutId(templateId);
     setCurrentExerciseIndex(0);
     setWorkoutDuration(0);
     setRestTimerActive(false);
     setRestTimeRemaining(0);
+    restEndTimeRef.current = null;
     setSetCompletions({});
     setRepsInput("");
     setWeightInput("");
@@ -138,7 +219,7 @@ export default function WorkoutsScreen() {
   const finishWorkout = useCallback(() => {
     if (!activeTemplate) return;
 
-    const totalCalories = Math.round(workoutDuration / 60) * 8; // rough estimate
+    const totalCalories = Math.round(workoutDuration / 60) * 8;
 
     addWorkout({
       id: `workout-${Date.now()}`,
@@ -157,6 +238,7 @@ export default function WorkoutsScreen() {
     setWorkoutDuration(0);
     setRestTimerActive(false);
     setRestTimeRemaining(0);
+    restEndTimeRef.current = null;
     setSetCompletions({});
   }, [activeTemplate, workoutDuration, addWorkout]);
 
@@ -177,8 +259,8 @@ export default function WorkoutsScreen() {
       },
     }));
 
-    // Start rest timer after completing a set
     if (currentExercise.restTime > 0) {
+      restEndTimeRef.current = Date.now() + currentExercise.restTime * 1000;
       setRestTimeRemaining(currentExercise.restTime);
       setRestTimerActive(true);
     }
@@ -192,6 +274,7 @@ export default function WorkoutsScreen() {
       setCurrentExerciseIndex((prev) => prev - 1);
       setRestTimerActive(false);
       setRestTimeRemaining(0);
+      restEndTimeRef.current = null;
     }
   }, [currentExerciseIndex]);
 
@@ -200,6 +283,7 @@ export default function WorkoutsScreen() {
       setCurrentExerciseIndex((prev) => prev + 1);
       setRestTimerActive(false);
       setRestTimeRemaining(0);
+      restEndTimeRef.current = null;
     }
   }, [activeTemplate, currentExerciseIndex]);
 
@@ -211,11 +295,10 @@ export default function WorkoutsScreen() {
     return template.category === selectedCategory;
   });
 
-  // --- Active Workout View ---
+  // --- Active Workout View Render Block ---
   if (activeTemplate && currentExercise) {
     const totalRestTime = currentExercise.restTime;
-    const restProgress =
-      totalRestTime > 0 ? ((totalRestTime - restTimeRemaining) / totalRestTime) * 100 : 0;
+    const restProgress = totalRestTime > 0 ? ((totalRestTime - restTimeRemaining) / totalRestTime) * 100 : 0;
 
     return (
       <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -229,38 +312,17 @@ export default function WorkoutsScreen() {
         >
           {/* Workout Title */}
           <Animated.View entering={FadeInDown.delay(0).duration(400)} style={{ alignItems: "center", marginBottom: 8 }}>
-            <Text
-              style={{
-                fontFamily: Fonts.bold,
-                fontSize: 22,
-                color: colors.textPrimary,
-                textAlign: "center",
-              }}
-            >
+            <Text style={{ fontFamily: Fonts.bold, fontSize: 22, color: colors.textPrimary, textAlign: "center" }}>
               {activeTemplate.name}
             </Text>
           </Animated.View>
 
           {/* Total Duration */}
           <Animated.View entering={FadeInDown.delay(100).duration(400)} style={{ alignItems: "center", marginBottom: 24 }}>
-            <Text
-              style={{
-                fontFamily: Fonts.semiBold,
-                fontSize: 36,
-                color: colors.primary,
-                fontVariant: ["tabular-nums"],
-              }}
-            >
+            <Text style={{ fontFamily: Fonts.semiBold, fontSize: 36, color: colors.primary, fontVariant: ["tabular-nums"] }}>
               {formatTime(workoutDuration)}
             </Text>
-            <Text
-              style={{
-                fontFamily: Fonts.regular,
-                fontSize: 13,
-                color: colors.textSecondary,
-                marginTop: 2,
-              }}
-            >
+            <Text style={{ fontFamily: Fonts.regular, fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>
               Total Duration
             </Text>
           </Animated.View>
@@ -278,37 +340,14 @@ export default function WorkoutsScreen() {
             }}
           >
             <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 16 }}>
-              <View
-                style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 12,
-                  backgroundColor: colors.primary + "1A",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: 12,
-                }}
-              >
+              <View style={{ width: 40, height: 40, borderRadius: 12, backgroundColor: colors.primary + "1A", alignItems: "center", justifyContent: "center", marginRight: 12 }}>
                 <Ionicons name="barbell" size={20} color={colors.primary} />
               </View>
               <View style={{ flex: 1 }}>
-                <Text
-                  style={{
-                    fontFamily: Fonts.semiBold,
-                    fontSize: 18,
-                    color: colors.textPrimary,
-                  }}
-                >
+                <Text style={{ fontFamily: Fonts.semiBold, fontSize: 18, color: colors.textPrimary }}>
                   {currentExercise.name}
                 </Text>
-                <Text
-                  style={{
-                    fontFamily: Fonts.regular,
-                    fontSize: 13,
-                    color: colors.textSecondary,
-                    marginTop: 2,
-                  }}
-                >
+                <Text style={{ fontFamily: Fonts.regular, fontSize: 13, color: colors.textSecondary, marginTop: 2 }}>
                   Exercise {currentExerciseIndex + 1} of {activeTemplate.exercises.length}
                 </Text>
               </View>
@@ -341,31 +380,15 @@ export default function WorkoutsScreen() {
                       Set {set.setNumber}: {set.reps} reps{set.weight > 0 ? ` @ ${set.weight}kg` : ""}
                     </Text>
                   </View>
-                  {isCompleted && (
-                    <Ionicons name="checkmark-circle" size={22} color={colors.success} />
-                  )}
+                  {isCompleted && <Ionicons name="checkmark-circle" size={22} color={colors.success} />}
                 </View>
               );
             })}
 
             {/* Input Row */}
-            <View
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                marginTop: 16,
-                gap: 12,
-              }}
-            >
+            <View style={{ flexDirection: "row", alignItems: "center", marginTop: 16, gap: 12 }}>
               <View style={{ flex: 1 }}>
-                <Text
-                  style={{
-                    fontFamily: Fonts.regular,
-                    fontSize: 11,
-                    color: colors.textSecondary,
-                    marginBottom: 4,
-                  }}
-                >
+                <Text style={{ fontFamily: Fonts.regular, fontSize: 11, color: colors.textSecondary, marginBottom: 4 }}>
                   Reps
                 </Text>
                 <TextInput
@@ -389,14 +412,7 @@ export default function WorkoutsScreen() {
                 />
               </View>
               <View style={{ flex: 1 }}>
-                <Text
-                  style={{
-                    fontFamily: Fonts.regular,
-                    fontSize: 11,
-                    color: colors.textSecondary,
-                    marginBottom: 4,
-                  }}
-                >
+                <Text style={{ fontFamily: Fonts.regular, fontSize: 11, color: colors.textSecondary, marginBottom: 4 }}>
                   Weight (kg)
                 </Text>
                 <TextInput
@@ -436,60 +452,66 @@ export default function WorkoutsScreen() {
             </View>
           </Animated.View>
 
-          {/* Rest Timer */}
+          {/* Rest Timer Module with Inline Stepper Row */}
           {restTimerActive && restTimeRemaining > 0 && (
-            <Animated.View
-              entering={FadeInDown.delay(300).duration(400)}
-              style={{
-                alignItems: "center",
-                marginBottom: 24,
-                paddingVertical: 20,
-              }}
-            >
-              <Text
-                style={{
-                  fontFamily: Fonts.semiBold,
-                  fontSize: 14,
-                  color: colors.textSecondary,
-                  marginBottom: 12,
-                  textTransform: "uppercase",
-                  letterSpacing: 1,
-                }}
-              >
+            <Animated.View entering={FadeInDown.delay(300).duration(400)} style={{ alignItems: "center", marginBottom: 24, paddingVertical: 20 }}>
+              <Text style={{ fontFamily: Fonts.semiBold, fontSize: 14, color: colors.textSecondary, marginBottom: 12, textTransform: "uppercase", letterSpacing: 1 }}>
                 Rest Timer
               </Text>
-              <ProgressRing
-                progress={restProgress}
-                size={160}
-                strokeWidth={12}
-                color={colors.accent}
-                backgroundColor={colors.border}
-              >
-                <Text
-                  style={{
-                    fontFamily: Fonts.bold,
-                    fontSize: 32,
-                    color: colors.accent,
-                    fontVariant: ["tabular-nums"],
-                  }}
+              
+              <View style={{ flexDirection: "row", alignItems: "center", gap: 20 }}>
+                {/* Decrement Rest Button */}
+                <Pressable
+                  onPress={() => adjustRestTime(-15)}
+                  style={({ pressed }) => ({
+                    width: 44,
+                    height: 44,
+                    borderRadius: 22,
+                    backgroundColor: colors.surface,
+                    borderWidth: 1,
+                    borderColor: colors.border,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    opacity: pressed ? 0.7 : 1,
+                  })}
                 >
-                  {formatTime(restTimeRemaining)}
-                </Text>
-              </ProgressRing>
+                  <Ionicons name="remove" size={20} color={colors.textPrimary} />
+                </Pressable>
+
+                <ProgressRing progress={restProgress} size={160} strokeWidth={12} color={colors.accent} backgroundColor={colors.border}>
+                  <Text style={{ fontFamily: Fonts.bold, fontSize: 32, color: colors.accent, fontVariant: ["tabular-nums"] }}>
+                    {formatTime(restTimeRemaining)}
+                  </Text>
+                </ProgressRing>
+
+                {/* Increment Rest Button */}
+                <Pressable
+                  onPress={() => adjustRestTime(15)}
+                  style={({ pressed }) => ({
+                    width: 44,
+                    height: 44,
+                    borderRadius: 22,
+                    backgroundColor: colors.surface,
+                    borderWidth: 1,
+                    borderColor: colors.border,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    opacity: pressed ? 0.7 : 1,
+                  })}
+                >
+                  <Ionicons name="add" size={20} color={colors.textPrimary} />
+                </Pressable>
+              </View>
+
               <Pressable
                 onPress={() => {
                   setRestTimerActive(false);
                   setRestTimeRemaining(0);
+                  restEndTimeRef.current = null;
                 }}
-                style={{ marginTop: 12 }}
+                style={{ marginTop: 16 }}
               >
-                <Text
-                  style={{
-                    fontFamily: Fonts.medium,
-                    fontSize: 14,
-                    color: colors.primary,
-                  }}
-                >
+                <Text style={{ fontFamily: Fonts.medium, fontSize: 14, color: colors.primary }}>
                   Skip Rest
                 </Text>
               </Pressable>
@@ -497,15 +519,7 @@ export default function WorkoutsScreen() {
           )}
 
           {/* Exercise Navigation */}
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: 16,
-              gap: 12,
-            }}
-          >
+          <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 16, gap: 12 }}>
             <Pressable
               onPress={goToPreviousExercise}
               disabled={currentExerciseIndex === 0}
@@ -524,17 +538,10 @@ export default function WorkoutsScreen() {
               })}
             >
               <Ionicons name="chevron-back" size={18} color={colors.textPrimary} />
-              <Text
-                style={{
-                  fontFamily: Fonts.medium,
-                  fontSize: 14,
-                  color: colors.textPrimary,
-                }}
-              >
+              <Text style={{ fontFamily: Fonts.medium, fontSize: 14, color: colors.textPrimary }}>
                 Previous
               </Text>
             </Pressable>
-
             <Pressable
               onPress={goToNextExercise}
               disabled={currentExerciseIndex === activeTemplate.exercises.length - 1}
@@ -549,147 +556,76 @@ export default function WorkoutsScreen() {
                 backgroundColor: colors.surface,
                 borderWidth: 1,
                 borderColor: colors.border,
-                opacity:
-                  currentExerciseIndex === activeTemplate.exercises.length - 1
-                    ? 0.4
-                    : pressed
-                      ? 0.85
-                      : 1,
+                opacity: currentExerciseIndex === activeTemplate.exercises.length - 1 ? 0.4 : pressed ? 0.85 : 1,
               })}
             >
-              <Text
-                style={{
-                  fontFamily: Fonts.medium,
-                  fontSize: 14,
-                  color: colors.textPrimary,
-                }}
-              >
+              <Text style={{ fontFamily: Fonts.medium, fontSize: 14, color: colors.textPrimary }}>
                 Next
               </Text>
               <Ionicons name="chevron-forward" size={18} color={colors.textPrimary} />
             </Pressable>
           </View>
 
-          {/* Finish Workout Button */}
-          <ActionButton
-            title="Finish Workout"
-            onPress={finishWorkout}
-            variant="accent"
-            icon="checkmark-done"
-          />
+          {/* Finish Workout Action */}
+          <ActionButton title="Finish Workout" icon="checkmark-done" variant="primary" onPress={finishWorkout} />
         </ScrollView>
       </View>
     );
   }
 
-  // --- Template List View ---
+  // --- Master Workouts Directory Template Feed View ---
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView
+        style={{ flex: 1 }}
         contentContainerStyle={{
           paddingTop: insets.top + 16,
-          paddingBottom: insets.bottom + 24,
+          paddingBottom: insets.bottom + 100,
           paddingHorizontal: 20,
         }}
         showsVerticalScrollIndicator={false}
       >
-        {/* Header */}
-        <Animated.View entering={FadeInDown.delay(0).duration(400)}>
-          <Text
-            style={{
-              fontFamily: Fonts.bold,
-              fontSize: 28,
-              color: colors.textPrimary,
-              marginBottom: 20,
-            }}
-          >
-            Workouts
-          </Text>
-        </Animated.View>
+        <SectionHeader title="Workout Routines" style={{ marginBottom: 16 }} />
 
-        {/* Category Filter */}
-        <Animated.View entering={FadeInDown.delay(100).duration(400)}>
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            style={{ flexGrow: 0 }}
-            contentContainerStyle={{ gap: 8, marginBottom: 24 }}
-          >
-            {CATEGORY_FILTERS.map((filter) => {
-              const isActive = selectedCategory === filter.value;
-              return (
-                <Pressable
-                  key={filter.value}
-                  onPress={() => setSelectedCategory(filter.value)}
-                  style={{
-                    paddingHorizontal: 16,
-                    paddingVertical: 8,
-                    borderRadius: 20,
-                    backgroundColor: isActive ? colors.primary : colors.surface,
-                    borderWidth: isActive ? 0 : 1,
-                    borderColor: colors.border,
-                  }}
-                >
-                  <Text
-                    style={{
-                      fontFamily: Fonts.medium,
-                      fontSize: 13,
-                      color: isActive ? "#0A0E1A" : colors.textSecondary,
-                    }}
-                  >
-                    {filter.label}
-                  </Text>
-                </Pressable>
-              );
-            })}
-          </ScrollView>
-        </Animated.View>
-
-        {/* Workout Templates */}
-        <Animated.View entering={FadeInDown.delay(200).duration(400)}>
-          <SectionHeader title="Workout Templates" style={{ marginBottom: 16 }} />
-        </Animated.View>
+        {/* Category Filters Row */}
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginBottom: 20, mx: -20 }} contentContainerStyle={{ paddingHorizontal: 20, gap: 8 }}>
+          {CATEGORY_FILTERS.map((filter) => {
+            const isActive = selectedCategory === filter.value;
+            return (
+              <Pressable
+                key={filter.value}
+                onPress={() => setSelectedCategory(filter.value)}
+                style={{
+                  paddingHorizontal: 16,
+                  paddingVertical: 8,
+                  borderRadius: 20,
+                  backgroundColor: isActive ? colors.primary : colors.surface,
+                  borderWidth: 1,
+                  borderColor: isActive ? colors.primary : colors.border,
+                }}
+              >
+                <Text style={{ fontFamily: isActive ? Fonts.semiBold : Fonts.medium, fontSize: 13, color: isActive ? "#0A0E1A" : colors.textSecondary }}>
+                  {filter.label}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </ScrollView>
 
         {filteredTemplates.length === 0 ? (
-          <Animated.View
-            entering={FadeInDown.delay(300).duration(400)}
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              paddingVertical: 60,
-            }}
-          >
-            <Ionicons name="barbell-outline" size={48} color={colors.textSecondary} />
-            <Text
-              style={{
-                fontFamily: Fonts.medium,
-                fontSize: 16,
-                color: colors.textSecondary,
-                marginTop: 12,
-                textAlign: "center",
-              }}
-            >
+          <Animated.View entering={FadeInDown.delay(200).duration(400)} style={{ paddingVertical: 40, alignItems: "center" }}>
+            <Ionicons name="clipboard-outline" size={48} color={colors.textSecondary} />
+            <Text style={{ fontFamily: Fonts.semiBold, fontSize: 16, color: colors.textSecondary, marginTop: 12, textAlign: "center" }}>
               No workouts in this category
             </Text>
-            <Text
-              style={{
-                fontFamily: Fonts.regular,
-                fontSize: 14,
-                color: colors.textSecondary,
-                marginTop: 4,
-                textAlign: "center",
-              }}
-            >
+            <Text style={{ fontFamily: Fonts.regular, fontSize: 14, color: colors.textSecondary, marginTop: 4, textAlign: "center" }}>
               Try selecting a different filter
             </Text>
           </Animated.View>
         ) : (
           <View style={{ gap: 12 }}>
             {filteredTemplates.map((template, index) => (
-              <Animated.View
-                key={template.id}
-                entering={FadeInDown.delay(300 + index * 50).duration(400)}
-              >
+              <Animated.View key={template.id} entering={FadeInDown.delay(300 + index * 50).duration(400)}>
                 <WorkoutCard
                   name={template.name}
                   category={template.category}
